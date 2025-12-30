@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "NYSDS Override - [App Name]",
-  "description": "Preview NYS Design System styling on [App Name]",
+  "name": "NYSDS Test Drive: IES Worker Portal",
+  "description": "Preview NYS Design System styling on the IES Worker Portal",
   "version": "1.0.0",
   "permissions": [
     "activeTab",
@@ -9,7 +9,7 @@
     "scripting"
   ],
   "host_permissions": [
-    "*://*.example.gov/*"
+    "*://*.ies.ny.gov/*"
   ],
   "action": {
     "default_popup": "popup.html",
@@ -26,7 +26,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.example.gov/*"],
+      "matches": ["*://*.ies.ny.gov/*"],
       "js": ["toggle.js", "override.js"],
       "run_at": "document_end"
     }
@@ -34,7 +34,7 @@
   "web_accessible_resources": [
     {
       "resources": ["override.css", "fonts/*"],
-      "matches": ["*://*.example.gov/*"]
+      "matches": ["*://*.ies.ny.gov/*"]
     }
   ]
 }

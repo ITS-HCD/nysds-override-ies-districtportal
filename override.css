@@ -59,190 +59,284 @@
  * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-safety.min.css');
  * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-transportation.min.css');
  */
+/* ==========================================================================
+   NYSDS Base Element Styles
+
+   These styles apply NYSDS typography and spacing to common HTML elements.
+   Customize or remove as needed based on your application's requirements.
+
+   See: https://designsystem.ny.gov/foundations/typography/
+   ========================================================================== */
 
 /* ==========================================================================
-   Example: Typography Overrides
-
-   Font families:
-   - --nys-font-family-sans    (Proxima Nova - body/UI)
-   - --nys-font-family-agency  (D Sari - brand/headings)
-   - --nys-font-family-alt     (Oswald - alternate)
-
-   Font sizes: --nys-font-size-2xs through --nys-font-size-9xl
-
-   See: https://designsystem.ny.gov/foundations/tokens/
+   1. RESET & FOUNDATION
    ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, 
+blockquote, figure, pre, td, th {
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: var(--nys-font-family-sans, 'Proxima Nova', system-ui, sans-serif);
-  color: var(--nys-color-text);
-  font-size: var(--nys-font-size-md);
+  font: var(--nys-font-size-md)/var(--nys-font-lineheight-md) var(--nys-font-family-body, var(--nys-font-family-sans));
+  color: var(--nys-color-ink);
+  background-color: #ffffff; /* Combined with .bodyBackground */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--nys-font-family-sans, 'Proxima Nova', system-ui, sans-serif);
-  color: var(--nys-color-text);
+/* Base Body Background Overlay */
+body.bodyBackground:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 0 !important;
+  background: var(--nys-color-theme-mid) !important;
 }
 
 /* ==========================================================================
-   Example: Button Overrides
-
-   Theme colors:
-   - --nys-color-theme          (primary brand color)
-   - --nys-color-theme-strong   (hover/active state)
-   - --nys-color-theme-stronger (pressed state)
-
-   Spacing: --nys-space-50 through --nys-space-1200
-   Radius: --nys-radius-xs, -sm, -md, -lg, -xl, -round
-
-   See: https://designsystem.ny.gov/components/button/
+   2. TYPOGRAPHY & VERTICAL RHYTHM
    ========================================================================== */
 
-/*
-.legacy-button,
-input[type="submit"],
-button {
-  background-color: var(--nys-color-theme);
-  color: var(--nys-color-ink-reverse);
-  font-family: var(--nys-font-family-sans);
-  font-size: var(--nys-font-size-md);
-  padding: var(--nys-space-100) var(--nys-space-200);
-  border: none;
-  border-radius: var(--nys-radius-md);
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.legacy-button:hover,
-input[type="submit"]:hover,
-button:hover {
-  background-color: var(--nys-color-theme-strong);
-}
-
-.legacy-button:focus,
-input[type="submit"]:focus,
-button:focus {
-  outline: 2px solid var(--nys-color-focus);
-  outline-offset: 2px;
-}
-*/
-
-/* ==========================================================================
-   Example: Form Element Overrides
-
-   Border colors:
-   - --nys-color-neutral-400    (default border)
-   - --nys-color-neutral-600    (darker border)
-
-   Surface colors:
-   - --nys-color-surface        (background)
-   - --nys-color-surface-raised (elevated background)
-
-   See: https://designsystem.ny.gov/components/textinput/
-   ========================================================================== */
-
-/*
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select {
-  font-family: var(--nys-font-family-sans);
-  font-size: var(--nys-font-size-md);
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nys-font-family-heading, 'Proxima Nova', system-ui, sans-serif);
   color: var(--nys-color-text);
-  background-color: var(--nys-color-surface);
-  padding: var(--nys-space-100);
-  border: 1px solid var(--nys-color-neutral-400);
-  border-radius: var(--nys-radius-sm);
+  font-weight: 700;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid var(--nys-color-focus);
-  outline-offset: 2px;
-  border-color: var(--nys-color-theme);
+h1 { 
+  font-size: var(--nys-font-size-h1); 
+  line-height: var(--nys-font-lineheight-h1); 
+  letter-spacing: var(--nys-font-letterspacing-negative-300, -.02rem);
+  margin: var(--nys-space-600) 0 var(--nys-space-250);
 }
-*/
 
-/* ==========================================================================
-   Example: Link Overrides
+h2 { 
+  font-size: var(--nys-font-size-h2); 
+  line-height: var(--nys-font-lineheight-h2); 
+  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
+  margin: var(--nys-space-500) 0 var(--nys-space-200);
+}
 
-   Link colors:
-   - --nys-color-link           (default)
-   - --nys-color-link-strong    (hover)
-   - --nys-color-link-strongest (active/pressed)
+h3 { 
+  font-size: var(--nys-font-size-h3); 
+  line-height: var(--nys-font-lineheight-h3); 
+  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
+  margin: var(--nys-space-400) 0 var(--nys-space-150);
+}
 
-   See: https://designsystem.ny.gov/foundations/tokens/
-   ========================================================================== */
+h4 { font-size: var(--nys-font-size-h4); line-height: var(--nys-font-lineheight-h4); margin: var(--nys-space-300) 0 var(--nys-space-100); }
+h5 { font-size: var(--nys-font-size-h5); line-height: var(--nys-font-lineheight-h5); margin: var(--nys-space-250) 0 var(--nys-space-100); }
+h6 { font-size: var(--nys-font-size-h6); line-height: var(--nys-font-lineheight-h6); margin: var(--nys-space-200) 0 var(--nys-space-100); }
 
-/*
+/* Spacing Helpers */
+p, ul, ol, dl, blockquote { margin-bottom: var(--nys-space-150); }
+p + p { margin-top: var(--nys-space-150); }
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: var(--nys-space-150); }
+
+small {
+  font: var(--nys-font-size-xs)/var(--nys-font-lineheight-xs) var(--nys-font-family-body);
+  margin-bottom: var(--nys-space-100);
+  display: block;
+}
+
+/* Links */
 a {
   color: var(--nys-color-link);
-  text-decoration: underline;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--nys-color-link-strong);
+a:hover, a:focus { color: var(--nys-color-link-strong); }
+a:active { color: var(--nys-color-link-strongest); }
+
+/* Lists */
+ul, ol {
+  padding-left: var(--nys-space-200);
+  list-style: none;
 }
 
-a:active {
-  color: var(--nys-color-link-strongest);
-}
-*/
+ul { list-style-type: disc; }
+ul ul { list-style-type: circle; padding-left: var(--nys-space-200); margin-top: 0; }
+ul ul ul { list-style-type: square; padding-left: var(--nys-space-200); }
+
+ol { list-style-type: decimal; }
+ol ol { list-style-type: lower-alpha; padding-left: var(--nys-space-200); margin-top: 0; }
+ol ol ol { list-style-type: lower-roman; padding-left: var(--nys-space-200); }
+
+li { margin-bottom: var(--nys-space-100); }
+li::marker { color: var(--nys-color-theme-primary, #000); }
 
 /* ==========================================================================
-   App-Specific Overrides
+   3. LAYOUT & SHELL
+   ========================================================================== */
+#header {
+  height: 102px !important;
+  background: var(--nys-color-theme) !important;
+  padding-bottom: 0 !important;
+}
 
-   Common tokens reference:
+#headerContainer, #wrapper { margin-left: 70px !important; }
+#wrapperContainer { margin-top: 102px !important; }
+#headerBottomContainer { height: 100%; }
 
-   COLORS
-   - --nys-color-theme, -strong, -stronger, -mid, -weak, -weaker, -faint
-   - --nys-color-text, -weak, -weaker, -weakest, -disabled
-   - --nys-color-link, -strong, -strongest, -neutral
-   - --nys-color-surface, -raised, -reverse
-   - --nys-color-success, -warning, -danger, -info, -emergency (+ -weak variants)
-   - --nys-color-neutral-900 through --nys-color-neutral-10
+#wrapperBody {
+  border: 0 !important;
+  background: var(--nys-color-surface) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
 
-   TYPOGRAPHY
-   - --nys-font-family-sans, -agency, -alt
-   - --nys-font-size-2xs, -xs, -sm, -md, -lg, -xl, -2xl ... -9xl
+#pageBodyColumn {
+  border-left: 1px solid black;
+  vertical-align: top;
+  background-color: var(--nys-color-surface);
+}
 
-   SPACING
-   - --nys-space-50, -100, -150, -200, -300, -400, -500, -600, -800, -1000, -1200
+section + section { margin-top: var(--nys-space-300); }
 
-   BORDERS
-   - --nys-radius-xs, -sm, -md, -lg, -xl, -round
+@media(min-width: 768px) {
+  section + section { margin-bottom: var(--nys-space-600); }
+}
 
-   SHADOWS
-   - --nys-shadow-raised, --nys-shadow-overlay
+/* ==========================================================================
+   4. COMPONENTS (BUTTONS, FORMS, NAV)
    ========================================================================== */
 
-/*
- * Add your application-specific overrides below.
- * Target specific elements using their existing classes or IDs.
- *
- * Example:
- *
- * #main-header {
- *   background-color: var(--nys-color-theme);
- *   color: var(--nys-color-ink-reverse);
- * }
- *
- * .nav-menu {
- *   font-family: var(--nys-font-family-sans);
- *   background-color: var(--nys-color-surface);
- *   box-shadow: var(--nys-shadow-raised);
- * }
- *
- * .card {
- *   background-color: var(--nys-color-surface-raised);
- *   border-radius: var(--nys-radius-md);
- *   padding: var(--nys-space-200);
- * }
- */
+/* Buttons */
+.smallButton, .largeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nys-space-100);
+  width: fit-content;
+  max-height: var(--nys-size-500);
+  padding: 6px 14px !important;
+  border: solid var(--nys-border-width-md) var(--nys-color-transparent);
+  border-radius: var(--nys-radius-xl);
+  background: var(--nys-color-theme) !important;
+  font-family: var(--nys-font-family-sans);
+  font-weight: var(--nys-font-weight-semibold);
+}
+
+.smallButton:hover, .largeButton:hover, a#CaseButton:hover {
+  color: var(--nys-color-text-reverse);
+  background-color: var(--nys-color-theme-strong) !important;
+}
+
+/* Forms */
+.formInput, select, input[type="text" i], div.fieldCell3Col input {
+  font: inherit;
+  color: var(--nys-color-text);
+  height: var(--nys-size-500);
+  padding: var(--nys-space-100);
+  border: solid var(--nys-color-neutral-400) var(--nys-border-width-sm);
+  border-radius: var(--nys-radius-md);
+  box-sizing: border-box;
+}
+
+div.fieldCell3Col input:focus, input.formInput:focus {
+  outline: solid var(--nys-border-width-sm) var(--nys-color-focus);
+  border-color: var(--nys-color-focus);
+}
+
+label.formLabel {
+  display: block;
+  height: 24px !important;
+  margin-bottom: 8px !important;
+}
+
+.block-form-type1, .block-form-type3 {
+  border: none;
+  border-radius: 0;
+  background-color: var(--nys-color-surface);
+}
+
+/* Navigation */
+li.navContainer > a.globalNavTab {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 35px !important;
+  padding: 8px 8px 6px !important;
+  line-height: var(--nys-font-lineheight-2xs);
+}
+
+.taskNavEntrySelected {
+  font-weight: 600;
+  background-color: var(--nys-color-theme);
+}
+
+/* ==========================================================================
+   5. TABLES & DATA
+   ========================================================================== */
+table.tableStyle {
+  background-color: #ffffff;
+  border: 2px solid #ededed;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 24px;
+}
+
+th, .expandableHeaderSectionTag {
+  background: #ededed;
+  color: #1b1b1b !important;
+  text-align: left;
+  padding-left: 16px;
+  vertical-align: middle;
+}
+
+/* Results Pagination Specifics */
+table.resultsPaginationContent {
+  background-color: #ffffff !important;
+  border: 0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1) !important;
+}
+
+.resultsPaginationHeader h2 {
+  color: var(--nys-color-text-reverse);
+  background-color: var(--nys-color-theme);
+  padding: 8px 16px;
+}
+
+/* ==========================================================================
+   6. BRANDING & PAGE SPECIFIC
+   ========================================================================== */
+.homepageImage {
+  width: 579px !important;
+  border: 2px solid #ededed !important;
+  border-radius: 4px 4px 0 0 !important;
+  margin-bottom: 24px !important;
+}
+
+#headerLogo::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 117px;
+  width: 90px;
+  height: 65px;
+  background: url(data:image/png;base64,...) no-repeat left;
+  background-size: 88px;
+}
+
+#headerEnvironment::after {
+  content: "Albany SBX";
+  color: var(--nys-color-text-reverse);
+  font-family: var(--nys-font-family-agency);
+  position: relative;
+  left: 62px;
+  top: -15px;
+}
+
+/* Hidden Elements */
+.homepageCountySelector, 
+#headerUtility a img, 
+.fieldCell3Col br,
+#headerEnvironment span { 
+  display: none !important; 
+}
