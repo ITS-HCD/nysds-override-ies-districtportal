@@ -1,0 +1,248 @@
+/*
+ * NYSDS Override Styles
+ * =====================
+ * This stylesheet applies NYS Design System styling to the target application.
+ * Edit this file to customize the appearance of legacy elements.
+ *
+ * PRODUCTION-READY: These styles use clean selectors that engineers can
+ * copy directly into the application's codebase. The extension dynamically
+ * injects/removes this stylesheet when toggled on/off.
+ *
+ * NYSDS Resources:
+ * - Tokens: https://designsystem.ny.gov/foundations/tokens/
+ * - Components: https://designsystem.ny.gov/components/
+ */
+
+/* ==========================================================================
+   NYSDS Design System Imports
+
+   Choose which NYSDS assets to import based on your needs.
+   Uncomment/comment the @import lines below as needed.
+
+   Package: https://www.npmjs.com/package/@nysds/styles
+   ========================================================================== */
+
+/*
+ * FONTS (bundled locally)
+ * Loads Proxima Nova, D Sari, and Oswald typefaces.
+ * Font files must be added to the fonts/ directory.
+ * See fonts/README.md for download instructions.
+ */
+@import url('fonts/nysds-fonts.css');
+
+/*
+ * BASE TOKENS (recommended)
+ * CSS variables only - colors, typography, spacing, etc.
+ * Use this when you want to apply NYSDS tokens to existing styles.
+ */
+@import url('https://unpkg.com/@nysds/styles@latest/dist/nysds.min.css');
+
+/*
+ * FULL STYLES (alternative)
+ * Includes base tokens PLUS CSS reset and utility classes.
+ * Use this when you want more aggressive normalization.
+ * May conflict with existing application styles.
+ *
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-full.min.css');
+ */
+
+/*
+ * AGENCY THEMES (optional)
+ * Override default theme colors for specific agency branding.
+ * Import AFTER base tokens. Only use ONE theme at a time.
+ *
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-admin.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-business.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-environment.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-health.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-local.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-safety.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-transportation.min.css');
+ */
+
+/* ==========================================================================
+   Example: Typography Overrides
+
+   Font families:
+   - --nys-font-family-sans    (Proxima Nova - body/UI)
+   - --nys-font-family-agency  (D Sari - brand/headings)
+   - --nys-font-family-alt     (Oswald - alternate)
+
+   Font sizes: --nys-font-size-2xs through --nys-font-size-9xl
+
+   See: https://designsystem.ny.gov/foundations/tokens/
+   ========================================================================== */
+
+body {
+  font-family: var(--nys-font-family-sans, 'Proxima Nova', system-ui, sans-serif);
+  color: var(--nys-color-text);
+  font-size: var(--nys-font-size-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--nys-font-family-sans, 'Proxima Nova', system-ui, sans-serif);
+  color: var(--nys-color-text);
+}
+
+/* ==========================================================================
+   Example: Button Overrides
+
+   Theme colors:
+   - --nys-color-theme          (primary brand color)
+   - --nys-color-theme-strong   (hover/active state)
+   - --nys-color-theme-stronger (pressed state)
+
+   Spacing: --nys-space-50 through --nys-space-1200
+   Radius: --nys-radius-xs, -sm, -md, -lg, -xl, -round
+
+   See: https://designsystem.ny.gov/components/button/
+   ========================================================================== */
+
+/*
+.legacy-button,
+input[type="submit"],
+button {
+  background-color: var(--nys-color-theme);
+  color: var(--nys-color-ink-reverse);
+  font-family: var(--nys-font-family-sans);
+  font-size: var(--nys-font-size-md);
+  padding: var(--nys-space-100) var(--nys-space-200);
+  border: none;
+  border-radius: var(--nys-radius-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.legacy-button:hover,
+input[type="submit"]:hover,
+button:hover {
+  background-color: var(--nys-color-theme-strong);
+}
+
+.legacy-button:focus,
+input[type="submit"]:focus,
+button:focus {
+  outline: 2px solid var(--nys-color-focus);
+  outline-offset: 2px;
+}
+*/
+
+/* ==========================================================================
+   Example: Form Element Overrides
+
+   Border colors:
+   - --nys-color-neutral-400    (default border)
+   - --nys-color-neutral-600    (darker border)
+
+   Surface colors:
+   - --nys-color-surface        (background)
+   - --nys-color-surface-raised (elevated background)
+
+   See: https://designsystem.ny.gov/components/textinput/
+   ========================================================================== */
+
+/*
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-family: var(--nys-font-family-sans);
+  font-size: var(--nys-font-size-md);
+  color: var(--nys-color-text);
+  background-color: var(--nys-color-surface);
+  padding: var(--nys-space-100);
+  border: 1px solid var(--nys-color-neutral-400);
+  border-radius: var(--nys-radius-sm);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--nys-color-focus);
+  outline-offset: 2px;
+  border-color: var(--nys-color-theme);
+}
+*/
+
+/* ==========================================================================
+   Example: Link Overrides
+
+   Link colors:
+   - --nys-color-link           (default)
+   - --nys-color-link-strong    (hover)
+   - --nys-color-link-strongest (active/pressed)
+
+   See: https://designsystem.ny.gov/foundations/tokens/
+   ========================================================================== */
+
+/*
+a {
+  color: var(--nys-color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--nys-color-link-strong);
+}
+
+a:active {
+  color: var(--nys-color-link-strongest);
+}
+*/
+
+/* ==========================================================================
+   App-Specific Overrides
+
+   Common tokens reference:
+
+   COLORS
+   - --nys-color-theme, -strong, -stronger, -mid, -weak, -weaker, -faint
+   - --nys-color-text, -weak, -weaker, -weakest, -disabled
+   - --nys-color-link, -strong, -strongest, -neutral
+   - --nys-color-surface, -raised, -reverse
+   - --nys-color-success, -warning, -danger, -info, -emergency (+ -weak variants)
+   - --nys-color-neutral-900 through --nys-color-neutral-10
+
+   TYPOGRAPHY
+   - --nys-font-family-sans, -agency, -alt
+   - --nys-font-size-2xs, -xs, -sm, -md, -lg, -xl, -2xl ... -9xl
+
+   SPACING
+   - --nys-space-50, -100, -150, -200, -300, -400, -500, -600, -800, -1000, -1200
+
+   BORDERS
+   - --nys-radius-xs, -sm, -md, -lg, -xl, -round
+
+   SHADOWS
+   - --nys-shadow-raised, --nys-shadow-overlay
+   ========================================================================== */
+
+/*
+ * Add your application-specific overrides below.
+ * Target specific elements using their existing classes or IDs.
+ *
+ * Example:
+ *
+ * #main-header {
+ *   background-color: var(--nys-color-theme);
+ *   color: var(--nys-color-ink-reverse);
+ * }
+ *
+ * .nav-menu {
+ *   font-family: var(--nys-font-family-sans);
+ *   background-color: var(--nys-color-surface);
+ *   box-shadow: var(--nys-shadow-raised);
+ * }
+ *
+ * .card {
+ *   background-color: var(--nys-color-surface-raised);
+ *   border-radius: var(--nys-radius-md);
+ *   padding: var(--nys-space-200);
+ * }
+ */
