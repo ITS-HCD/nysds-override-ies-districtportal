@@ -71,126 +71,166 @@
 /* ==========================================================================
    1. RESET & FOUNDATION
    ========================================================================== */
-html {
-  scroll-behavior: smooth;
+
+
+/* Component: custom */
+.homepageImage {
+  width: 579px !important;
+  border-color: #ededed !important;
+  border-width: 2px !important;
+  margin-bottom: 24px !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, 
-blockquote, figure, pre, td, th {
+#headerBottomContainer {
+  height: 100%;
+}
+
+.taskNavEntrySelected {
+  font-weight: 600;
+  background-color: var(--nys-color-theme);
+}
+
+table.resultsPaginationContent table.tableStyle td, table.resultsPaginationContent table.tableStyle th {
+  border: 1px solid #d0d0ce !important;
+}
+
+td.formInput.textAlignRight {
+  border: 0;
+  padding-top: 12px !important;
+}
+
+.homepageTopRowHeader h2 {
+  color: white;
   margin: 0;
-  padding: 0;
+  padding: 16px !important;
+  font-size: 22px;
+  background: #736289;
+  font-weight: 300;
+  border-radius: 0;
+  letter-spacing: 0.016px;
 }
 
-body {
-  font: var(--nys-font-size-md)/var(--nys-font-lineheight-md) var(--nys-font-family-body, var(--nys-font-family-sans));
-  color: var(--nys-color-ink);
-  background-color: #ffffff; /* Combined with .bodyBackground */
+#headerUtility a img {
+  display: none !important;
 }
 
-/* Base Body Background Overlay */
-body.bodyBackground:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 65px;
-  z-index: 0 !important;
-  background: var(--nys-color-theme-mid) !important;
+div.fieldCell3Col input:focus, input.formInput:focus {
+  caret-color: var(--nys-color-focus);
+  border-color: var(--nys-color-focus);
+  outline-color: var(--nys-color-focus);
 }
 
-/* ==========================================================================
-   2. TYPOGRAPHY & VERTICAL RHYTHM
-   ========================================================================== */
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--nys-font-family-heading, 'Proxima Nova', system-ui, sans-serif);
-  color: var(--nys-color-text);
-  font-weight: 700;
+table.resultsPaginationContent table.tableStyle tr.sortableTableRow td {
+  border: none !important;
+  background-color: var(--nys-color-base-weak) !important;
 }
 
-h1 { 
-  font-size: var(--nys-font-size-h1); 
-  line-height: var(--nys-font-lineheight-h1); 
-  letter-spacing: var(--nys-font-letterspacing-negative-300, -.02rem);
-  margin: var(--nys-space-600) 0 var(--nys-space-250);
+table.resultsPaginationContent br {
+  display: none;
 }
 
-h2 { 
-  font-size: var(--nys-font-size-h2); 
-  line-height: var(--nys-font-lineheight-h2); 
-  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
-  margin: var(--nys-space-500) 0 var(--nys-space-200);
-}
-
-h3 { 
-  font-size: var(--nys-font-size-h3); 
-  line-height: var(--nys-font-lineheight-h3); 
-  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
-  margin: var(--nys-space-400) 0 var(--nys-space-150);
-}
-
-h4 { font-size: var(--nys-font-size-h4); line-height: var(--nys-font-lineheight-h4); margin: var(--nys-space-300) 0 var(--nys-space-100); }
-h5 { font-size: var(--nys-font-size-h5); line-height: var(--nys-font-lineheight-h5); margin: var(--nys-space-250) 0 var(--nys-space-100); }
-h6 { font-size: var(--nys-font-size-h6); line-height: var(--nys-font-lineheight-h6); margin: var(--nys-space-200) 0 var(--nys-space-100); }
-
-/* Spacing Helpers */
-p, ul, ol, dl, blockquote { margin-bottom: var(--nys-space-150); }
-p + p { margin-top: var(--nys-space-150); }
-h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: var(--nys-space-150); }
-
-small {
-  font: var(--nys-font-size-xs)/var(--nys-font-lineheight-xs) var(--nys-font-family-body);
-  margin-bottom: var(--nys-space-100);
-  display: block;
-}
-
-/* Links */
-a {
-  color: var(--nys-color-link);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a:hover, a:focus { color: var(--nys-color-link-strong); }
-a:active { color: var(--nys-color-link-strongest); }
-
-/* Lists */
-ul, ol {
-  padding-left: var(--nys-space-200);
-  list-style: none;
-}
-
-ul { list-style-type: disc; }
-ul ul { list-style-type: circle; padding-left: var(--nys-space-200); margin-top: 0; }
-ul ul ul { list-style-type: square; padding-left: var(--nys-space-200); }
-
-ol { list-style-type: decimal; }
-ol ol { list-style-type: lower-alpha; padding-left: var(--nys-space-200); margin-top: 0; }
-ol ol ol { list-style-type: lower-roman; padding-left: var(--nys-space-200); }
-
-li { margin-bottom: var(--nys-space-100); }
-li::marker { color: var(--nys-color-theme-primary, #000); }
-
-/* ==========================================================================
-   3. LAYOUT & SHELL
-   ========================================================================== */
-#header {
-  height: 102px !important;
-  background: var(--nys-color-theme) !important;
-  padding-bottom: 0 !important;
-}
-
-#headerContainer, #wrapper { margin-left: 70px !important; }
-#wrapperContainer { margin-top: 102px !important; }
-#headerBottomContainer { height: 100%; }
-
-#wrapperBody {
+table.resultsPaginationHeader td {
   border: 0 !important;
-  background: var(--nys-color-surface) !important;
-  box-shadow: none !important;
   border-radius: 0 !important;
+  background-color: var(--nys-color-theme) !important;
+}
+
+#headerUtility a {
+  color: var(--nys-color-text-reverse);
+  padding-left: var(--nys-space-200);
+  text-decoration: underline;
+}
+
+p.imageText {
+  left: 36px !important;
+}
+
+.block-form-type1, .block-form-type3 {
+  border: none;
+  border-radius: 0;
+  background-color: #ffffff;
+}
+
+.altColor {
+  background-color: var(--nys-color-base-weak) !important;
+}
+
+#contentHeader .pageTitle, #taskNavHeader span {
+  color: var(--nys-color-theme) !important;
+}
+
+table.resultsPaginationContent {
+  border: 0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 4px 6px -1px rgba(0,0,0,0.0) !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.homepageTopRowItem {
+  padding: 16px 16px 2px !important;
+  margin-bottom: 16px;
+}
+
+div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
+  display: none;
+}
+
+table.resultsPaginationContent table.tableStyle th {
+  font-size: 16px !important;
+  line-height: 1.25rem !important;
+  padding-bottom: 6px !important;
+  background-color: white !important;
+}
+
+img.banner:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 9999;
+  position: absolute;
+  background-color: var(--nys-color-theme-weak);
+}
+
+.resultsPaginationHeader h2 {
+  color: var(--nys-color-text-reverse);
+  padding: 8px 16px;
+  background-color: var(--nys-color-theme);
+}
+
+#taskNavHeader {
+  height: 60px !important;
+}
+
+.homepageRowLeft .homepageLeftItem:nth-child(2) {
+  display: none !important;
+}
+
+/* Component: general */
+a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
+  color: var(--nys-color-text-reverse);
+  border-color: var(--nys-color-theme-strong);
+  background-color: var(--nys-color-theme-strong) !important;
+}
+
+.homepageImage {
+  width: 579px !important;
+  border-color: #ededed !important;
+  border-width: 2px !important;
+  margin-bottom: 24px !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+#headerBottomContainer {
+  height: 100%;
 }
 
 #pageBodyColumn {
@@ -199,57 +239,79 @@ li::marker { color: var(--nys-color-theme-primary, #000); }
   background-color: var(--nys-color-surface);
 }
 
-section + section { margin-top: var(--nys-space-300); }
-
-@media(min-width: 768px) {
-  section + section { margin-bottom: var(--nys-space-600); }
+#wrapperBody {
+  border: 0 !important;
+  background: var(--nys-color-surface) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none !important;
 }
 
-/* ==========================================================================
-   4. COMPONENTS (BUTTONS, FORMS, NAV)
-   ========================================================================== */
-
-/* Buttons */
-.smallButton, .largeButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--nys-space-100);
-  width: fit-content;
-  max-height: var(--nys-size-500);
-  padding: 6px 14px !important;
-  border: solid var(--nys-border-width-md) var(--nys-color-transparent);
-  border-radius: var(--nys-radius-xl);
-  background: var(--nys-color-theme) !important;
-  font-family: var(--nys-font-family-sans);
-  font-weight: var(--nys-font-weight-semibold);
+th, th a, .expandableHeaderSectionTag, .expandableHeaderSectionTag a.white {
+  color: #1b1b1b !important;
+  border: 0 !important;
 }
 
-.smallButton:hover, .largeButton:hover, a#CaseButton:hover {
-  color: var(--nys-color-text-reverse);
-  background-color: var(--nys-color-theme-strong) !important;
+th, .expandableHeaderSectionTag, th a {
+  background: #ededed;
 }
 
-/* Forms */
-.formInput, select, input[type="text" i], div.fieldCell3Col input {
-  font: inherit;
-  color: var(--nys-color-text);
-  height: var(--nys-size-500);
-  padding: var(--nys-space-100);
-  border: solid var(--nys-color-neutral-400) var(--nys-border-width-sm);
-  border-radius: var(--nys-radius-md);
-  box-sizing: border-box;
-}
-
-div.fieldCell3Col input:focus, input.formInput:focus {
-  outline: solid var(--nys-border-width-sm) var(--nys-color-focus);
+div.fieldCell3Col input:focus {
+  caret-color: var(--nys-color-focus);
   border-color: var(--nys-color-focus);
+  outline-color: var(--nys-color-focus);
 }
 
-label.formLabel {
-  display: block;
-  height: 24px !important;
-  margin-bottom: 8px !important;
+#header {
+  height: 102px !important;
+  background: var(--nys-color-theme) !important;
+  padding-bottom: 0 !important;
+}
+
+img.banner {
+  width: 100% !important;
+  opacity: 0;
+  padding-left: 0 !important;
+}
+
+/* Notes: li.navContainer>a.globalNavTab {
+    width: -webkit-fill-available !important;
+    padding: 8px 8px 6px !important;
+    height: 35px !important;
+    display: flex;
+    flex-direction: column-reverse;
+    line-height: var(--nys-font-lineheight-2xs);
+} */
+li.navContainer>a.globalNavTab {
+  width: -webkit-fill-available !important;
+  height: 35px !important;
+  display: flex;
+  padding: 8px 8px 6px !important;
+  line-height: var(--nys-font-lineheight-2xs);
+  flex-direction: column-reverse;
+}
+
+.homepageCountySelector {
+  display: none;
+}
+
+table.tableStyle td {
+  padding: 10px 20px;
+}
+
+p.imageText {
+  left: 36px !important;
+}
+
+#wrapperContainer {
+  margin-top: 102px !important;
+}
+
+#headerEnvironment {
+  top: -16px;
+  position: relative;
+  vertical-align: middle;
 }
 
 .block-form-type1, .block-form-type3 {
@@ -258,85 +320,307 @@ label.formLabel {
   background-color: var(--nys-color-surface);
 }
 
-/* Navigation */
-li.navContainer > a.globalNavTab {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 35px !important;
-  padding: 8px 8px 6px !important;
-  line-height: var(--nys-font-lineheight-2xs);
+div.homepageTopRowItem div:last-child {
+  width: fit-content;
+  padding-right: 0;
 }
 
-.taskNavEntrySelected {
-  font-weight: 600;
-  background-color: var(--nys-color-theme);
+div.homepageTopRowItem div {
+  width: auto !important;
+  display: inline-block !important;
+  padding-right: 48px !important;
 }
 
-/* ==========================================================================
-   5. TABLES & DATA
-   ========================================================================== */
-table.tableStyle {
-  background-color: #ffffff;
-  border: 2px solid #ededed;
+table.tableStyle, table.tableStyle.expandableSectionTable {
+  border-color: #ededed;
+  border-width: 2px;
   border-radius: 4px 4px 0 0;
   margin-bottom: 24px;
+  background-color: #ffffff;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
 }
 
-th, .expandableHeaderSectionTag {
-  background: #ededed;
-  color: #1b1b1b !important;
+h2.expandableHeaderInheritProperties, th a.white, th {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  letter-spacing: .001rem !important;
+}
+
+div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
+  display: none;
+}
+
+#pageContentHomepage {
+  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+.fieldCell3Col br {
+  display: none !important;
+}
+
+label.formLabel {
+  height: 24px !important;
+  display: block;
+  box-sizing: border-box !important;
+  margin-bottom: 8px !important;
+}
+
+.fieldCell3Col {
+  margin-bottom: 32px !important;
+}
+
+.homepageCaseSearch label + br {
+  display: none;
+}
+
+.bodyBackground {
+  background: #ffffff !important;
+}
+
+.homepageTopRowItem {
+  padding: 16px 16px 2px !important;
+  margin-bottom: 16px;
+}
+
+#pageContentWrapperHomepage {
+  padding: 16px 10px;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
+
+th:hover, th a:hover, .expandableHeaderSectionTag:hover, .expandableHeaderSectionTag a.white:hover {
+  background-color: var(--nys-color-neutral-100) !important;
+}
+
+#pageContentWrapperHomepage {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+div.fieldCell3Col input:hover:not(:disabled):not(:focus) {
+  border-color: var(--nys-color-neutral-900) !important;
+  outline-color: var(--nys-color-neutral-900) !important;
+}
+
+th, .block-title, .block-footer {
   text-align: left;
   padding-left: 16px;
   vertical-align: middle;
 }
 
-/* Results Pagination Specifics */
-table.resultsPaginationContent {
-  background-color: #ffffff !important;
-  border: 0 !important;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1) !important;
-}
-
-.resultsPaginationHeader h2 {
-  color: var(--nys-color-text-reverse);
-  background-color: var(--nys-color-theme);
-  padding: 8px 16px;
-}
-
-/* ==========================================================================
-   6. BRANDING & PAGE SPECIFIC
-   ========================================================================== */
-.homepageImage {
-  width: 579px !important;
-  border: 2px solid #ededed !important;
-  border-radius: 4px 4px 0 0 !important;
-  margin-bottom: 24px !important;
-}
-
-#headerLogo::before {
+.bodyBackground:before {
+  right: 0;
+  width: 100%;
+  height: 65px;
   content: "";
+  z-index: 0 !important;
   position: absolute;
+  background: var(--nys-color-theme-mid) !important;
+}
+
+p.imageText:before {
+  top: -9px;
+  left: -37px;
+  width: 577px;
+  height: 60px;
+  content: "";
+  opacity: .4;
+  z-index: 1;
+  position: absolute;
+  background-color: #abc4d8;
+}
+
+span#logo {
+  width: 0px !important;
+  display: inline-block;
+  font-size: 0px !important;
+}
+
+.formInput {
+  font: inherit;
+  border: solid var(--nys-color-neutral-400) var(--nys-border-width-sm);
+  height: var(--nys-size-500);
+  padding: var(--nys-space-100);
+  position: relative;
+  box-sizing: border-box;
+  border-radius: var(--nys-radius-md);
+  outline-color: transparent;
+  outline-style: solid;
+  outline-width: var(--nys-border-width-sm);
+}
+
+.homepageCaseSearch a {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+#wrapper, #headerContainer {
+  margin-left: 70px !important;
+}
+
+a {
+  color: var(--nys-color-link);
+}
+
+a:hover {
+  color: var(--nys-color-link-strongest);
+}
+
+.homepageTopRowHeader h2 {
+  color: var(--nys-color-text-reverse);
+  margin: 0;
+  padding: var(--nys-space-200) !important;
+  font-size: var(--nys-font-size-h4);
+  background: var(--nys-color-theme-mid);
+  font-weight: var(--nys-font-weight-light);
+  border-radius: 0;
+  letter-spacing: var(--nys-font-letterspacing-h2);
+}
+
+div.fieldCell3Col input, input[type="text" i], select {
+  color: var(--nys-color-text);
+  height: var(--nys-space-500);
+  padding: var(--nys-space-100);
+  font-size: var(--nys-font-size-md);
+  background: var(--nys-color-surface);
+  box-sizing: border-box;
+  font-family: var(--nys-font-family-sans);
+  font-weight: var(--nys-font-weight-regular);
+  line-height: var(--nys-font-lineheight-md);
+  border-color: var(--nys-color-neutral-400);
+  border-width: var(--nys-border-width-sm);
+  border-radius: var(--nys-space-50);
+  letter-spacing: var(--nys-font-letterspacing-body-md);
+}
+
+button.ui-datepicker-trigger img {
+  opacity: 0;
+}
+
+button.ui-datepicker-trigger:after {
+  top: -25px;
+  left: 6px;
+  width: var(--nys-size-300);
+  height: var(--nys-size-300);
+  content: "";
+  display: block;
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuMzMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG1hc2s6IHVybCgjbWFzayk7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzFhMWExYTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZGFkOWQ5OwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPG1hc2sgaWQ9Im1hc2siIHg9Ii0zLjUiIHk9Ii0yLjMzIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8ZyBpZD0ibWFzazBfNDY1N181ODY5IiBkYXRhLW5hbWU9Im1hc2swIDQ2NTcgNTg2OSI+CiAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0zIiB4PSItMy41IiB5PSItMi4zMyIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4Ii8+CiAgICAgIDwvZz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0xIj4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIuMzMsMjMuMzNjLS42NCwwLTEuMTktLjIzLTEuNjUtLjY5LS40Ni0uNDYtLjY5LTEuMDEtLjY5LTEuNjVWNC42N2MwLS42NC4yMy0xLjE5LjY5LTEuNjUuNDYtLjQ2LDEuMDEtLjY5LDEuNjUtLjY5aDEuMTd2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDkuMzN2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDEuMTdjLjY0LDAsMS4xOS4yMywxLjY1LjY5LjQ2LjQ2LjY5LDEuMDEuNjksMS42NXYxNi4zM2MwLC42NC0uMjMsMS4xOS0uNjksMS42NS0uNDYuNDYtMS4wMS42OS0xLjY1LjY5SDIuMzNaTTIuMzMsMjFoMTYuMzN2LTExLjY3SDIuMzN2MTEuNjdaTTIuMzMsN2gxNi4zM3YtMi4zM0gyLjMzdjIuMzNaTTEwLjUsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNNS44MywxNGMtLjMzLDAtLjYxLS4xMS0uODMtLjM0cy0uMzQtLjUtLjM0LS44My4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNHMtLjM0LS41LS4zNC0uODMuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODMtLjUuMzQtLjgzLjM0Wk0xMC41LDE4LjY3Yy0uMzMsMC0uNjEtLjExLS44My0uMzQtLjIyLS4yMi0uMzQtLjUtLjM0LS44M3MuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODNjLS4yMi4yMi0uNS4zNC0uODMuMzRaTTUuODMsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFoiLz4KICA8L2c+Cjwvc3ZnPg==); };
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button.ui-datepicker-trigger {
+  width: var(--nys-size-500);
+  border: none !important;
+  height: var(--nys-size-500);
+  margin: 0 0 0 var(--nys-space-100);
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+button.ui-datepicker-trigger:hover {
+  background-color: var(--nys-color-base-weak) !important;
+}
+
+h2.expandableHeaderInheritProperties, th a.white, th {
+  font-size: var(--nys-font-size-ui-xl);
+  font-family: var(--nys-font-family-ui);
+  font-weight: var(--nys-font-weight-bold);
+  line-height: var(--nys-font-lineheight-ui-xl);
+  letter-spacing: var(--nys-font-letterspacing-ui-xl);
+}
+
+tbody tr th {
+  font-size: var(--nys-font-size-lg) !important;
+  font-weight: var(--nys-font-weight-semibold) !important;
+}
+
+.block-title,.block-footer, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, table.tableStyle caption, tr.formLabel>th, th.formLabel, tr.formlabel>th, th.formlabel, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, .curvedHeaderTableData, .curvedLeftTopHeaderSearchResults, .curvedRightTopHeaderSearchResults, .headerStyleWithoutTH, .headerStyleWithPadding {
+  color: var(--nys-color-text-reverse) !important;
+  background-color: var(--nys-color-theme);
+}
+
+body, h1, h2, h3, h4, h5, h6, p, td, #logo, #pageContentHomepage, #pageContent, #mainNavigationContainer, h2.expandableHeaderInheritProperties, th a.white, th, .block-title, .block-footer {
+  color: var(--nys-color-text);
+  font-family: var(--nys-font-family-ui);
+}
+
+button.ui-datepicker-trigger:after {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+button.ui-datepicker-trigger:hover {
+  background-color: var(--nys-color-weak) !important;
+}
+
+/* Notes: BUTTON */
+.smallButton, .largeButton {
+  gap: var(--nys-space-100);
+  width: fit-content;
+  border: solid var(--nys-border-width-md) var(--nys-color-transparent);
+  padding: 6px 14px !important;
+  background: var(--nys-color-theme) !important;
+  max-height: var(--nys-size-500);
+  align-items: center;
+  font-family: var(--nys-font-family-sans);
+  font-weight: var(--nys-font-weight-semibold);
+  line-height: var(--nys-font-lineheight-md);
+  border-radius: var(--nys-radius-xl);
+  justify-content: center;
+}
+
+/* Notes: adding logo to homepage with data-uri */
+#headerLogo::before {
   top: 4px;
   left: 117px;
   width: 90px;
   height: 65px;
-  background: url(data:image/png;base64,...) no-repeat left;
+  content: "";
+  display: inline;
+  position: absolute;
   background-size: 88px;
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 #headerEnvironment::after {
-  content: "Albany SBX";
-  color: var(--nys-color-text-reverse);
-  font-family: var(--nys-font-family-agency);
-  position: relative;
-  left: 62px;
   top: -15px;
+  left: 62px;
+  color: var(--nys-color-text-reverse);
+  width: 400px;
+  height: 45px;
+  content: "Albany SBX";
+  display: inline;
+  position: relative;
+  font-size: var(--nys-font-size-md);
+  font-family: var(--nys-font-family-agency);
 }
 
-/* Hidden Elements */
-.homepageCountySelector, 
-#headerUtility a img, 
-.fieldCell3Col br,
-#headerEnvironment span { 
-  display: none !important; 
+#logo:after {
+  top: -8px;
+  left: 11px;
+  color: var(--nys-color-ink-reverse);
+  float: left;
+  width: 400px !important;
+  height: 55px;
+  content: "NYS Integrated Eligibility System";
+  position: relative;
+  font-size: var(--nys-font-size-2xl);
+  text-align: left;
+  border-left: 1.5px solid #ebebeb;
+  font-family: var(--nys-font-family-agency);
+  font-weight: 600;
+  line-height: 25.5px;
+  text-shadow: 0 0 0 rgba(0,0,0,0) !important;
+  padding-left: 9px;
+}
+
+/* Notes: hiding san bernadino */
+#headerEnvironment span {
+  display: none;
 }
