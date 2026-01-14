@@ -1226,7 +1226,6 @@ td.curvedHeaderTableData,  td.curvedHeaderTableData h2 {
   height: auto;
   content: "*";
   display: inline-flex;
-  outline: 3px solid pink !important;
   position: relative;
   visibility: visible !important;
 }form table.tableStyle td:has(#selectWorkerButton) {
@@ -1258,17 +1257,14 @@ span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
   gap: var(--nys-space-200);
   display: flex;
   flex-wrap: wrap;
- outline: 3px solid pink;
   align-items: flex-start;
 }form div.block.rowHeight {
   display: flex;
- outline: 3px solid red;
   align-items: flex-start;
   padding-bottom: var(--nys-space-200);
 }label.formLabel {
   width: 100% !important;
   max-width: 100%;
- outline: 5px solid yellow;
   box-sizing: border-box;
 }form select:not(#resultsPerPage), #pageContent form div.block-form-type1 .row div select {
   width: fit-content !important;
@@ -1360,7 +1356,6 @@ form .block {
 form select:not(#resultsPerPage) {
   height: var(--nys-space-500);
   max-width: 100%;
- outline: 3px solid cyan;
   box-sizing: border-box;
 }
 #pageContent form div.block-form-type1 .row {
@@ -1572,7 +1567,7 @@ div.homepageTopRowItem div {
 
 li.navContainer>a.globalNavTab {
   width: -webkit-fill-available !important;
-  height: 33px !important;
+  height: 35px !important;
   display: flex;
   padding: 5px 8px 6px !important;
   line-height: var(--nys-font-lineheight-2xs);
