@@ -1055,9 +1055,6 @@ th, .expandableHeaderSectionTag, th a {
   background: var(--nys-color-neutral-50);
 }
 
-#wrapper, #headerContainer {
-  margin-left: 70px !important;
-}
 
 #taskNavigation a:focus>.taskNavEntry {
   color: var(--nys-color-text) !important;
