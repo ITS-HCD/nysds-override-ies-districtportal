@@ -1277,7 +1277,25 @@ form:not(:has(a)) table.tableStyle {
   border-radius: 0 !important;
 }div#wrapper:has(#wrapperContainer #wrapperBody #pageContentWrapperHomepage) #header #headerLogo span:after {
   content: "NYS Integrated Eligibility System" !important;
-}a[title="CalWORKs"] h2.expandableHeaderInheritProperties {
+   top: -8px;
+left: 11px;
+color: var(--nys-color-ink-reverse);
+float: left;
+width: 400px !important;
+height: 55px;
+position: relative;
+font-size: var(--nys-font-size-2xl);
+text-align: left;
+border-left: 1.5px solid #ebebeb;
+font-family: var(--nys-font-family-sans);
+font-weight: 600;
+line-height: 25.5px;
+text-shadow: 0 0 0 rgba(0,0,0,0) !important;
+padding-left: 9px;
+}
+
+
+a[title="CalWORKs"] h2.expandableHeaderInheritProperties {
   visibility: hidden;
 }a[title="CalFresh"] h2.expandableHeaderInheritProperties:before {
   content: "NYFresh";
@@ -1347,7 +1365,24 @@ form select:not(#resultsPerPage) {
 
 #headerContainer:has(#rightHeaderContainer #headerTopContainer #headerContext div.container) #leftHeaderContainer #headerLogo span:after {
   content: "NYS IES" !important;
-}a[title="CalWORKs"] h2.expandableHeaderInheritProperties:before {
+   top: -8px;
+left: 11px;
+color: var(--nys-color-ink-reverse);
+float: left;
+width: 400px !important;
+height: 55px;
+position: relative;
+font-size: var(--nys-font-size-2xl);
+text-align: left;
+border-left: 1.5px solid #ebebeb;
+font-family: var(--nys-font-family-sans);
+font-weight: 600;
+line-height: 25.5px;
+text-shadow: 0 0 0 rgba(0,0,0,0) !important;
+padding-left: 9px;
+}
+
+a[title="CalWORKs"] h2.expandableHeaderInheritProperties:before {
   content: "NYWorks";
   visibility: visible !important;
 }table.expandableSectionTable td {
