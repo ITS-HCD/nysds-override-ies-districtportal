@@ -744,7 +744,9 @@ button.ui-datepicker-trigger {
 
 button.ui-datepicker-trigger:hover {
   background-color: var(--nys-color-base-weak) !important;
-}#taskNavContainer {
+}
+
+#taskNavContainer {
   border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100);
   margin-top: var(--nys-space-200);
 }
@@ -785,7 +787,8 @@ button.ui-datepicker-trigger:after {
 
 button.ui-datepicker-trigger:hover {
   background-color: var(--nys-color-weak) !important;
-}#headerEnvironment span {
+}
+#headerEnvironment span {
   display: none;
 }div#virtualBotContainer {
   display: none !important;
@@ -793,7 +796,8 @@ button.ui-datepicker-trigger:hover {
 
 .homepageTopRow {
   width: 100% !important;
-}#headerLogo::before {
+}
+#headerLogo::before {
   top: 4px;
   left: 117px;
   width: 90px;
@@ -818,7 +822,8 @@ button.ui-datepicker-trigger:hover {
   position: relative;
   font-size: var(--nys-font-size-md);
   font-family: var(--nys-font-family-agency);
-}.smallButton, .largeButton {
+}
+.smallButton, .largeButton {
   gap: var(--nys-space-100);
   width: fit-content;
   border: solid var(--nys-border-width-md) var(--nys-color-transparent);
@@ -891,17 +896,21 @@ input[type="radio"] {
 
 .fieldCell3Col input[type="text"] {
   display: block;
-}.smallRowHeight span.formLabel {
+}
+.smallRowHeight span.formLabel {
   font-size: var(--nys-font-size-h4);
 }label.formLabel {
   font-weight: var(--nys-font-weight-semibold) !important;
-}.row:has(input.hasDatepicker) {
+}
+.row:has(input.hasDatepicker) {
   padding-top: var(--nys-space-50);
 }span.requiredIcon img {
   display: none;
-}#pageContent form div.block-form-type1 .row div {
+}
+#pageContent form div.block-form-type1 .row div {
   display: none;
-}#pageContent form div.block-form-type1 .row {
+}
+#pageContent form div.block-form-type1 .row {
   gap: var(--nys-space-250);
   height: auto;
   margin: 0 var(--nys-space-2px) var(--nys-space-500);
@@ -910,31 +919,39 @@ input[type="radio"] {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-}.fieldCell10Col {
+}
+.fieldCell10Col {
   width: min-content !important;
   height: -webkit-fill-available;
   display: flex;
   padding-top: var(--nys-space-200);
-}.fieldCell7Col label.formLabel {
+}
+.fieldCell7Col label.formLabel {
   grid-column: 1 / span 4 !important;
 }input.hasDatepicker {
   grid-column: 1 / span 3 !important;
 }button.ui-datepicker-trigger {
   grid-column: 4 !important;
-}.fieldCell7Col select {
+}
+.fieldCell7Col select {
   grid-column: 1 / span 4 !important;
-}.smallButton {
+}
+.smallButton {
   display: block;
   box-sizing: border-box !important;
-}#pageContent form div.block-form-type1 .row div.fieldCell10Col:has(.smallButton) {
+}
+#pageContent form div.block-form-type1 .row div.fieldCell10Col:has(.smallButton) {
   align-content: flex-end;
-}.smallRowHeight div {
+}
+.smallRowHeight div {
   display: none;
-}.smallRowHeight div.fieldCell7Col {
+}
+.smallRowHeight div.fieldCell7Col {
   display: block;
   margin-top: var(--nys-space-100);
   margin-bottom: var(--nys-space-100);
-}.smallRowHeight {
+}
+.smallRowHeight {
   height: auto;
   margin: 0 var(--nys-space-2px);
 }
@@ -974,19 +991,22 @@ form .block-form-type1 div.row .rowFields {
 
 .buttonContainer .right .smallButton {
   width: 100% !important;
-}#pageContent form div.block-form-type1 .row div.fieldCell7Col, #pageContent form div.block-form-type1 .row div.fieldCell10Col, .row .rowFields .fieldCell4Col {
+}
+#pageContent form div.block-form-type1 .row div.fieldCell7Col, #pageContent form div.block-form-type1 .row div.fieldCell10Col, .row .rowFields .fieldCell4Col {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   display: grid;
   font-weight: var(--nys-font-weight-regular);
   grid-row-gap: var(--nys-space-50);
   grid-template-columns: 1fr 1fr 1fr;
-}#pageContent form div.block-form-type1 .row div {
+}
+#pageContent form div.block-form-type1 .row div {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
   flex-direction: row;
-}#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
+}
+#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
   clear: both !important;
   float: none !important;
   width: 100% !important;
@@ -997,7 +1017,8 @@ form .block-form-type1 div.row .rowFields {
   grid-row-gap: var(--nys-space-50);
   justify-items: left;
   grid-template-columns: 1fr;
-}.row .rowFields div {
+}
+.row .rowFields div {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
   display: grid;
@@ -1010,7 +1031,8 @@ a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
   color: var(--nys-color-text-reverse);
   border-color: var(--nys-color-theme-strong);
   background-color: var(--nys-color-theme-strong) !important;
-}.row .rowFields * select * {
+}
+.row .rowFields * select * {
   width: 50% !important;
   grid-column: 1 / span 2 important;
 }
@@ -1062,8 +1084,7 @@ th, .expandableHeaderSectionTag, th a {
   background-color: var(--nys-color-theme-mid) !important;
 }
 
-raw-css-block {
-}form table.tableStyle th, form table.tableStyle td.curvedHeaderTableData {
+form table.tableStyle th, form table.tableStyle td.curvedHeaderTableData {
   padding: var(--nys-space-150) var(--nys-space-200);
   font-size: var(--nys-font-size-ui-md) !important;
   font-weight: var(--nys-font-weight-bold) !important;
@@ -1197,7 +1218,8 @@ td.curvedHeaderTableData,  td.curvedHeaderTableData h2 {
   display: inline !important;
   padding: 0 !important;
   vertical-align: top !important;
-}.fieldCell7Col:has(.requiredIcon) label:after {
+}
+.fieldCell7Col:has(.requiredIcon) label:after {
   left: 2px;
   color: var(--nys-color-danger) !important;
   width: min-content;
@@ -1227,7 +1249,8 @@ span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
   text-decoration: none !important;
 }form table.tableStyle td {
   padding: var(--nys-space-50) var(--nys-space-100);
-}#pageContent form div.block-form-type1 .row div {
+}
+#pageContent form div.block-form-type1 .row div {
   flex-wrap: wrap;
 }form .block:has(fieldCell3Col) {
   padding: 0;
@@ -1235,21 +1258,22 @@ span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
   gap: var(--nys-space-200);
   display: flex;
   flex-wrap: wrap;
-  // outline: 3px solid pink;
+ outline: 3px solid pink;
   align-items: flex-start;
 }form div.block.rowHeight {
   display: flex;
-  // outline: 3px solid red;
+ outline: 3px solid red;
   align-items: flex-start;
   padding-bottom: var(--nys-space-200);
 }label.formLabel {
   width: 100% !important;
   max-width: 100%;
-  // outline: 5px solid yellow;
+ outline: 5px solid yellow;
   box-sizing: border-box;
 }form select:not(#resultsPerPage), #pageContent form div.block-form-type1 .row div select {
   width: fit-content !important;
-}#pageContent form div.block-form-type1 .row, #pageContent form div.block-form-type1 .block {
+}
+#pageContent form div.block-form-type1 .row, #pageContent form div.block-form-type1 .block {
   margin: 0 var(--nys-space-2px) var(--nys-space-200);
 }form div.block.rowHeight:has(.fieldCell3Col) {
   gap: var(--nys-space-200);
@@ -1258,7 +1282,8 @@ span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
 }form div.fieldCell3Col:has(button) input[type="text"] {
   width: calc(100% - 50px) !important;
   max-width: 100%;
-}.fieldCell3Col {
+}
+.fieldCell3Col {
   margin-bottom: var(--nys-space-200) !important;
 }form .block.smallRowHeight {
   flex-direction: row;
@@ -1275,9 +1300,11 @@ span.requiredInst {
 form:not(:has(a)) table.tableStyle {
   border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100) !important;
   border-radius: 0 !important;
-}div#wrapper:has(#wrapperContainer #wrapperBody #pageContentWrapperHomepage) #header #headerLogo span:after {
+}
+
+div#wrapper:has(#wrapperContainer #wrapperBody #pageContentWrapperHomepage) #header #headerLogo span:after {
   content: "NYS Integrated Eligibility System" !important;
-   top: -8px;
+  top: -8px;
 left: 11px;
 color: var(--nys-color-ink-reverse);
 float: left;
@@ -1300,7 +1327,8 @@ a[title="CalWORKs"] h2.expandableHeaderInheritProperties {
 }a[title="CalFresh"] h2.expandableHeaderInheritProperties:before {
   content: "NYFresh";
   visibility: visible !important;
-}#taskNavigation #taskNavContainer > div:has(a) > a span {
+}
+#taskNavigation #taskNavContainer > div:has(a) > a span {
   width: 100%;
   height: 100%;
   padding: var(--nys-space-150) var(--nys-space-200);
@@ -1332,9 +1360,10 @@ form .block {
 form select:not(#resultsPerPage) {
   height: var(--nys-space-500);
   max-width: 100%;
-  // outline: 3px solid cyan;
+ outline: 3px solid cyan;
   box-sizing: border-box;
-}#pageContent form div.block-form-type1 .row {
+}
+#pageContent form div.block-form-type1 .row {
   display: grid;
   justify-content: start;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1342,23 +1371,28 @@ form select:not(#resultsPerPage) {
   max-width: 100%;
   padding-left: 6px;
   margin-bottom: var(--nys-space-500);
-}.rowHeight {
+}
+.rowHeight {
   height: auto;
 }button.ui-datepicker-trigger:after {
   width: var(--nys-size-300);
   height: var(--nys-size-300);
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuMzMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG1hc2s6IHVybCgjbWFzayk7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzFhMWExYTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZGFkOWQ5OwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPG1hc2sgaWQ9Im1hc2siIHg9Ii0zLjUiIHk9Ii0yLjMzIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8ZyBpZD0ibWFzazBfNDY1N181ODY5IiBkYXRhLW5hbWU9Im1hc2swIDQ2NTcgNTg2OSI+CiAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0zIiB4PSItMy41IiB5PSItMi4zMyIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4Ii8+CiAgICAgIDwvZz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0xIj4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIuMzMsMjMuMzNjLS42NCwwLTEuMTktLjIzLTEuNjUtLjY5LS40Ni0uNDYtLjY5LTEuMDEtLjY5LTEuNjVWNC42N2MwLS42NC4yMy0xLjE5LjY5LTEuNjUuNDYtLjQ2LDEuMDEtLjY5LDEuNjUtLjY5aDEuMTd2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDkuMzN2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDEuMTdjLjY0LDAsMS4xOS4yMywxLjY1LjY5LjQ2LjQ2LjY5LDEuMDEuNjksMS42NXYxNi4zM2MwLC42NC0uMjMsMS4xOS0uNjksMS42NS0uNDYuNDYtMS4wMS42OS0xLjY1LjY5SDIuMzNaTTIuMzMsMjFoMTYuMzN2LTExLjY3SDIuMzN2MTEuNjdaTTIuMzMsN2gxNi4zM3YtMi4zM0gyLjMzdjIuMzNaTTEwLjUsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNNS44MywxNGMtLjMzLDAtLjYxLS4xMS0uODMtLjM0cy0uMzQtLjUtLjM0LS44My4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNHMtLjM0LS41LS4zNC0uODMuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODMtLjUuMzQtLjgzLjM0Wk0xMC41LDE4LjY3Yy0uMzMsMC0uNjEtLjExLS44My0uMzQtLjIyLS4yMi0uMzQtLjUtLjM0LS44M3MuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODNjLS4yMi4yMi0uNS4zNC0uODMuMzRaTTUuODMsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFoiLz4KICA8L2c+Cjwvc3ZnPg==) !important;
-}#taskNavigation #taskNavContainer div:has(a) {
+}
+#taskNavigation #taskNavContainer div:has(a) {
   background: none;
-}.taskNavEntrySelected {
+}
+.taskNavEntrySelected {
   color: var(--nys-color-text);
   background: var(--nys-color-theme-faint);
-}#taskNavigation {
+}
+#taskNavigation {
   height: auto !important;
   background: none;
   min-height: 0 !important;
   border-radius: 0 !important;
-}#pageBodyColumn {
+}
+#pageBodyColumn {
   border: none;
   padding-left: 16px !important;
 }
@@ -1375,7 +1409,7 @@ position: relative;
 font-size: var(--nys-font-size-2xl);
 text-align: left;
 border-left: 1.5px solid #ebebeb;
-font-family: var(--nys-font-family-sans);
+font-family: var(--nys-font-family-agency);
 font-weight: 600;
 line-height: 25.5px;
 text-shadow: 0 0 0 rgba(0,0,0,0) !important;
@@ -1387,20 +1421,27 @@ a[title="CalWORKs"] h2.expandableHeaderInheritProperties:before {
   visibility: visible !important;
 }table.expandableSectionTable td {
   max-width: 100%;
-}}@media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
   form .row .fieldCell3Col {
     flex: 1 1 100%;
-}table.expandableSectionTable {
+}
+table.expandableSectionTable {
   width: 100%;
   max-width: 100%;
-}form .ui-datepicker-trigger {
+}
+form .ui-datepicker-trigger {
   align-self: flex-start;
-}@media (max-width: 900px) {
+}}
+@media (max-width: 900px) {
   form .row .fieldCell3Col {
     flex: 1 1 calc(50% - var(--nys-space-200));
-}#taskNavigation #taskNavContainer > div:has(a) > a:last-child span {
+}}
+#taskNavigation #taskNavContainer > div:has(a) > a:last-child span {
   border-bottom: none !important;
-}.taskNavEntry {
+}
+.taskNavEntry {
   border: none !important;
   font-size: var(--nys-font-size-ui-md);
   background: none;
@@ -1447,7 +1488,8 @@ div.fieldCell3Col input, input[type="text" i], select, .formInput {
   line-height: 25.5px;
   text-shadow: 0 0 0 rgba(0,0,0,0) !important;
   padding-left: 9px;
-}#taskNavigation a span {
+}
+#taskNavigation a span {
   color: var(--nys-color-ink);
   display: block;
   padding: var(--nys-space-150) var(--nys-space-200) !important;
@@ -1479,20 +1521,14 @@ img.banner {
   width: 100% !important;
   opacity: 0;
   padding-left: 0 !important;
-}#pageTaskNavColumn {
+}
+#pageTaskNavColumn {
   background-color: var(--nys-theme-surface) !important;
-}#taskNavHeader {
+}
+#taskNavHeader {
   background: none !important;
 }
 
-li.navContainer>a.globalNavTab {
-  width: -webkit-fill-available !important;
-  height: 35px !important;
-  display: flex;
-  padding: 8px 8px 6px !important;
-  line-height: var(--nys-font-lineheight-2xs);
-  flex-direction: column-reverse;
-}
 
 .homepageCountySelector, .homepageCounty {
   display: none;
@@ -1532,3 +1568,14 @@ div.homepageTopRowItem div {
   display: inline-block !important;
   padding-right: 48px !important;
 }
+
+
+li.navContainer>a.globalNavTab {
+  width: -webkit-fill-available !important;
+  height: 33px !important;
+  display: flex;
+  padding: 5px 8px 6px !important;
+  line-height: var(--nys-font-lineheight-2xs);
+  flex-direction: column-reverse;
+}
+
