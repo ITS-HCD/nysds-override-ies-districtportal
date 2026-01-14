@@ -71,7 +71,423 @@
 /* ==========================================================================
    1. RESET & FOUNDATION
    ========================================================================== */
+/* Rebrander Export */
+/* Generated: 2026-01-14T15:03:04.038Z */
+/* Mode: Development (Inlined Variables) */
+/* Custom Overrides: 176 */
 
+/* ==========================================================================
+   NYSDS Base Variables (From Database)
+   Last updated: 2026-01-09T22:12:19.277925+00:00
+   These can be overridden by theme and custom CSS rules below
+   ========================================================================== */
+
+:root {
+  --nys-size-50: 4px;
+  --nys-size-100: 8px;
+  --nys-size-150: 12px;
+  --nys-size-1px: 1px;
+  --nys-size-200: 16px;
+  --nys-size-250: 20px;
+  --nys-size-2px: 2px;
+  --nys-size-300: 24px;
+  --nys-size-400: 32px;
+  --nys-size-450: 36px;
+  --nys-size-500: 40px;
+  --nys-size-550: 44px;
+  --nys-size-600: 48px;
+  --nys-size-700: 56px;
+  --nys-size-800: 64px;
+  --nys-space-50: 4px;
+  --nys-color-ink: var(--nys-color-neutral-900);
+  --nys-gutter-lg: 32px;
+  --nys-gutter-md: 32px;
+  --nys-gutter-sm: 20px;
+  --nys-gutter-xl: 64px;
+  --nys-gutter-xs: 20px;
+  --nys-radius-lg: var(--nys-space-100);
+  --nys-radius-md: var(--nys-space-50);
+  --nys-radius-sm: var(--nys-space-2px);
+  --nys-radius-xl: var(--nys-space-150);
+  --nys-radius-xs: var(--nys-space-1px);
+  --nys-size-1200: 96px;
+  --nys-space-100: 8px;
+  --nys-space-150: 12px;
+  --nys-space-1px: 1px;
+  --nys-space-200: 16px;
+  --nys-space-250: 20px;
+  --nys-space-2px: 2px;
+  --nys-space-300: 24px;
+  --nys-space-400: 32px;
+  --nys-space-500: 40px;
+  --nys-space-600: 48px;
+  --nys-space-700: 56px;
+  --nys-space-800: 64px;
+  --nys-color-base: var(--nys-color-neutral-600);
+  --nys-color-info: var(--nys-color-blue-600);
+  --nys-color-link: var(--nys-color-blue-600);
+  --nys-color-text: var(--nys-color-neutral-900);
+  --nys-radius-xxl: var(--nys-space-200);
+  --nys-space-1200: 96px;
+  --nys-color-black: #000000;
+  --nys-color-focus: var(--nys-color-blue-600);
+  --nys-color-theme: var(--nys-color-state-blue-700);
+  --nys-color-white: #ffffff;
+  --nys-color-accent: var(--nys-color-yellow-400);
+  --nys-color-danger: var(--nys-color-red-600);
+  --nys-color-red-10: #fbf4f4;
+  --nys-color-red-50: #f7eaea;
+  --nys-font-size-h1: var(--nys-font-size-7xl);
+  --nys-font-size-h2: var(--nys-font-size-5xl);
+  --nys-font-size-h3: var(--nys-font-size-4xl);
+  --nys-font-size-h4: var(--nys-font-size-2xl);
+  --nys-font-size-h5: var(--nys-font-size-2xl);
+  --nys-font-size-h6: var(--nys-font-size-lg);
+  --nys-font-size-lg: 1.125rem;
+  --nys-font-size-md: 1rem;
+  --nys-font-size-sm: .875rem;
+  --nys-font-size-xl: 1.25rem;
+  --nys-font-size-xs: .75rem;
+  --nys-icon-size-lg: var(--nys-font-size-lg);
+  --nys-icon-size-md: var(--nys-font-size-md);
+  --nys-icon-size-sm: var(--nys-font-size-sm);
+  --nys-icon-size-xl: var(--nys-font-size-xl);
+  --nys-icon-size-xs: var(--nys-font-size-xs);
+  --nys-radius-round: 1776px;
+  --nys-color-blue-10: #f2f7fc;
+  --nys-color-blue-50: #e5effa;
+  --nys-color-red-100: #f0d5d5;
+  --nys-color-red-200: #e4b3b3;
+  --nys-color-red-300: #d89191;
+  --nys-color-red-400: #cc6f6f;
+  --nys-color-red-500: #c04d4d;
+  --nys-color-red-600: #b52c2c;
+  --nys-color-red-700: #932424;
+  --nys-color-red-800: #721c1c;
+  --nys-color-red-900: #511414;
+  --nys-color-success: var(--nys-color-green-600);
+  --nys-color-surface: var(--nys-color-white);
+  --nys-color-warning: var(--nys-color-yellow-400);
+  --nys-font-size-2xl: 1.375rem;
+  --nys-font-size-2xs: .625rem;
+  --nys-font-size-3xl: 1.5rem;
+  --nys-font-size-4xl: 1.75rem;
+  --nys-font-size-5xl: 2rem;
+  --nys-font-size-6xl: 2.25rem;
+  --nys-font-size-7xl: 2.5rem;
+  --nys-font-size-8xl: 2.75rem;
+  --nys-font-size-9xl: 3.125rem;
+  --nys-form-width-lg: 384px;
+  --nys-form-width-md: 200px;
+  --nys-form-width-sm: 88px;
+  --nys-icon-size-2xl: var(--nys-font-size-2xl);
+  --nys-icon-size-3xl: var(--nys-font-size-3xl);
+  --nys-icon-size-4xl: var(--nys-font-size-4xl);
+  --nys-icon-size-5xl: var(--nys-font-size-5xl);
+  --nys-shadow-raised: 0 4px 6px -1px var(--nys-color-black-transparent-100), 0 4px 6px -1px var(--nys-color-black-transparent-50);
+  --nys-color-blue-100: #cce0f6;
+  --nys-color-blue-200: #a3c2ee;
+  --nys-color-blue-300: #7aa5e7;
+  --nys-color-blue-400: #5187df;
+  --nys-color-blue-500: #286ad8;
+  --nys-color-blue-600: #004dd1;
+  --nys-color-blue-700: #003ba1;
+  --nys-color-blue-800: #002971;
+  --nys-color-blue-900: #001842;
+  --nys-color-green-10: #f3f8f4;
+  --nys-color-green-50: #e8f1ea;
+  --nys-font-family-ui: var(--nys-font-family-sans);
+  --nys-shadow-overlay: 0 25px 50px -12px var(--nys-color-black-transparent-300);
+  --nys-border-width-lg: var(--nys-space-50);
+  --nys-border-width-md: var(--nys-space-2px);
+  --nys-border-width-sm: var(--nys-space-1px);
+  --nys-color-base-weak: var(--nys-color-neutral-10);
+  --nys-color-emergency: var(--nys-color-red-800);
+  --nys-color-green-100: #d2e3d5;
+  --nys-color-green-200: #aecdb3;
+  --nys-color-green-300: #8ab792;
+  --nys-color-green-400: #66a170;
+  --nys-color-green-500: #428b4f;
+  --nys-color-green-600: #1e752e;
+  --nys-color-green-700: #165923;
+  --nys-color-green-800: #0f3d18;
+  --nys-color-green-900: #08210d;
+  --nys-color-info-weak: var(--nys-color-blue-50);
+  --nys-color-text-weak: var(--nys-color-neutral-700);
+  --nys-color-theme-mid: var(--nys-color-state-blue-500);
+  --nys-color-yellow-10: #fefcf2;
+  --nys-color-yellow-50: #fefae5;
+  --nys-font-family-alt: Oswald, Arial, sans-serif;
+  --nys-font-size-ui-lg: var(--nys-font-size-lg);
+  --nys-font-size-ui-md: var(--nys-font-size-md);
+  --nys-font-size-ui-sm: var(--nys-font-size-sm);
+  --nys-font-size-ui-xl: var(--nys-font-size-xl);
+  --nys-font-size-ui-xs: var(--nys-font-size-xs);
+  --nys-color-neutral-10: #f6f6f6;
+  --nys-color-neutral-50: #ededed;
+  --nys-color-theme-weak: var(--nys-color-state-blue-100);
+  --nys-color-yellow-100: #fef5cc;
+  --nys-color-yellow-200: #fce888;
+  --nys-color-yellow-300: #fbdb44;
+  --nys-color-yellow-400: #face00;
+  --nys-color-yellow-500: #d6b000;
+  --nys-color-yellow-600: #b29200;
+  --nys-color-yellow-700: #8e7500;
+  --nys-color-yellow-800: #6a5700;
+  --nys-color-yellow-900: #463a00;
+  --nys-font-family-body: var(--nys-font-family-sans);
+  --nys-font-family-sans: Proxima Nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --nys-font-weight-bold: 700;
+  --nys-font-weight-thin: 100;
+  --nys-color-danger-weak: var(--nys-color-red-50);
+  --nys-color-info-strong: var(--nys-color-blue-800);
+  --nys-color-ink-reverse: var(--nys-color-white);
+  --nys-color-link-strong: var(--nys-color-blue-700);
+  --nys-color-neutral-100: #d0d0ce;
+  --nys-color-neutral-200: #bec0c1;
+  --nys-color-neutral-300: #a7a9ab;
+  --nys-color-neutral-400: #909395;
+  --nys-color-neutral-500: #797c7f;
+  --nys-color-neutral-600: #62666a;
+  --nys-color-neutral-700: #4a4d4f;
+  --nys-color-neutral-800: #323435;
+  --nys-color-neutral-900: #1b1b1b;
+  --nys-color-text-weaker: var(--nys-color-neutral-500);
+  --nys-color-theme-faint: var(--nys-color-state-blue-10);
+  --nys-color-transparent: #ffffff00;
+  --nys-font-family-serif: Noto Serif, Georgia, Cambria, Times New Roman, Times, serif;
+  --nys-font-size-body-md: var(--nys-font-size-md);
+  --nys-font-size-body-sm: var(--nys-font-size-sm);
+  --nys-font-size-body-xs: var(--nys-font-size-xs);
+  --nys-font-weight-black: 900;
+  --nys-font-weight-light: 300;
+  --nys-color-link-neutral: var(--nys-color-neutral-900);
+  --nys-color-link-reverse: var(--nys-color-neutral-300);
+  --nys-color-success-weak: var(--nys-color-green-50);
+  --nys-color-text-reverse: var(--nys-color-white);
+  --nys-color-text-weakest: var(--nys-color-neutral-200);
+  --nys-color-theme-strong: var(--nys-color-state-blue-800);
+  --nys-color-theme-weaker: var(--nys-color-state-blue-50);
+  --nys-color-warning-weak: var(--nys-color-yellow-50);
+  --nys-font-family-agency: D Sari, Arial, sans-serif;
+  --nys-font-lineheight-h1: 40px;
+  --nys-font-lineheight-h2: 36px;
+  --nys-font-lineheight-h3: 32px;
+  --nys-font-lineheight-h4: 32px;
+  --nys-font-lineheight-h5: 28px;
+  --nys-font-lineheight-h6: 28px;
+  --nys-font-lineheight-lg: 28px;
+  --nys-font-lineheight-md: 25px;
+  --nys-font-lineheight-sm: 22px;
+  --nys-font-lineheight-xl: 31px;
+  --nys-font-lineheight-xs: 21px;
+  --nys-font-weight-medium: 500;
+  --nys-color-danger-strong: var(--nys-color-red-800);
+  --nys-color-state-blue-10: #f7fafd;
+  --nys-color-state-blue-50: #eff6fb;
+  --nys-color-text-disabled: var(--nys-color-neutral-200);
+  --nys-font-family-display: var(--nys-font-family-sans);
+  --nys-font-family-heading: var(--nys-font-family-sans);
+  --nys-font-lineheight-2xl: 39px;
+  --nys-font-lineheight-2xs: 18px;
+  --nys-font-lineheight-3xl: 45px;
+  --nys-font-lineheight-4xl: 57px;
+  --nys-font-size-agency-lg: var(--nys-font-size-lg);
+  --nys-font-size-agency-md: var(--nys-font-size-md);
+  --nys-font-size-agency-xl: var(--nys-font-size-2xl);
+  --nys-font-weight-regular: 400;
+  --nys-color-emergency-weak: var(--nys-color-red-300);
+  --nys-color-link-strongest: var(--nys-color-blue-800);
+  --nys-color-local-brown-10: #f6f5f4;
+  --nys-color-local-brown-50: #eeebe9;
+  --nys-color-safety-gray-10: #f2f5f6;
+  --nys-color-safety-gray-50: #e5ebed;
+  --nys-color-state-blue-100: #cddde9;
+  --nys-color-state-blue-200: #abc4d8;
+  --nys-color-state-blue-300: #89abc7;
+  --nys-color-state-blue-400: #6792b6;
+  --nys-color-state-blue-500: #457aa5;
+  --nys-color-state-blue-600: #2d618c;
+  --nys-color-state-blue-700: #154973;
+  --nys-color-state-blue-800: #0e324f;
+  --nys-color-state-blue-900: #081b2b;
+  --nys-color-success-strong: var(--nys-color-green-800);
+  --nys-color-surface-raised: var(--nys-color-neutral-10);
+  --nys-color-theme-stronger: var(--nys-color-state-blue-900);
+  --nys-color-warning-strong: var(--nys-color-yellow-800);
+  --nys-font-letterspacing-0: 0rem;
+  --nys-font-size-display-lg: var(--nys-font-size-8xl);
+  --nys-font-size-display-md: var(--nys-font-size-7xl);
+  --nys-font-size-display-sm: var(--nys-font-size-6xl);
+  --nys-font-size-display-xl: var(--nys-font-size-9xl);
+  --nys-font-weight-semibold: 600;
+  --nys-color-admin-orange-10: #fcf4ef;
+  --nys-color-admin-orange-50: #f9e9e0;
+  --nys-color-local-brown-100: #ddd7d3;
+  --nys-color-local-brown-200: #c3b9b3;
+  --nys-color-local-brown-300: #a99b94;
+  --nys-color-local-brown-400: #8f7d75;
+  --nys-color-local-brown-500: #745e55;
+  --nys-color-local-brown-600: #5a4036;
+  --nys-color-local-brown-700: #402217;
+  --nys-color-local-brown-800: #2a160f;
+  --nys-color-local-brown-900: #150b07;
+  --nys-color-safety-gray-100: #cdd6da;
+  --nys-color-safety-gray-200: #b5c1c8;
+  --nys-color-safety-gray-300: #9dacb5;
+  --nys-color-safety-gray-400: #8697a3;
+  --nys-color-safety-gray-500: #6f8391;
+  --nys-color-safety-gray-600: #59707f;
+  --nys-color-safety-gray-700: #435d6e;
+  --nys-color-safety-gray-800: #30424f;
+  --nys-color-safety-gray-900: #1d2830;
+  --nys-color-surface-reverse: var(--nys-color-neutral-900);
+  --nys-font-family-monospace: Roboto Mono Web, Bitstream Vera Sans Mono, Consolas, Courier, monospace;
+  --nys-font-letterspacing-h1: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-h2: var(--nys-font-letterspacing-100);
+  --nys-font-letterspacing-h3: var(--nys-font-letterspacing-100);
+  --nys-font-letterspacing-h4: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-h5: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-h6: var(--nys-font-letterspacing-300);
+  --nys-font-lineheight-ui-lg: 28px;
+  --nys-font-lineheight-ui-md: 24px;
+  --nys-font-lineheight-ui-sm: 24px;
+  --nys-font-lineheight-ui-xl: 28px;
+  --nys-font-lineheight-ui-xs: 20px;
+  --nys-font-weight-extrabold: 800;
+  --nys-color-admin-orange-100: #f3d3c1;
+  --nys-color-admin-orange-200: #e7b59c;
+  --nys-color-admin-orange-300: #db9778;
+  --nys-color-admin-orange-400: #d07954;
+  --nys-color-admin-orange-500: #c0623b;
+  --nys-color-admin-orange-600: #b14b22;
+  --nys-color-admin-orange-700: #a2350a;
+  --nys-color-admin-orange-800: #752607;
+  --nys-color-admin-orange-900: #481704;
+  --nys-color-business-teal-10: #f2f6f6;
+  --nys-color-business-teal-50: #e5eded;
+  --nys-color-health-purple-10: #f4f4f8;
+  --nys-color-health-purple-50: #e9eaf1;
+  --nys-font-letterspacing-100: .001rem;
+  --nys-font-letterspacing-200: .001rem;
+  --nys-font-letterspacing-300: .002rem;
+  --nys-font-letterspacing-400: .003rem;
+  --nys-font-letterspacing-500: .003rem;
+  --nys-font-weight-extralight: 200;
+  --nys-color-business-teal-100: #c5d8d9;
+  --nys-color-business-teal-200: #a5c3c5;
+  --nys-color-business-teal-300: #85aeb1;
+  --nys-color-business-teal-400: #65999e;
+  --nys-color-business-teal-500: #387b82;
+  --nys-color-business-teal-600: #0b5d66;
+  --nys-color-business-teal-700: #084b52;
+  --nys-color-business-teal-800: #05393f;
+  --nys-color-business-teal-900: #02272c;
+  --nys-color-health-purple-100: #d3d5e3;
+  --nys-color-health-purple-200: #bbb8cc;
+  --nys-color-health-purple-300: #a39bb6;
+  --nys-color-health-purple-400: #8b7fa0;
+  --nys-color-health-purple-500: #736289;
+  --nys-color-health-purple-600: #5b4573;
+  --nys-color-health-purple-700: #43285d;
+  --nys-color-health-purple-800: #2c1a3e;
+  --nys-color-health-purple-900: #160d1f;
+  --nys-color-text-reverse-weak: var(--nys-color-neutral-100);
+  --nys-font-lineheight-body-md: 24px;
+  --nys-font-lineheight-body-sm: 24px;
+  --nys-font-lineheight-body-xs: 20px;
+  --nys-font-letterspacing-ui-lg: var(--nys-font-letterspacing-300);
+  --nys-font-letterspacing-ui-md: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-ui-sm: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-ui-xl: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-ui-xs: var(--nys-font-letterspacing-600);
+  --nys-color-link-reverse-strong: var(--nys-color-neutral-50);
+  --nys-color-text-reverse-weaker: var(--nys-color-neutral-200);
+  --nys-color-black-transparent-50: #00000003;
+  --nys-color-environment-green-10: #f5f7f6;
+  --nys-color-environment-green-50: #ecf0ee;
+  --nys-color-link-reverse-neutral: var(--nys-color-white);
+  --nys-color-white-transparent-50: #ffffff03;
+  --nys-font-letterspacing-body-md: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-body-sm: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-body-xs: var(--nys-font-letterspacing-600);
+  --nys-font-lineheight-display-lg: 52px;
+  --nys-font-lineheight-display-md: 48px;
+  --nys-font-lineheight-display-sm: 44px;
+  --nys-font-lineheight-display-xl: 60px;
+  --nys-color-black-transparent-100: #0000001a;
+  --nys-color-black-transparent-200: #00000033;
+  --nys-color-black-transparent-300: #0000004d;
+  --nys-color-black-transparent-400: #00000066;
+  --nys-color-black-transparent-500: #00000080;
+  --nys-color-black-transparent-600: #00000099;
+  --nys-color-black-transparent-700: #000000b3;
+  --nys-color-black-transparent-800: #000000cc;
+  --nys-color-black-transparent-900: #000000e6;
+  --nys-color-environment-green-100: #d9e1dd;
+  --nys-color-environment-green-200: #bac6bf;
+  --nys-color-environment-green-300: #9caba1;
+  --nys-color-environment-green-400: #7e9084;
+  --nys-color-environment-green-500: #5f7566;
+  --nys-color-environment-green-600: #415a48;
+  --nys-color-environment-green-700: #233f2b;
+  --nys-color-environment-green-800: #172a1c;
+  --nys-color-environment-green-900: #0b150e;
+  --nys-color-text-reverse-disabled: var(--nys-color-neutral-600);
+  --nys-color-white-transparent-100: #ffffff1a;
+  --nys-color-white-transparent-200: #ffffff33;
+  --nys-color-white-transparent-300: #ffffff4d;
+  --nys-color-white-transparent-400: #ffffff66;
+  --nys-color-white-transparent-500: #ffffff80;
+  --nys-color-white-transparent-600: #ffffff99;
+  --nys-color-white-transparent-700: #ffffffb3;
+  --nys-color-white-transparent-800: #ffffffcc;
+  --nys-color-white-transparent-900: #ffffffe6;
+  --nys-color-link-reverse-strongest: var(--nys-color-white);
+  --nys-color-transportation-blue-10: #f4f8fa;
+  --nys-color-transportation-blue-50: #eaf2f5;
+  --nys-color-transportation-blue-100: #d5e5eb;
+  --nys-color-transportation-blue-200: #b2ccd9;
+  --nys-color-transportation-blue-300: #90b3c7;
+  --nys-color-transportation-blue-400: #6e9ab5;
+  --nys-color-transportation-blue-500: #4d83a4;
+  --nys-color-transportation-blue-600: #2c6c93;
+  --nys-color-transportation-blue-700: #0b5583;
+  --nys-color-transportation-blue-800: #093a5c;
+  --nys-color-transportation-blue-900: #072036;
+  --nys-font-letterspacing-display-lg: var(--nys-font-letterspacing-negative-100);
+  --nys-font-letterspacing-display-md: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-display-sm: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-display-xl: var(--nys-font-letterspacing-negative-100);
+  --nys-font-letterspacing-negative-100: -.01rem;
+  --nys-font-letterspacing-negative-200: -.02rem;
+}
+
+/* ==========================================================================
+   Custom Overrides
+   These override NYSDS variables and apply custom styling
+   ========================================================================== */
+
+/* ========================================
+   URL Pattern: *
+   ======================================== */
+
+/* Component: button */
+/* Notes: BUTTON */
+.smallButton, .largeButton {
+  gap: var(--nys-space-100);
+  width: fit-content;
+  border: solid var(--nys-border-width-md) var(--nys-color-transparent);
+  padding: 6px 14px !important;
+  background: var(--nys-color-theme) !important;
+  max-height: var(--nys-size-500);
+  align-items: center;
+  font-family: var(--nys-font-family-sans);
+  font-weight: var(--nys-font-weight-semibold);
+  line-height: var(--nys-font-lineheight-md);
+  border-radius: var(--nys-radius-xl);
+  justify-content: center;
+}
 
 /* Component: custom */
 .homepageImage {
@@ -103,19 +519,12 @@ td.formInput.textAlignRight {
   padding-top: 12px !important;
 }
 
-.homepageTopRowHeader h2 {
-  color: white;
-  margin: 0;
-  padding: 16px !important;
-  font-size: 22px;
-  background: #736289;
-  font-weight: 300;
-  border-radius: 0;
-  letter-spacing: 0.016px;
-}
-
 #headerUtility a img {
   display: none !important;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 div.fieldCell3Col input:focus, input.formInput:focus {
@@ -170,11 +579,6 @@ table.resultsPaginationContent {
   background-color: #ffffff !important;
 }
 
-.homepageTopRowItem {
-  padding: 16px 16px 2px !important;
-  margin-bottom: 16px;
-}
-
 div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
   display: none;
 }
@@ -186,17 +590,6 @@ table.resultsPaginationContent table.tableStyle th {
   background-color: white !important;
 }
 
-img.banner:after {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  z-index: 9999;
-  position: absolute;
-  background-color: var(--nys-color-theme-weak);
-}
-
 .resultsPaginationHeader h2 {
   color: var(--nys-color-text-reverse);
   padding: 8px 16px;
@@ -205,140 +598,6 @@ img.banner:after {
 
 #taskNavHeader {
   height: 60px !important;
-}
-
-.homepageRowLeft .homepageLeftItem:nth-child(2) {
-  display: none !important;
-}
-
-/* Component: general */
-a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
-  color: var(--nys-color-text-reverse);
-  border-color: var(--nys-color-theme-strong);
-  background-color: var(--nys-color-theme-strong) !important;
-}
-
-.homepageImage {
-  width: 579px !important;
-  border-color: #ededed !important;
-  border-width: 2px !important;
-  margin-bottom: 24px !important;
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-#headerBottomContainer {
-  height: 100%;
-}
-
-#pageBodyColumn {
-  border-left: 1px solid black;
-  vertical-align: top;
-  background-color: var(--nys-color-surface);
-}
-
-#wrapperBody {
-  border: 0 !important;
-  background: var(--nys-color-surface) !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none !important;
-}
-
-th, th a, .expandableHeaderSectionTag, .expandableHeaderSectionTag a.white {
-  color: #1b1b1b !important;
-  border: 0 !important;
-}
-
-th, .expandableHeaderSectionTag, th a {
-  background: #ededed;
-}
-
-div.fieldCell3Col input:focus {
-  caret-color: var(--nys-color-focus);
-  border-color: var(--nys-color-focus);
-  outline-color: var(--nys-color-focus);
-}
-
-#header {
-  height: 102px !important;
-  background: var(--nys-color-theme) !important;
-  padding-bottom: 0 !important;
-}
-
-img.banner {
-  width: 100% !important;
-  opacity: 0;
-  padding-left: 0 !important;
-}
-
-/* Notes: li.navContainer>a.globalNavTab {
-    width: -webkit-fill-available !important;
-    padding: 8px 8px 6px !important;
-    height: 35px !important;
-    display: flex;
-    flex-direction: column-reverse;
-    line-height: var(--nys-font-lineheight-2xs);
-} */
-li.navContainer>a.globalNavTab {
-  width: -webkit-fill-available !important;
-  height: 35px !important;
-  display: flex;
-  padding: 8px 8px 6px !important;
-  line-height: var(--nys-font-lineheight-2xs);
-  flex-direction: column-reverse;
-}
-
-.homepageCountySelector {
-  display: none;
-}
-
-table.tableStyle td {
-  padding: 10px 20px;
-}
-
-p.imageText {
-  left: 36px !important;
-}
-
-#wrapperContainer {
-  margin-top: 102px !important;
-}
-
-#headerEnvironment {
-  top: -16px;
-  position: relative;
-  vertical-align: middle;
-}
-
-.block-form-type1, .block-form-type3 {
-  border: none;
-  border-radius: 0;
-  background-color: var(--nys-color-surface);
-}
-
-div.homepageTopRowItem div:last-child {
-  width: fit-content;
-  padding-right: 0;
-}
-
-div.homepageTopRowItem div {
-  width: auto !important;
-  display: inline-block !important;
-  padding-right: 48px !important;
-}
-
-table.tableStyle, table.tableStyle.expandableSectionTable {
-  border-color: #ededed;
-  border-width: 2px;
-  border-radius: 4px 4px 0 0;
-  margin-bottom: 24px;
-  background-color: #ffffff;
-  -moz-border-radius: 4px 4px 0 0;
-  -webkit-border-radius: 4px 4px 0 0;
 }
 
 h2.expandableHeaderInheritProperties, th a.white, th {
@@ -352,6 +611,8 @@ div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
 }
 
 #pageContentHomepage {
+  width: 100% !important;
+  overflow-x: visible !important;
   font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
@@ -379,7 +640,7 @@ label.formLabel {
 }
 
 .homepageTopRowItem {
-  padding: 16px 16px 2px !important;
+  padding: 16px 16px 2px 4px !important;
   margin-bottom: 16px;
 }
 
@@ -390,7 +651,7 @@ label.formLabel {
 }
 
 th:hover, th a:hover, .expandableHeaderSectionTag:hover, .expandableHeaderSectionTag a.white:hover {
-  background-color: var(--nys-color-neutral-100) !important;
+  background-color: var(--nys-color-neutral-50) !important;
 }
 
 #pageContentWrapperHomepage {
@@ -408,16 +669,6 @@ th, .block-title, .block-footer {
   text-align: left;
   padding-left: 16px;
   vertical-align: middle;
-}
-
-.bodyBackground:before {
-  right: 0;
-  width: 100%;
-  height: 65px;
-  content: "";
-  z-index: 0 !important;
-  position: absolute;
-  background: var(--nys-color-theme-mid) !important;
 }
 
 p.imageText:before {
@@ -456,10 +707,6 @@ span#logo {
   margin-left: 16px;
 }
 
-#wrapper, #headerContainer {
-  margin-left: 70px !important;
-}
-
 a {
   color: var(--nys-color-link);
 }
@@ -479,22 +726,6 @@ a:hover {
   letter-spacing: var(--nys-font-letterspacing-h2);
 }
 
-div.fieldCell3Col input, input[type="text" i], select {
-  color: var(--nys-color-text);
-  height: var(--nys-space-500);
-  padding: var(--nys-space-100);
-  font-size: var(--nys-font-size-md);
-  background: var(--nys-color-surface);
-  box-sizing: border-box;
-  font-family: var(--nys-font-family-sans);
-  font-weight: var(--nys-font-weight-regular);
-  line-height: var(--nys-font-lineheight-md);
-  border-color: var(--nys-color-neutral-400);
-  border-width: var(--nys-border-width-sm);
-  border-radius: var(--nys-space-50);
-  letter-spacing: var(--nys-font-letterspacing-body-md);
-}
-
 button.ui-datepicker-trigger img {
   opacity: 0;
 }
@@ -507,9 +738,6 @@ button.ui-datepicker-trigger:after {
   content: "";
   display: block;
   position: relative;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuMzMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG1hc2s6IHVybCgjbWFzayk7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzFhMWExYTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZGFkOWQ5OwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPG1hc2sgaWQ9Im1hc2siIHg9Ii0zLjUiIHk9Ii0yLjMzIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8ZyBpZD0ibWFzazBfNDY1N181ODY5IiBkYXRhLW5hbWU9Im1hc2swIDQ2NTcgNTg2OSI+CiAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0zIiB4PSItMy41IiB5PSItMi4zMyIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4Ii8+CiAgICAgIDwvZz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0xIj4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIuMzMsMjMuMzNjLS42NCwwLTEuMTktLjIzLTEuNjUtLjY5LS40Ni0uNDYtLjY5LTEuMDEtLjY5LTEuNjVWNC42N2MwLS42NC4yMy0xLjE5LjY5LTEuNjUuNDYtLjQ2LDEuMDEtLjY5LDEuNjUtLjY5aDEuMTd2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDkuMzN2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDEuMTdjLjY0LDAsMS4xOS4yMywxLjY1LjY5LjQ2LjQ2LjY5LDEuMDEuNjksMS42NXYxNi4zM2MwLC42NC0uMjMsMS4xOS0uNjksMS42NS0uNDYuNDYtMS4wMS42OS0xLjY1LjY5SDIuMzNaTTIuMzMsMjFoMTYuMzN2LTExLjY3SDIuMzN2MTEuNjdaTTIuMzMsN2gxNi4zM3YtMi4zM0gyLjMzdjIuMzNaTTEwLjUsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNNS44MywxNGMtLjMzLDAtLjYxLS4xMS0uODMtLjM0cy0uMzQtLjUtLjM0LS44My4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNHMtLjM0LS41LS4zNC0uODMuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODMtLjUuMzQtLjgzLjM0Wk0xMC41LDE4LjY3Yy0uMzMsMC0uNjEtLjExLS44My0uMzQtLjIyLS4yMi0uMzQtLjUtLjM0LS44M3MuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODNjLS4yMi4yMi0uNS4zNC0uODMuMzRaTTUuODMsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFoiLz4KICA8L2c+Cjwvc3ZnPg==); };
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 button.ui-datepicker-trigger {
@@ -523,6 +751,12 @@ button.ui-datepicker-trigger {
 
 button.ui-datepicker-trigger:hover {
   background-color: var(--nys-color-base-weak) !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavContainer {
+  border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100);
+  margin-top: var(--nys-space-200);
 }
 
 h2.expandableHeaderInheritProperties, th a.white, th {
@@ -557,20 +791,1183 @@ button.ui-datepicker-trigger:hover {
   background-color: var(--nys-color-weak) !important;
 }
 
-/* Notes: BUTTON */
-.smallButton, .largeButton {
-  gap: var(--nys-space-100);
-  width: fit-content;
-  border: solid var(--nys-border-width-md) var(--nys-color-transparent);
-  padding: 6px 14px !important;
+/* Notes: hiding bot */
+div#virtualBotContainer {
+  display: none !important;
+}
+
+.homepageTopRow {
+  width: 100% !important;
+}
+
+br {
+  display: none !important;
+}
+
+#header {
+  height: 87px !important;
   background: var(--nys-color-theme) !important;
-  max-height: var(--nys-size-500);
+  padding-bottom: 0 !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.smallRowHeight span.formLabel {
+  font-size: var(--nys-font-size-h4);
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+label.formLabel {
+  font-weight: var(--nys-font-weight-semibold) !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.row:has(input.hasDatepicker) {
+  padding-top: var(--nys-space-50);
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+#pageContent form div.block-form-type1 .row div {
+  display: none;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+#pageContent form div.block-form-type1 .row {
+  gap: var(--nys-space-250);
+  height: auto;
+  margin: 0 var(--nys-space-2px) var(--nys-space-500);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.fieldCell10Col {
+  width: min-content !important;
+  height: -webkit-fill-available;
+  display: flex;
+  padding-top: var(--nys-space-200);
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.fieldCell7Col label.formLabel {
+  grid-column: 1 / span 4 !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+input.hasDatepicker {
+  grid-column: 1 / span 3 !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+button.ui-datepicker-trigger {
+  grid-column: 4 !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.fieldCell7Col select {
+  grid-column: 1 / span 4 !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.smallButton {
+  display: block;
+  box-sizing: border-box !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+#pageContent form div.block-form-type1 .row div.fieldCell10Col:has(.smallButton) {
+  align-content: flex-end;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.smallRowHeight div {
+  display: none;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.smallRowHeight div.fieldCell7Col {
+  display: block;
+  margin-top: var(--nys-space-100);
+  margin-bottom: var(--nys-space-100);
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.smallRowHeight {
+  height: auto;
+  margin: 0 var(--nys-space-2px);
+}
+
+.rowFields {
+  display: flex !important;
+  flex-direction: row;
+}
+
+form .block-form-type1 div.row .rowFields {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+}
+
+#pageContent form div.block-form-type1 .row div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: row;
+}
+
+.buttonContainer .right * {
+  margin-bottom: 0px;
+}
+
+.buttonContainer .right:last-child {
+  gap: 16px;
+  border: 1px solid green;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: flex-end;
+  margin-bottom: 0 !important;
+  flex-direction: column;
+}
+
+.buttonContainer .right .smallButton {
+  width: 100% !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+#pageContent form div.block-form-type1 .row div.fieldCell7Col, #pageContent form div.block-form-type1 .row div.fieldCell10Col, .row .rowFields .fieldCell4Col {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: grid;
+  font-weight: var(--nys-font-weight-regular);
+  grid-row-gap: var(--nys-space-50);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Notes: cant figure why select boxes won't shrink */
+#pageContent form div.block-form-type1 .row div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+/* Notes: cant figure why select boxes won't shrink */
+#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
+  clear: both !important;
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  display: grid !important;
+  padding: 0 !important;
+  align-items: flex-start;
+  grid-row-gap: var(--nys-space-50);
+  justify-items: left;
+  grid-template-columns: 1fr;
+}
+
+/* Notes: cant figure why select boxes won't shrink */
+.row .rowFields div {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: grid;
+  font-weight: var(--nys-font-weight-regular);
+  grid-row-gap: var(--nys-space-50);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
+  color: var(--nys-color-text-reverse);
+  border-color: var(--nys-color-theme-strong);
+  background-color: var(--nys-color-theme-strong) !important;
+}
+
+/* Notes: cant figure why select boxes won't shrink */
+.row .rowFields * select * {
+  width: 50% !important;
+  grid-column: 1 / span 2 important;
+}
+
+.homepageImage {
+  width: 579px !important;
+  border-color: #ededed !important;
+  border-width: 2px !important;
+  margin-bottom: 24px !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+#headerBottomContainer {
+  height: 100%;
+}
+
+#pageBodyColumn {
+  border-left: 1px solid black;
+  vertical-align: top;
+  background-color: var(--nys-color-surface);
+}
+
+#wrapperBody {
+  border: 0 !important;
+  background: var(--nys-color-surface) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none !important;
+}
+
+th, th a, .expandableHeaderSectionTag, .expandableHeaderSectionTag a.white {
+  color: #1b1b1b !important;
+  border: 0 !important;
+}
+
+th, .expandableHeaderSectionTag, th a {
+  background: var(--nys-color-neutral-50);
+}
+
+raw-css-block {
+}
+
+table.tableStyle, table.tableStyle.expandableSectionTable {
+  border-color: var(--nys-color-neutral-100);
+  border-width: var(--nys-border-width-sm);
+  border-radius: 0 !important;
+  margin-bottom: var(--nys-space-200);
+  background-color: var(--nys-color-surface);
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.buttonContainer > :last-child {
+  margin-top: var(--nys-space-50);
+}
+
+form.taskNavCaseSearchForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+form.taskNavCaseSearchForm label {
+  width: 100% !important;
+}
+
+input#caseNumberTaskNav {
+  margin-right: var(--nys-space-150);
+}
+
+.buttonContainer {
+  gap: var(--nys-space-100);
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#taskNavCaseSearch {
+  font-size: var(--nys-font-size-sm);
+  padding-top: var(--nys-size-150);
+  padding-left: var(--nys-size-200);
+  border-bottom: 1px solid var(--nys-color-neutral-500);
+  padding-right: var(--nys-size-200);
+  padding-bottom: var(--nys-size-150);
+  background-color: unset;
+}
+
+#label_resultsPerPage {
+  font-size: var(--nys-font-size-h6);
+  font-weight: var(--nys-font-weight-semibold);
+  letter-spacing: var(--nys-font-letterspacing-h6);
+}
+
+/* Notes: adjusting the forms made of tables so the labels are right */
+form table.tableStyle td:first-of-type {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Notes: adjusting the forms made of tables so the labels are right */
+form table.tableStyle td:first-of-type a {
+  margin-left: var(--nys-space-150);
+}
+
+/* Notes: adjusting the forms made of tables so the labels are right */
+form table.tableStyle td {
+  padding: var(--nys-space-50) var(--nys-space-100);
+}
+
+/* Notes: forms when they are tables, mostly */
+#pageContent form div.block-form-type1 .row div {
+  flex-wrap: wrap;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .block:has(fieldCell3Col) {
+  padding: 0;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .row {
+  gap: var(--nys-space-200);
+  display: flex;
+  flex-wrap: wrap;
+  // outline: 3px solid pink;
+  align-items: flex-start;
+}
+
+/* Notes: forms when they are tables, mostly */
+form div.block.rowHeight {
+  display: flex;
+  // outline: 3px solid red;
+  align-items: flex-start;
+  padding-bottom: var(--nys-space-200);
+}
+
+/* Notes: forms when they are tables, mostly */
+label.formLabel {
+  width: 100% !important;
+  max-width: 100%;
+  // outline: 5px solid yellow;
+  box-sizing: border-box;
+}
+
+/* Notes: forms when they are tables, mostly */
+form select:not(#resultsPerPage), #pageContent form div.block-form-type1 .row div select {
+  width: fit-content !important;
+}
+
+/* Notes: forms when they are tables, mostly */
+#pageContent form div.block-form-type1 .row, #pageContent form div.block-form-type1 .block {
+  margin: 0 var(--nys-space-2px) var(--nys-space-200);
+}
+
+/* Notes: forms when they are tables, mostly */
+form div.block.rowHeight:has(.fieldCell3Col) {
+  gap: var(--nys-space-200);
+  flex-direction: row;
+  padding-bottom: 0;
+}
+
+/* Notes: forms when they are tables, mostly */
+form div.fieldCell3Col:has(button) input[type="text"] {
+  width: calc(100% - 50px) !important;
+  max-width: 100%;
+}
+
+/* Notes: forms when they are tables, mostly */
+.fieldCell3Col {
+  margin-bottom: var(--nys-space-200) !important;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .block.smallRowHeight {
+  flex-direction: row;
+}
+
+/* Notes: adjusting the forms made of tables so the labels are right */
+form table.tableStyle td.formLabel {
+  margin-top: var(--nys-space-300);
+  vertical-align: bottom;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .fieldCell3Col,
+form .block {
+  flex: 1 1 0;
+  display: flex;
+  min-width: 0;
+  margin-bottom: var(--nys-space-200);
+  flex-direction: column;
+}
+
+/* Notes: forms when they are tables, mostly */
+form select#state {
+  width: fit-content !important;
+}
+
+/* Notes: forms when they are tables, mostly */
+form label {
+  display: block;
+  text-align: left;
+  font-weight: var(--nys-font-weight-semibold);
+  white-space: normal;
+  margin-bottom: var(--nys-space-50);
+}
+
+/* Notes: forms when they are tables, mostly */
+form input[type="text"],
+form select:not(#resultsPerPage) {
+  height: var(--nys-space-500);
+  max-width: 100%;
+  // outline: 3px solid cyan;
+  box-sizing: border-box;
+}
+
+/* Notes: forms when they are tables, mostly */
+#pageContent form div.block-form-type1 .row {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .block {
+  max-width: 100%;
+  padding-left: 6px;
+  margin-bottom: var(--nys-space-500);
+}
+
+/* Notes: forms when they are tables, mostly */
+.rowHeight {
+  height: auto;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer div:has(a) {
+  background: none;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer > div:has(a) > a span {
+  width: 100%;
+  height: 100%;
+  padding: var(--nys-space-150) var(--nys-space-200) !important;
+  border-bottom: 1px solid var(--nys-color-neutral-100) !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+.taskNavEntrySelected {
+  color: var(--nys-color-text);
+  background: var(--nys-color-theme-faint);
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation {
+  height: auto !important;
+  background: none;
+  min-height: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#pageBodyColumn {
+  border: none;
+  padding-left: 16px !important;
+}
+
+/* Notes: forms when they are tables, mostly */
+table.expandableSectionTable td {
+  max-width: 100%;
+}
+
+/* Notes: forms when they are tables, mostly */
+}
+
+
+@media (max-width: 600px) {
+  form .row .fieldCell3Col {
+    flex: 1 1 100%;
+}
+
+/* Notes: forms when they are tables, mostly */
+table.expandableSectionTable {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Notes: forms when they are tables, mostly */
+@media (max-width: 900px) {
+  form .row .fieldCell3Col {
+    flex: 1 1 calc(50% - var(--nys-space-200));
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer > div:has(a) > a:last-child span {
+  border-bottom: none !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+.taskNavEntry {
+  border: none !important;
+  font-size: var(--nys-font-size-ui-md);
+  background: none;
+}
+
+:root {
+  --nys-size-50: 4px;
+  --nys-size-100: 8px;
+  --nys-size-150: 12px;
+  --nys-size-1px: 1px;
+  --nys-size-200: 16px;
+  --nys-size-250: 20px;
+  --nys-size-2px: 2px;
+  --nys-size-300: 24px;
+  --nys-size-400: 32px;
+  --nys-size-450: 36px;
+  --nys-size-500: 40px;
+  --nys-size-550: 44px;
+  --nys-size-600: 48px;
+  --nys-size-700: 56px;
+  --nys-size-800: 64px;
+  --nys-space-50: 4px;
+  --nys-color-ink: var(--nys-color-neutral-900);
+  --nys-gutter-lg: 32px;
+  --nys-gutter-md: 32px;
+  --nys-gutter-sm: 20px;
+  --nys-gutter-xl: 64px;
+  --nys-gutter-xs: 20px;
+  --nys-radius-lg: var(--nys-space-100);
+  --nys-radius-md: var(--nys-space-50);
+  --nys-radius-sm: var(--nys-space-2px);
+  --nys-radius-xl: var(--nys-space-150);
+  --nys-radius-xs: var(--nys-space-1px);
+  --nys-size-1200: 96px;
+  --nys-space-100: 8px;
+  --nys-space-150: 12px;
+  --nys-space-1px: 1px;
+  --nys-space-200: 16px;
+  --nys-space-250: 20px;
+  --nys-space-2px: 2px;
+  --nys-space-300: 24px;
+  --nys-space-400: 32px;
+  --nys-space-500: 40px;
+  --nys-space-600: 48px;
+  --nys-space-700: 56px;
+  --nys-space-800: 64px;
+  --nys-color-base: var(--nys-color-neutral-600);
+  --nys-color-info: var(--nys-color-blue-600);
+  --nys-color-link: var(--nys-color-blue-600);
+  --nys-color-text: var(--nys-color-neutral-900);
+  --nys-radius-xxl: var(--nys-space-200);
+  --nys-space-1200: 96px;
+  --nys-color-black: #000000;
+  --nys-color-focus: var(--nys-color-blue-600);
+  --nys-color-theme: var(--nys-color-state-blue-700);
+  --nys-color-white: #ffffff;
+  --nys-color-accent: var(--nys-color-yellow-400);
+  --nys-color-danger: var(--nys-color-red-600);
+  --nys-color-red-10: #fbf4f4;
+  --nys-color-red-50: #f7eaea;
+  --nys-font-size-h1: var(--nys-font-size-7xl);
+  --nys-font-size-h2: var(--nys-font-size-5xl);
+  --nys-font-size-h3: var(--nys-font-size-4xl);
+  --nys-font-size-h4: var(--nys-font-size-2xl);
+  --nys-font-size-h5: var(--nys-font-size-2xl);
+  --nys-font-size-h6: var(--nys-font-size-lg);
+  --nys-font-size-lg: 1.125rem;
+  --nys-font-size-md: 1rem;
+  --nys-font-size-sm: .875rem;
+  --nys-font-size-xl: 1.25rem;
+  --nys-font-size-xs: .75rem;
+  --nys-icon-size-lg: var(--nys-font-size-lg);
+  --nys-icon-size-md: var(--nys-font-size-md);
+  --nys-icon-size-sm: var(--nys-font-size-sm);
+  --nys-icon-size-xl: var(--nys-font-size-xl);
+  --nys-icon-size-xs: var(--nys-font-size-xs);
+  --nys-radius-round: 1776px;
+  --nys-color-blue-10: #f2f7fc;
+  --nys-color-blue-50: #e5effa;
+  --nys-color-red-100: #f0d5d5;
+  --nys-color-red-200: #e4b3b3;
+  --nys-color-red-300: #d89191;
+  --nys-color-red-400: #cc6f6f;
+  --nys-color-red-500: #c04d4d;
+  --nys-color-red-600: #b52c2c;
+  --nys-color-red-700: #932424;
+  --nys-color-red-800: #721c1c;
+  --nys-color-red-900: #511414;
+  --nys-color-success: var(--nys-color-green-600);
+  --nys-color-surface: var(--nys-color-white);
+  --nys-color-warning: var(--nys-color-yellow-400);
+  --nys-font-size-2xl: 1.375rem;
+  --nys-font-size-2xs: .625rem;
+  --nys-font-size-3xl: 1.5rem;
+  --nys-font-size-4xl: 1.75rem;
+  --nys-font-size-5xl: 2rem;
+  --nys-font-size-6xl: 2.25rem;
+  --nys-font-size-7xl: 2.5rem;
+  --nys-font-size-8xl: 2.75rem;
+  --nys-font-size-9xl: 3.125rem;
+  --nys-form-width-lg: 384px;
+  --nys-form-width-md: 200px;
+  --nys-form-width-sm: 88px;
+  --nys-icon-size-2xl: var(--nys-font-size-2xl);
+  --nys-icon-size-3xl: var(--nys-font-size-3xl);
+  --nys-icon-size-4xl: var(--nys-font-size-4xl);
+  --nys-icon-size-5xl: var(--nys-font-size-5xl);
+  --nys-shadow-raised: 0 4px 6px -1px var(--nys-color-black-transparent-100), 0 4px 6px -1px var(--nys-color-black-transparent-50);
+  --nys-color-blue-100: #cce0f6;
+  --nys-color-blue-200: #a3c2ee;
+  --nys-color-blue-300: #7aa5e7;
+  --nys-color-blue-400: #5187df;
+  --nys-color-blue-500: #286ad8;
+  --nys-color-blue-600: #004dd1;
+  --nys-color-blue-700: #003ba1;
+  --nys-color-blue-800: #002971;
+  --nys-color-blue-900: #001842;
+  --nys-color-green-10: #f3f8f4;
+  --nys-color-green-50: #e8f1ea;
+  --nys-font-family-ui: var(--nys-font-family-sans);
+  --nys-shadow-overlay: 0 25px 50px -12px var(--nys-color-black-transparent-300);
+  --nys-border-width-lg: var(--nys-space-50);
+  --nys-border-width-md: var(--nys-space-2px);
+  --nys-border-width-sm: var(--nys-space-1px);
+  --nys-color-base-weak: var(--nys-color-neutral-10);
+  --nys-color-emergency: var(--nys-color-red-800);
+  --nys-color-green-100: #d2e3d5;
+  --nys-color-green-200: #aecdb3;
+  --nys-color-green-300: #8ab792;
+  --nys-color-green-400: #66a170;
+  --nys-color-green-500: #428b4f;
+  --nys-color-green-600: #1e752e;
+  --nys-color-green-700: #165923;
+  --nys-color-green-800: #0f3d18;
+  --nys-color-green-900: #08210d;
+  --nys-color-info-weak: var(--nys-color-blue-50);
+  --nys-color-text-weak: var(--nys-color-neutral-700);
+  --nys-color-theme-mid: var(--nys-color-state-blue-500);
+  --nys-color-yellow-10: #fefcf2;
+  --nys-color-yellow-50: #fefae5;
+  --nys-font-family-alt: Oswald, Arial, sans-serif;
+  --nys-font-size-ui-lg: var(--nys-font-size-lg);
+  --nys-font-size-ui-md: var(--nys-font-size-md);
+  --nys-font-size-ui-sm: var(--nys-font-size-sm);
+  --nys-font-size-ui-xl: var(--nys-font-size-xl);
+  --nys-font-size-ui-xs: var(--nys-font-size-xs);
+  --nys-color-neutral-10: #f6f6f6;
+  --nys-color-neutral-50: #ededed;
+  --nys-color-theme-weak: var(--nys-color-state-blue-100);
+  --nys-color-yellow-100: #fef5cc;
+  --nys-color-yellow-200: #fce888;
+  --nys-color-yellow-300: #fbdb44;
+  --nys-color-yellow-400: #face00;
+  --nys-color-yellow-500: #d6b000;
+  --nys-color-yellow-600: #b29200;
+  --nys-color-yellow-700: #8e7500;
+  --nys-color-yellow-800: #6a5700;
+  --nys-color-yellow-900: #463a00;
+  --nys-font-family-body: var(--nys-font-family-sans);
+  --nys-font-family-sans: Proxima Nova, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --nys-font-weight-bold: 700;
+  --nys-font-weight-thin: 100;
+  --nys-color-danger-weak: var(--nys-color-red-50);
+  --nys-color-info-strong: var(--nys-color-blue-800);
+  --nys-color-ink-reverse: var(--nys-color-white);
+  --nys-color-link-strong: var(--nys-color-blue-700);
+  --nys-color-neutral-100: #d0d0ce;
+  --nys-color-neutral-200: #bec0c1;
+  --nys-color-neutral-300: #a7a9ab;
+  --nys-color-neutral-400: #909395;
+  --nys-color-neutral-500: #797c7f;
+  --nys-color-neutral-600: #62666a;
+  --nys-color-neutral-700: #4a4d4f;
+  --nys-color-neutral-800: #323435;
+  --nys-color-neutral-900: #1b1b1b;
+  --nys-color-text-weaker: var(--nys-color-neutral-500);
+  --nys-color-theme-faint: var(--nys-color-state-blue-10);
+  --nys-color-transparent: #ffffff00;
+  --nys-font-family-serif: Noto Serif, Georgia, Cambria, Times New Roman, Times, serif;
+  --nys-font-size-body-md: var(--nys-font-size-md);
+  --nys-font-size-body-sm: var(--nys-font-size-sm);
+  --nys-font-size-body-xs: var(--nys-font-size-xs);
+  --nys-font-weight-black: 900;
+  --nys-font-weight-light: 300;
+  --nys-color-link-neutral: var(--nys-color-neutral-900);
+  --nys-color-link-reverse: var(--nys-color-neutral-300);
+  --nys-color-success-weak: var(--nys-color-green-50);
+  --nys-color-text-reverse: var(--nys-color-white);
+  --nys-color-text-weakest: var(--nys-color-neutral-200);
+  --nys-color-theme-strong: var(--nys-color-state-blue-800);
+  --nys-color-theme-weaker: var(--nys-color-state-blue-50);
+  --nys-color-warning-weak: var(--nys-color-yellow-50);
+  --nys-font-family-agency: D Sari, Arial, sans-serif;
+  --nys-font-lineheight-h1: 40px;
+  --nys-font-lineheight-h2: 36px;
+  --nys-font-lineheight-h3: 32px;
+  --nys-font-lineheight-h4: 32px;
+  --nys-font-lineheight-h5: 28px;
+  --nys-font-lineheight-h6: 28px;
+  --nys-font-lineheight-lg: 28px;
+  --nys-font-lineheight-md: 25px;
+  --nys-font-lineheight-sm: 22px;
+  --nys-font-lineheight-xl: 31px;
+  --nys-font-lineheight-xs: 21px;
+  --nys-font-weight-medium: 500;
+  --nys-color-danger-strong: var(--nys-color-red-800);
+  --nys-color-state-blue-10: #f7fafd;
+  --nys-color-state-blue-50: #eff6fb;
+  --nys-color-text-disabled: var(--nys-color-neutral-200);
+  --nys-font-family-display: var(--nys-font-family-sans);
+  --nys-font-family-heading: var(--nys-font-family-sans);
+  --nys-font-lineheight-2xl: 39px;
+  --nys-font-lineheight-2xs: 18px;
+  --nys-font-lineheight-3xl: 45px;
+  --nys-font-lineheight-4xl: 57px;
+  --nys-font-size-agency-lg: var(--nys-font-size-lg);
+  --nys-font-size-agency-md: var(--nys-font-size-md);
+  --nys-font-size-agency-xl: var(--nys-font-size-2xl);
+  --nys-font-weight-regular: 400;
+  --nys-color-emergency-weak: var(--nys-color-red-300);
+  --nys-color-link-strongest: var(--nys-color-blue-800);
+  --nys-color-local-brown-10: #f6f5f4;
+  --nys-color-local-brown-50: #eeebe9;
+  --nys-color-safety-gray-10: #f2f5f6;
+  --nys-color-safety-gray-50: #e5ebed;
+  --nys-color-state-blue-100: #cddde9;
+  --nys-color-state-blue-200: #abc4d8;
+  --nys-color-state-blue-300: #89abc7;
+  --nys-color-state-blue-400: #6792b6;
+  --nys-color-state-blue-500: #457aa5;
+  --nys-color-state-blue-600: #2d618c;
+  --nys-color-state-blue-700: #154973;
+  --nys-color-state-blue-800: #0e324f;
+  --nys-color-state-blue-900: #081b2b;
+  --nys-color-success-strong: var(--nys-color-green-800);
+  --nys-color-surface-raised: var(--nys-color-neutral-10);
+  --nys-color-theme-stronger: var(--nys-color-state-blue-900);
+  --nys-color-warning-strong: var(--nys-color-yellow-800);
+  --nys-font-letterspacing-0: 0rem;
+  --nys-font-size-display-lg: var(--nys-font-size-8xl);
+  --nys-font-size-display-md: var(--nys-font-size-7xl);
+  --nys-font-size-display-sm: var(--nys-font-size-6xl);
+  --nys-font-size-display-xl: var(--nys-font-size-9xl);
+  --nys-font-weight-semibold: 600;
+  --nys-color-admin-orange-10: #fcf4ef;
+  --nys-color-admin-orange-50: #f9e9e0;
+  --nys-color-local-brown-100: #ddd7d3;
+  --nys-color-local-brown-200: #c3b9b3;
+  --nys-color-local-brown-300: #a99b94;
+  --nys-color-local-brown-400: #8f7d75;
+  --nys-color-local-brown-500: #745e55;
+  --nys-color-local-brown-600: #5a4036;
+  --nys-color-local-brown-700: #402217;
+  --nys-color-local-brown-800: #2a160f;
+  --nys-color-local-brown-900: #150b07;
+  --nys-color-safety-gray-100: #cdd6da;
+  --nys-color-safety-gray-200: #b5c1c8;
+  --nys-color-safety-gray-300: #9dacb5;
+  --nys-color-safety-gray-400: #8697a3;
+  --nys-color-safety-gray-500: #6f8391;
+  --nys-color-safety-gray-600: #59707f;
+  --nys-color-safety-gray-700: #435d6e;
+  --nys-color-safety-gray-800: #30424f;
+  --nys-color-safety-gray-900: #1d2830;
+  --nys-color-surface-reverse: var(--nys-color-neutral-900);
+  --nys-font-family-monospace: Roboto Mono Web, Bitstream Vera Sans Mono, Consolas, Courier, monospace;
+  --nys-font-letterspacing-h1: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-h2: var(--nys-font-letterspacing-100);
+  --nys-font-letterspacing-h3: var(--nys-font-letterspacing-100);
+  --nys-font-letterspacing-h4: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-h5: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-h6: var(--nys-font-letterspacing-300);
+  --nys-font-lineheight-ui-lg: 28px;
+  --nys-font-lineheight-ui-md: 24px;
+  --nys-font-lineheight-ui-sm: 24px;
+  --nys-font-lineheight-ui-xl: 28px;
+  --nys-font-lineheight-ui-xs: 20px;
+  --nys-font-weight-extrabold: 800;
+  --nys-color-admin-orange-100: #f3d3c1;
+  --nys-color-admin-orange-200: #e7b59c;
+  --nys-color-admin-orange-300: #db9778;
+  --nys-color-admin-orange-400: #d07954;
+  --nys-color-admin-orange-500: #c0623b;
+  --nys-color-admin-orange-600: #b14b22;
+  --nys-color-admin-orange-700: #a2350a;
+  --nys-color-admin-orange-800: #752607;
+  --nys-color-admin-orange-900: #481704;
+  --nys-color-business-teal-10: #f2f6f6;
+  --nys-color-business-teal-50: #e5eded;
+  --nys-color-health-purple-10: #f4f4f8;
+  --nys-color-health-purple-50: #e9eaf1;
+  --nys-font-letterspacing-100: .001rem;
+  --nys-font-letterspacing-200: .001rem;
+  --nys-font-letterspacing-300: .002rem;
+  --nys-font-letterspacing-400: .003rem;
+  --nys-font-letterspacing-500: .003rem;
+  --nys-font-weight-extralight: 200;
+  --nys-color-business-teal-100: #c5d8d9;
+  --nys-color-business-teal-200: #a5c3c5;
+  --nys-color-business-teal-300: #85aeb1;
+  --nys-color-business-teal-400: #65999e;
+  --nys-color-business-teal-500: #387b82;
+  --nys-color-business-teal-600: #0b5d66;
+  --nys-color-business-teal-700: #084b52;
+  --nys-color-business-teal-800: #05393f;
+  --nys-color-business-teal-900: #02272c;
+  --nys-color-health-purple-100: #d3d5e3;
+  --nys-color-health-purple-200: #bbb8cc;
+  --nys-color-health-purple-300: #a39bb6;
+  --nys-color-health-purple-400: #8b7fa0;
+  --nys-color-health-purple-500: #736289;
+  --nys-color-health-purple-600: #5b4573;
+  --nys-color-health-purple-700: #43285d;
+  --nys-color-health-purple-800: #2c1a3e;
+  --nys-color-health-purple-900: #160d1f;
+  --nys-color-text-reverse-weak: var(--nys-color-neutral-100);
+  --nys-font-lineheight-body-md: 24px;
+  --nys-font-lineheight-body-sm: 24px;
+  --nys-font-lineheight-body-xs: 20px;
+  --nys-font-letterspacing-ui-lg: var(--nys-font-letterspacing-300);
+  --nys-font-letterspacing-ui-md: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-ui-sm: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-ui-xl: var(--nys-font-letterspacing-200);
+  --nys-font-letterspacing-ui-xs: var(--nys-font-letterspacing-600);
+  --nys-color-link-reverse-strong: var(--nys-color-neutral-50);
+  --nys-color-text-reverse-weaker: var(--nys-color-neutral-200);
+  --nys-color-black-transparent-50: #00000003;
+  --nys-color-environment-green-10: #f5f7f6;
+  --nys-color-environment-green-50: #ecf0ee;
+  --nys-color-link-reverse-neutral: var(--nys-color-white);
+  --nys-color-white-transparent-50: #ffffff03;
+  --nys-font-letterspacing-body-md: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-body-sm: var(--nys-font-letterspacing-400);
+  --nys-font-letterspacing-body-xs: var(--nys-font-letterspacing-600);
+  --nys-font-lineheight-display-lg: 52px;
+  --nys-font-lineheight-display-md: 48px;
+  --nys-font-lineheight-display-sm: 44px;
+  --nys-font-lineheight-display-xl: 60px;
+  --nys-color-black-transparent-100: #0000001a;
+  --nys-color-black-transparent-200: #00000033;
+  --nys-color-black-transparent-300: #0000004d;
+  --nys-color-black-transparent-400: #00000066;
+  --nys-color-black-transparent-500: #00000080;
+  --nys-color-black-transparent-600: #00000099;
+  --nys-color-black-transparent-700: #000000b3;
+  --nys-color-black-transparent-800: #000000cc;
+  --nys-color-black-transparent-900: #000000e6;
+  --nys-color-environment-green-100: #d9e1dd;
+  --nys-color-environment-green-200: #bac6bf;
+  --nys-color-environment-green-300: #9caba1;
+  --nys-color-environment-green-400: #7e9084;
+  --nys-color-environment-green-500: #5f7566;
+  --nys-color-environment-green-600: #415a48;
+  --nys-color-environment-green-700: #233f2b;
+  --nys-color-environment-green-800: #172a1c;
+  --nys-color-environment-green-900: #0b150e;
+  --nys-color-text-reverse-disabled: var(--nys-color-neutral-600);
+  --nys-color-white-transparent-100: #ffffff1a;
+  --nys-color-white-transparent-200: #ffffff33;
+  --nys-color-white-transparent-300: #ffffff4d;
+  --nys-color-white-transparent-400: #ffffff66;
+  --nys-color-white-transparent-500: #ffffff80;
+  --nys-color-white-transparent-600: #ffffff99;
+  --nys-color-white-transparent-700: #ffffffb3;
+  --nys-color-white-transparent-800: #ffffffcc;
+  --nys-color-white-transparent-900: #ffffffe6;
+  --nys-color-link-reverse-strongest: var(--nys-color-white);
+  --nys-color-transportation-blue-10: #f4f8fa;
+  --nys-color-transportation-blue-50: #eaf2f5;
+  --nys-color-transportation-blue-100: #d5e5eb;
+  --nys-color-transportation-blue-200: #b2ccd9;
+  --nys-color-transportation-blue-300: #90b3c7;
+  --nys-color-transportation-blue-400: #6e9ab5;
+  --nys-color-transportation-blue-500: #4d83a4;
+  --nys-color-transportation-blue-600: #2c6c93;
+  --nys-color-transportation-blue-700: #0b5583;
+  --nys-color-transportation-blue-800: #093a5c;
+  --nys-color-transportation-blue-900: #072036;
+  --nys-font-letterspacing-display-lg: var(--nys-font-letterspacing-negative-100);
+  --nys-font-letterspacing-display-md: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-display-sm: var(--nys-font-letterspacing-0);
+  --nys-font-letterspacing-display-xl: var(--nys-font-letterspacing-negative-100);
+  --nys-font-letterspacing-negative-100: -.01rem;
+  --nys-font-letterspacing-negative-200: -.02rem;
+}
+
+div.fieldCell3Col input:focus {
+  caret-color: var(--nys-color-focus);
+  border-color: var(--nys-color-focus);
+  outline-color: var(--nys-color-focus);
+}
+
+img.banner {
+  width: 100% !important;
+  opacity: 0;
+  padding-left: 0 !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#pageTaskNavColumn {
+  background-color: var(--nys-theme-surface) !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavHeader {
+  background: none !important;
+}
+
+li.navContainer>a.globalNavTab {
+  width: -webkit-fill-available !important;
+  height: 35px !important;
+  display: flex;
+  padding: 8px 8px 6px !important;
+  line-height: var(--nys-font-lineheight-2xs);
+  flex-direction: column-reverse;
+}
+
+.homepageCountySelector, .homepageCounty {
+  display: none;
+}
+
+table.tableStyle td {
+  padding: 10px 20px;
+}
+
+p.imageText {
+  left: 36px !important;
+}
+
+#wrapperContainer {
+  margin-top: 102px !important;
+}
+
+#headerEnvironment {
+  top: -16px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.block-form-type1, .block-form-type3 {
+  border: none;
+  border-radius: 0;
+  background-color: var(--nys-color-surface);
+}
+
+div.homepageTopRowItem div:last-child {
+  width: fit-content;
+  padding-right: 0;
+}
+
+div.homepageTopRowItem div {
+  width: auto !important;
+  display: inline-block !important;
+  padding-right: 48px !important;
+}
+
+/* Component: label */
+/* Notes: lots of styles to make certain search forms work better */
+span.requiredIcon img {
+  display: none;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+span.requiredInst:after {
+  left: var(--nys-space-50);
+  color: var(--nys-color-danger) !important;
+  width: auto;
+  height: auto;
+  content: " (red astericks)";
+  display: inline !important;
+  position: relative;
+  visibility: visible !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+span.requiredIcon:after {
+  left: var(--nys-space-50);
+  color: var(--nys-color-danger) !important;
+  content: "*";
+  position: relative;
+  visibility: visible !important;
+  vertical-align: top;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+span.requiredIcon {
+  width: var(--nys-space-50) !important;
+  height: 100%;
+  margin: 0 !important;
+  display: inline !important;
+  padding: 0 !important;
+  vertical-align: top !important;
+}
+
+/* Notes: lots of styles to make certain search forms work better */
+.fieldCell7Col:has(.requiredIcon) label:after {
+  left: 2px;
+  color: var(--nys-color-danger) !important;
+  width: min-content;
+  height: auto;
+  content: "*";
+  display: inline-flex;
+  outline: 3px solid pink !important;
+  position: relative;
+  visibility: visible !important;
+}
+
+span.requiredInst {
+  color: var(--nys-color-danger);
+  padding-left: var(--nys-space-100);
+}
+
+/* Component: radio */
+input[type="radio"] {
+  width: var(--nys-size-300);
+  border: var(--nys-border-width-md) solid var(--nys-color-neutral-600);
+  height: var(--nys-size-300);
+  margin: 0px 0px auto;
+  display: flex;
+  outline: none;
+  max-width: var(--nys-size-300);
+  min-width: var(--nys-size-300);
+  appearance: none;
+  box-sizing: border-box;
+  max-height: var(--nys-size-300);
+  min-height: var(--nys-size-300);
   align-items: center;
   font-family: var(--nys-font-family-sans);
-  font-weight: var(--nys-font-weight-semibold);
+  line-height: var(--nys-font-lineheight-body-md);
+  border-radius: 100%;
+  outline-offset: var(--nys-size-2px);
+  background-size: contain;
+  background-color: var(--nys-color-surface);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Component: table */
+/* Notes: some tables are in forms like these */
+form table.tableStyle th {
+  padding: var(--nys-space-150) var(--nys-space-200);
+  font-size: var(--nys-font-size-ui-md) !important;
+  font-weight: var(--nys-font-weight-bold) !important;
+  line-height: var(--nys-font-lineheight-ui-md);
+  border-radius: 0 !important;
+  background-color: var(--nys-color-surface) !important;
+}
+
+form table.tableStyle tbody, form table.tableStyle {
+  border: none !important;
+  border-width: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+form:not(:has(a)) table.tableStyle td {
+  width: auto;
+  display: table-cell !important;
+  padding: var(--nys-space-200);
+  border-top: var(--nys-border-width-sm) solid var(--nys-color-neutral-100) !important;
+}
+
+form:not(:has(a)) table.tableStyle tr:nth-child(even) {
+  background-color: var(--nys-color-neutral-10) !important;
+}
+
+/* Notes: somehow this fixes the background issue, but it won't also fix the border issue. */
+form:not(:has(a)) table.tableStyle tr:has(td[colspan]):after {
+  content: "" !important;
+}
+
+form:not(:has(a)) table.tableStyle {
+  border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100) !important;
+  border-radius: 0 !important;
+}
+
+/* Component: text-input */
+label.formLabel {
+  display: inline-block !important;
+}
+
+select {
+  display: block !important;
+}
+
+.row:has(input.hasDatepicker) {
+  padding-top: var(--nys-space-250);
+}
+
+input[type="radio"]:hover, input[type="radio"]:hover * {
+  cursor: pointer;
+}
+
+[type="radio"]:not(:disabled):checked {
+  background-color: var(--_nys-color-theme);
+  background-image: url(data:image/svg+xml;
+  utf8,<svg width="22"height="22"viewBox="0 0 22 22"fill="none"xmlns="http: //www.w3.org/2000/svg"><circle cx="11"cy="11"r="11"stroke="white"stroke-width="6"/></svg>);
+}
+
+.fieldCell3Col input[type="text"] {
+  display: block;
+}
+
+/* Notes: forms when they are tables, mostly */
+button.ui-datepicker-trigger:after {
+  width: var(--nys-size-300);
+  height: var(--nys-size-300);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuMzMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG1hc2s6IHVybCgjbWFzayk7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzFhMWExYTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZGFkOWQ5OwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPG1hc2sgaWQ9Im1hc2siIHg9Ii0zLjUiIHk9Ii0yLjMzIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8ZyBpZD0ibWFzazBfNDY1N181ODY5IiBkYXRhLW5hbWU9Im1hc2swIDQ2NTcgNTg2OSI+CiAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0zIiB4PSItMy41IiB5PSItMi4zMyIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4Ii8+CiAgICAgIDwvZz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0xIj4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIuMzMsMjMuMzNjLS42NCwwLTEuMTktLjIzLTEuNjUtLjY5LS40Ni0uNDYtLjY5LTEuMDEtLjY5LTEuNjVWNC42N2MwLS42NC4yMy0xLjE5LjY5LTEuNjUuNDYtLjQ2LDEuMDEtLjY5LDEuNjUtLjY5aDEuMTd2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDkuMzN2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDEuMTdjLjY0LDAsMS4xOS4yMywxLjY1LjY5LjQ2LjQ2LjY5LDEuMDEuNjksMS42NXYxNi4zM2MwLC42NC0uMjMsMS4xOS0uNjksMS42NS0uNDYuNDYtMS4wMS42OS0xLjY1LjY5SDIuMzNaTTIuMzMsMjFoMTYuMzN2LTExLjY3SDIuMzN2MTEuNjdaTTIuMzMsN2gxNi4zM3YtMi4zM0gyLjMzdjIuMzNaTTEwLjUsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNNS44MywxNGMtLjMzLDAtLjYxLS4xMS0uODMtLjM0cy0uMzQtLjUtLjM0LS44My4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNHMtLjM0LS41LS4zNC0uODMuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODMtLjUuMzQtLjgzLjM0Wk0xMC41LDE4LjY3Yy0uMzMsMC0uNjEtLjExLS44My0uMzQtLjIyLS4yMi0uMzQtLjUtLjM0LS44M3MuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODNjLS4yMi4yMi0uNS4zNC0uODMuMzRaTTUuODMsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFoiLz4KICA8L2c+Cjwvc3ZnPg==) !important;
+}
+
+/* Notes: forms when they are tables, mostly */
+form .ui-datepicker-trigger {
+  align-self: flex-start;
+}
+
+/* Notes: border-radius: var(--nys-radius-md);
+outline-color: transparent;
+outline-style: solid;
+outline-width: var(--nys-border-width-sm); */
+div.fieldCell3Col input, input[type="text" i], select, .formInput {
+  color: var(--nys-color-text);
+  height: var(--nys-space-500);
+  padding: var(--nys-space-100);
+  font-size: var(--nys-font-size-md);
+  background: var(--nys-color-surface);
+  box-sizing: border-box;
+  font-family: var(--nys-font-family-sans);
+  font-weight: var(--nys-font-weight-regular);
   line-height: var(--nys-font-lineheight-md);
-  border-radius: var(--nys-radius-xl);
-  justify-content: center;
+  border-color: var(--nys-color-neutral-400);
+  border-width: var(--nys-border-width-sm);
+  border-radius: var(--nys-radius-md);
+  outline-color: transparent;
+  outline-style: solid;
+  outline-width: var(--nys-border-width-sm);
+  letter-spacing: var(--nys-font-letterspacing-body-md);
+}
+
+/* Component: view_only */
+img.banner:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: 9999;
+  position: absolute;
+  background-color: var(--nys-color-theme-weak);
+}
+
+.homepageRowLeft .homepageLeftItem:nth-child(2) {
+  display: none !important;
+}
+
+#logo:after {
+  top: -8px;
+  left: 11px;
+  color: var(--nys-color-ink-reverse);
+  float: left;
+  width: 400px !important;
+  height: 55px;
+  content: "NYS Integrated Eligibility System";
+  position: relative;
+  font-size: var(--nys-font-size-2xl);
+  text-align: left;
+  border-left: 1.5px solid #ebebeb;
+  font-family: var(--nys-font-family-agency);
+  font-weight: 600;
+  line-height: 25.5px;
+  text-shadow: 0 0 0 rgba(0,0,0,0) !important;
+  padding-left: 9px;
+}
+
+/* Notes: hiding san bernadino */
+#headerEnvironment span {
+  display: none;
 }
 
 /* Notes: adding logo to homepage with data-uri */
@@ -601,26 +1998,3 @@ button.ui-datepicker-trigger:hover {
   font-family: var(--nys-font-family-agency);
 }
 
-#logo:after {
-  top: -8px;
-  left: 11px;
-  color: var(--nys-color-ink-reverse);
-  float: left;
-  width: 400px !important;
-  height: 55px;
-  content: "NYS Integrated Eligibility System";
-  position: relative;
-  font-size: var(--nys-font-size-2xl);
-  text-align: left;
-  border-left: 1.5px solid #ebebeb;
-  font-family: var(--nys-font-family-agency);
-  font-weight: 600;
-  line-height: 25.5px;
-  text-shadow: 0 0 0 rgba(0,0,0,0) !important;
-  padding-left: 9px;
-}
-
-/* Notes: hiding san bernadino */
-#headerEnvironment span {
-  display: none;
-}
