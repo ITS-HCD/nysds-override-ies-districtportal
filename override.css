@@ -1221,6 +1221,10 @@ tbody tr th {
   background-color: var(--nys-color-theme);
 }
 
+.formErrorText {
+  font-family: var(--nys-font-family-sans);
+}
+
 body, p, td, #logo, #pageContentHomepage, #pageContent, #mainNavigationContainer, h2.expandableHeaderInheritProperties, th a.white, th, .block-title, .block-footer {
   color: var(--nys-color-text);
   font-family: var(--nys-font-family-sans);
