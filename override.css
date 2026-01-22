@@ -1,13 +1,87 @@
+/*
+ * NYSDS Override Styles
+ * =====================
+ * This stylesheet applies NYS Design System styling to the target application.
+ * Edit this file to customize the appearance of legacy elements.
+ *
+ * PRODUCTION-READY: These styles use clean selectors that engineers can
+ * copy directly into the application's codebase. The extension dynamically
+ * injects/removes this stylesheet when toggled on/off.
+ *
+ * NYSDS Resources:
+ * - Tokens: https://designsystem.ny.gov/foundations/tokens/
+ * - Components: https://designsystem.ny.gov/components/
+ */
+
+/* ==========================================================================
+   NYSDS Design System Imports
+
+   Choose which NYSDS assets to import based on your needs.
+   Uncomment/comment the @import lines below as needed.
+
+   Package: https://www.npmjs.com/package/@nysds/styles
+   ========================================================================== */
+
+/*
+ * FONTS (bundled locally)
+ * Loads Proxima Nova, D Sari, and Oswald typefaces.
+ * Font files must be added to the fonts/ directory.
+ * See fonts/README.md for download instructions.
+ */
+@import url('fonts/nysds-fonts.css');
+
+/*
+ * BASE TOKENS (recommended)
+ * CSS variables only - colors, typography, spacing, etc.
+ * Use this when you want to apply NYSDS tokens to existing styles.
+ */
+@import url('https://unpkg.com/@nysds/styles@latest/dist/nysds.min.css');
+
+/*
+ * FULL STYLES (alternative)
+ * Includes base tokens PLUS CSS reset and utility classes.
+ * Use this when you want more aggressive normalization.
+ * May conflict with existing application styles.
+ *
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-full.min.css');
+ */
+
+/*
+ * AGENCY THEMES (optional)
+ * Override default theme colors for specific agency branding.
+ * Import AFTER base tokens. Only use ONE theme at a time.
+ *
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-admin.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-business.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-environment.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-health.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-local.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-safety.min.css');
+ * @import url('https://unpkg.com/@nysds/styles@latest/dist/nysds-theme-transportation.min.css');
+ */
+/* ==========================================================================
+   NYSDS Base Element Styles
+
+   These styles apply NYSDS typography and spacing to common HTML elements.
+   Customize or remove as needed based on your application's requirements.
+
+   See: https://designsystem.ny.gov/foundations/typography/
+   ========================================================================== */
+
+/* ==========================================================================
+   1. RESET & FOUNDATION
+   ========================================================================== */
 /* Rebrander Export */
-/* Generated: 2026-01-14T17:32:31.512Z */
+/* Generated: 2026-01-14T15:03:04.038Z */
 /* Mode: Development (Inlined Variables) */
-/* Custom Overrides: 197 */
+/* Custom Overrides: 176 */
 
 /* ==========================================================================
    NYSDS Base Variables (From Database)
    Last updated: 2026-01-09T22:12:19.277925+00:00
    These can be overridden by theme and custom CSS rules below
    ========================================================================== */
+
 
 :root {
   --nys-size-50: 4px;
@@ -390,51 +464,637 @@
   --nys-font-letterspacing-negative-200: -.02rem;
 }
 
+/*
+ * FONTS (bundled locally)
+ * Loads Proxima Nova, D Sari, and Oswald typefaces.
+ * Font files must be added to the fonts/ directory.
+ * See fonts/README.md for download instructions.
+ */
+@import url('fonts/nysds-fonts.css');
+
+/*
+ * BASE TOKENS (recommended)
+ * CSS variables only - colors, typography, spacing, etc.
+ * Use this when you want to apply NYSDS tokens to existing styles.
+ */
+@import url('https://unpkg.com/@nysds/styles@latest/dist/nysds.min.css');
+
+
 /* ==========================================================================
-   Custom Overrides
-   These override NYSDS variables and apply custom styling
+   1. RESET & FOUNDATION
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, 
+blockquote, figure, pre, td, th {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: var(--nys-font-size-md)/var(--nys-font-lineheight-md) var(--nys-font-family-body, var(--nys-font-family-sans));
+  color: var(--nys-color-ink);
+  background-color: #ffffff; /* Combined with .bodyBackground */
+}
+
+
+/* ==========================================================================
+   2. TYPOGRAPHY & VERTICAL RHYTHM
    ========================================================================== */
 
-/* ========================================
-   URL Pattern: *
-   ======================================== */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nys-font-family-heading, 'Proxima Nova', system-ui, sans-serif);
+  color: var(--nys-color-text);
+  font-weight: 700;
+}
+
+h1 { 
+  font-size: var(--nys-font-size-h1); 
+  line-height: var(--nys-font-lineheight-h1); 
+  letter-spacing: var(--nys-font-letterspacing-negative-300, -.02rem);
+  margin: var(--nys-space-600) 0 var(--nys-space-250);
+}
+
+h2 { 
+  font-size: var(--nys-font-size-h2); 
+  line-height: var(--nys-font-lineheight-h2); 
+  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
+  margin: var(--nys-space-500) 0 var(--nys-space-200);
+}
+
+h3 { 
+  font-size: var(--nys-font-size-h3); 
+  line-height: var(--nys-font-lineheight-h3); 
+  letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
+  margin: var(--nys-space-400) 0 var(--nys-space-150);
+}
+
+h4 { font-size: var(--nys-font-size-h4); line-height: var(--nys-font-lineheight-h4); margin: var(--nys-space-300) 0 var(--nys-space-100); }
+h5 { font-size: var(--nys-font-size-h5); line-height: var(--nys-font-lineheight-h5); margin: var(--nys-space-250) 0 var(--nys-space-100); }
+h6 { font-size: var(--nys-font-size-h6); line-height: var(--nys-font-lineheight-h6); margin: var(--nys-space-200) 0 var(--nys-space-100); }
+
+/* Spacing Helpers */
+p, ul, ol, dl, blockquote { margin-bottom: var(--nys-space-150); }
+p + p { margin-top: var(--nys-space-150); }
+h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 { margin-top: var(--nys-space-150); }
+
+small {
+  font: var(--nys-font-size-xs)/var(--nys-font-lineheight-xs) var(--nys-font-family-body);
+  margin-bottom: var(--nys-space-100);
+  display: block;
+}
+
+section + section { margin-top: var(--nys-space-300); }
+
+
+/* Links */
+a {
+  color: var(--nys-color-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+div#pageContentHomepage .underline, div#pageContentHomepage .hoverHand {
+  color: var(--nys-color-link);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+
+a:hover, a:focus { color: var(--nys-color-link-strong); }
+a:active { color: var(--nys-color-link-strongest); }
+
+/* Lists */
+ul, ol {
+  padding-left: var(--nys-space-200);
+  list-style: none;
+}
+
+ul { list-style-type: disc; }
+ul ul { list-style-type: circle; padding-left: var(--nys-space-200); margin-top: 0; }
+ul ul ul { list-style-type: square; padding-left: var(--nys-space-200); }
+
+ol { list-style-type: decimal; }
+ol ol { list-style-type: lower-alpha; padding-left: var(--nys-space-200); margin-top: 0; }
+ol ol ol { list-style-type: lower-roman; padding-left: var(--nys-space-200); }
+
+li { margin-bottom: var(--nys-space-100); }
+li::marker { color: var(--nys-color-theme-primary, #000); }
+
+/**
+ * List Fixes 
+ */
+
+ul.localNavigation>li {
+  margin-bottom: 0;
+
+}
+
+/**
+ * Main Navigation
+ */
+
+ ul.localNavigation>li {
+  border-color: var(--nys-color-neutral-500) !important;
+  color: var(--nys-color-ink);
+  background-color: var(--nys-color-surface);
+  
+}
+
+ul.localNavigation {
+    height: auto !important;
+    
+}
+
+a.localNavEntry {
+  width: auto;
+  font-weight: var(--nys-font-weight-semibold);
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--nys-color-ink);
+  height: var(--nys-size-500);
+
+}
+
+a.localNavEntry:hover, a.localNavEntry:focus {
+  background-color: var(--nys-color-theme-weaker);
+  color: var(--nys-color-ink);
+}
+
+#mainNavigation {
+  width: auto !important;
+  float: inline-end !important;
+}
+
+li.navContainer>a.globalNavTab {
+  width: -webkit-fill-available !important;
+  height: 35px !important;
+  display: flex;
+  padding: 0px 6px 2px !important;
+  line-height: 16px;
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+  #selectedGlobalNav, .globalNavTabHighlight {
+    border-radius: var(--nys-radius-lg) var(--nys-radius-lg) 0px 0px;
+    -webkit-border-radius: var(--nys-radius-lg) var(--nys-radius-lg) 0px 0px;
+    -moz-border-radius: var(--nys-radius-lg) var(--nys-radius-lg) 0px 0px;
+    background-color: var(--nys-color-surface);
+    color: var(--nys-color-text) !important;
+    border: 1px solid var(--nys-color-neutral-800);
+    font-weight: var(--nys-font-weight-semibold);
+
+}
+
+a#selectedGlobalNav {
+    font-weight: var(--nys-font-weight-bold);
+}
+
+
+
+
+
+
+  /* No animation dropdowns */
+  ul.localNavigation {
+    height: auto !important;
+  }
+
+/**
+ * NYS Design System - Native Form Control Styles
+ */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+textarea,
+select {
+  height: var(--nys-size-500, 40px);
+  padding: var(--nys-space-100, 8px);
+  font-family: var(--nys-font-family-ui, var(--nys-font-family-sans));
+  font-size: var(--nys-font-size-ui-md, 16px);
+  font-weight: var(--nys-font-weight-regular, 400);
+  line-height: var(--nys-font-lineheight-ui-md, 24px);
+  letter-spacing: var(--nys-font-letterspacing-ui-md, var(--nys-font-letterspacing-400, 0.044px));
+  color: var(--nys-color-ink, var(--nys-color-neutral-900, #1b1b1b));
+  background-color: var(--nys-color-ink-reverse, var(--nys-color-white, #ffffff));
+  border: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-400, #909395);
+  border-radius: var(--nys-radius-md, 4px);
+  box-sizing: border-box;
+  outline: none;
+}
+
+textarea {
+  height: auto;
+  min-height: var(--nys-size-500, 40px);
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--nys-color-text-weaker, var(--nys-color-neutral-500, #797c7f));
+  opacity: 1;
+}
+
+input:hover:not(:disabled),
+textarea:hover:not(:disabled),
+select:hover:not(:disabled) {
+  border-color: var(--nys-color-neutral-900, #1b1b1b);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--nys-color-focus, #004dd1);
+  box-shadow: 0 0 0 var(--nys-border-width-sm, 1px) var(--nys-color-focus, #004dd1);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  background-color: var(--nys-color-neutral-10, #f6f6f6);
+  border-color: var(--nys-color-neutral-200, #bec0c1);
+  color: var(--nys-color-text-disabled, var(--nys-color-neutral-200, #bec0c1));
+  cursor: not-allowed;
+}
+
+
+/**
+ * NYS Design System - jQuery UI Datepicker Override
+ */
+
+ .ui-datepicker .ui-state-default,
+ .ui-datepicker .ui-state-hover,
+ .ui-datepicker .ui-state-focus,
+ .ui-datepicker .ui-state-active,
+ .ui-datepicker .ui-state-highlight,
+ .ui-datepicker .ui-state-disabled,
+ .ui-datepicker .ui-widget-content .ui-state-default,
+ .ui-datepicker .ui-widget-content .ui-state-hover,
+ .ui-datepicker .ui-widget-content .ui-state-focus,
+ .ui-datepicker .ui-widget-content .ui-state-active,
+ .ui-datepicker .ui-widget-content .ui-state-highlight,
+ .ui-datepicker .ui-widget-content .ui-state-disabled,
+ .ui-datepicker .ui-widget-header .ui-state-default,
+ .ui-datepicker .ui-widget-header .ui-state-hover,
+ .ui-datepicker .ui-widget-header .ui-state-focus,
+ .ui-datepicker .ui-widget-header .ui-state-active,
+ .ui-datepicker .ui-widget-header .ui-state-highlight,
+ .ui-datepicker .ui-widget-header .ui-state-disabled {
+   border: none;
+   background: none;
+   background-image: none;
+   font-weight: inherit;
+   color: inherit;
+ }
+
+/* Container */
+.ui-datepicker {
+  font-family: var(--nys-font-family-ui, var(--nys-font-family-sans));
+  font-size: var(--nys-font-size-ui-md, 16px);
+  font-weight: var(--nys-font-weight-regular, 400);
+  line-height: var(--nys-font-lineheight-ui-md, 24px);
+  letter-spacing: var(--nys-font-letterspacing-ui-md, 0.044px);
+  color: var(--nys-color-text, #1b1b1b);
+  background: var(--nys-color-ink-reverse, #fff);
+  border: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-400, #909395);
+  border-radius: var(--nys-radius-xl, 12px);
+  padding: var(--nys-space-200, 16px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: fit-content !important;
+}
+
+/* Header */
+.ui-datepicker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: var(--nys-space-100, 8px);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.ui-datepicker-title {
+  display: flex;
+  gap: var(--nys-space-100, 8px);
+  order: 0;
+  flex: 1;
+}
+
+/* Month/Year Selects */
+.ui-datepicker-month,
+.ui-datepicker-year {
+  font-family: var(--nys-font-family-ui, var(--nys-font-family-sans));
+  font-size: var(--nys-font-size-ui-md, 16px);
+  font-weight: var(--nys-font-weight-regular, 400);
+  line-height: var(--nys-font-lineheight-ui-md, 24px);
+  color: var(--nys-color-text, #1b1b1b);
+  background: var(--nys-color-ink-reverse, #fff);
+  border: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-400, #909395);
+  border-radius: var(--nys-radius-md, 4px);
+  padding: var(--nys-space-50, 4px) var(--nys-space-100, 8px);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23909395' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  padding-right: var(--nys-space-300, 24px);
+}
+
+.ui-datepicker-month:hover,
+.ui-datepicker-year:hover {
+  border-color: var(--nys-color-neutral-900, #1b1b1b);
+}
+
+.ui-datepicker-month:focus,
+.ui-datepicker-year:focus {
+  outline: none;
+  border-color: var(--nys-color-focus, #004dd1);
+  box-shadow: 0 0 0 var(--nys-border-width-sm, 1px) var(--nys-color-focus, #004dd1);
+}
+
+/* Prev/Next Navigation Buttons */
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  position: relative;
+  top: auto;
+  width: var(--nys-size-500, 40px);
+  height: var(--nys-size-500, 40px);
+  background: var(--nys-color-ink-reverse, #fff);
+  border: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-400, #909395);
+  border-radius: var(--nys-radius-md, 4px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-datepicker-prev {
+  order: -1;
+}
+
+.ui-datepicker-next {
+  order: 1;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background: var(--nys-color-neutral-10, #f6f6f6);
+  border-color: var(--nys-color-neutral-900, #1b1b1b);
+}
+
+.ui-datepicker-prev:active,
+.ui-datepicker-next:active {
+  background: var(--nys-color-neutral-50, #ededed);
+}
+
+.ui-datepicker-prev:focus,
+.ui-datepicker-next:focus {
+  outline: none;
+  border-color: var(--nys-color-focus, #004dd1);
+  box-shadow: 0 0 0 var(--nys-border-width-sm, 1px) var(--nys-color-focus, #004dd1);
+}
+
+/* Hide default jQuery UI icon text, use custom arrows */
+.ui-datepicker-prev .ui-icon,
+.ui-datepicker-next .ui-icon {
+  font-size: 0;
+  background: none;
+  position: static;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-datepicker-prev .ui-icon::before,
+.ui-datepicker-next .ui-icon::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: solid var(--nys-color-text, #1b1b1b);
+  border-width: 0 2px 2px 0;
+}
+
+.ui-datepicker-prev .ui-icon::before {
+  transform: rotate(135deg);
+  margin-left: 4px;
+}
+
+.ui-datepicker-next .ui-icon::before {
+  transform: rotate(-45deg);
+  margin-right: 4px;
+}
+
+/* Calendar Table */
+.ui-datepicker-calendar {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 var(--nys-space-2-px, 2px);
+  margin: 0;
+}
+
+/* Day Headers */
+.ui-datepicker-calendar thead th {
+  font-family: var(--nys-font-family-ui, var(--nys-font-family-sans));
+  font-size: var(--nys-font-size-ui-sm, 14px);
+  font-weight: var(--nys-font-weight-regular, 400);
+  color: var(--nys-color-text-weaker, #797c7f);
+  text-align: center;
+  padding: var(--nys-space-50, 4px);
+  border: none;
+}
+
+/* Date Cells */
+.ui-datepicker-calendar td {
+  padding: 0;
+  border: none;
+}
+
+.ui-datepicker-calendar td a,
+.ui-datepicker-calendar td span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--nys-size-500, 40px);
+  height: var(--nys-size-500, 40px);
+  font-family: var(--nys-font-family-ui, var(--nys-font-family-sans));
+  font-size: var(--nys-font-size-ui-sm, 14px);
+  color: var(--nys-color-text, #1b1b1b);
+  text-decoration: none;
+  background: transparent;
+  border: var(--nys-border-width-sm, 1px) solid transparent;
+  border-radius: var(--nys-radius-md, 4px);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+/* Date Hover */
+.ui-datepicker-calendar td a:hover {
+  background: var(--nys-color-neutral-50, #ededed);
+  color: var(--nys-color-text, #1b1b1b);
+}
+
+/* Date Active/Pressed */
+.ui-datepicker-calendar td a:active {
+  background: var(--nys-color-neutral-100, #d0d0ce);
+}
+
+/* Date Focus */
+.ui-datepicker-calendar td a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--nys-color-link, #004dd1);
+}
+
+/* Selected Date */
+.ui-datepicker-calendar td a.ui-state-active {
+  background: var(--nys-color-info-weak, #e5effa);
+  color: var(--nys-color-info, #004dd1);
+  font-weight: var(--nys-font-weight-semibold, 600);
+}
+
+/* Today Highlight */
+.ui-datepicker-calendar td a.ui-state-highlight {
+  border-color: var(--nys-color-neutral-400, #909395);
+}
+
+/* Disabled Dates */
+.ui-datepicker-calendar td.ui-datepicker-unselectable span,
+.ui-datepicker-calendar td.ui-state-disabled span {
+  color: var(--nys-color-text-disabled, #bec0c1);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+/* Other Month Dates (if shown) */
+.ui-datepicker-calendar td.ui-datepicker-other-month a {
+  color: var(--nys-color-text-weaker, #797c7f);
+}
+
+/* Button Pane */
+.ui-datepicker-buttonpane {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--nys-space-100, 8px);
+  margin-top: var(--nys-space-100, 8px);
+  padding-top: var(--nys-space-100, 8px);
+  border-top: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-200, #bec0c1);
+  background: transparent;
+}
+
+.ui-datepicker-buttonpane button {
+  font-family: var(--nys-font-family-ui);
+  font-size: var(--nys-font-size-ui-md, 16px);
+  font-weight: var(--nys-font-weight-semibold, 600);
+  line-height: var(--nys-font-lineheight-ui-md, 24px);
+  padding: var(--nys-space-50, 4px) var(--nys-space-150, 12px);
+  border-radius: var(--nys-radius-md, 4px);
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+  background-color: var(--nys-color-theme) !important;
+  color: var(--nys-color-text-reverse) !important;
+}
+
+/* Close/Primary Button */
+button.ui-datepicker-close {
+  color: var(--nys-color-text-reverse, #fff) !important;
+  background-color: var(--nys-color-theme) !important;
+}
+
+.ui-datepicker-close:hover {
+  background: var(--nys-color-neutral-900, #1b1b1b);
+  border-color: var(--nys-color-neutral-900, #1b1b1b);
+}
+
+.ui-datepicker-close:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--nys-color-focus, #004dd1);
+}
+
+/* Today/Secondary Button */
+.ui-datepicker-current {
+  color: var(--nys-color-text, #1b1b1b);
+  background: var(--nys-color-ink-reverse, #fff);
+  border: var(--nys-border-width-sm, 1px) solid var(--nys-color-neutral-400, #909395);
+}
+
+.ui-datepicker-current:hover {
+  background: var(--nys-color-neutral-10, #f6f6f6);
+  border-color: var(--nys-color-neutral-900, #1b1b1b);
+}
+
+
+/* Component: accordion */
+.homepageLeftItem > table.expandableSectionTable.tableStyle > tbody > tr:not(:has(.expandableHeaderSectionTag)):nth-child(even) {
+  background: var(--nys-color-neutral-10);
+}
+
+.homepageLeftItem > table.expandableSectionTable.tableStyle > tbody:has(#section0) > tr:not(:has(.expandableHeaderSectionTag)):nth-child(even) {
+    background-color: var(--nys-color-surface);
+}
+.homepageLeftItem > table.expandableSectionTable.tableStyle > tbody:has(#section0) > tr:not(:has(.expandableHeaderSectionTag)):nth-child(odd) {
+  background: var(--nys-color-neutral-10);
+}
+
+
+th[colspan] .divHomeScheduleLabel {
+  font-size: 10px;
+  transform: rotate(300deg);
+  font-weight: 400;
+  letter-spacing: .01rem;
+}
 
 /* Component: button */
-/* Notes: BUTTON */
+
 .smallButton, .largeButton {
+  color: var(--nys-color-text-reverse) !important;
   gap: var(--nys-space-100);
   width: fit-content;
   border: solid var(--nys-border-width-md) var(--nys-color-transparent);
   padding: 6px 14px !important;
   background: var(--nys-color-theme) !important;
+  box-shadow: none !important;
   max-height: var(--nys-size-500);
   align-items: center;
-  font-family: var(--nys-font-family-sans);
+  font-family: var(--nys-font-family-ui);
   font-weight: var(--nys-font-weight-semibold);
   line-height: var(--nys-font-lineheight-md);
+  text-shadow: none !important;
   border-radius: var(--nys-radius-xl);
   justify-content: center;
+  box-shadow: none !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none !important;
 }
 
-/* Component: custom */
-.homepageImage {
-  width: 579px !important;
-  border-color: #ededed !important;
-  border-width: 2px !important;
-  margin-bottom: 24px !important;
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+.fieldCell3Col a.smallButton {
+  margin-bottom: var(--nys-space-200);
 }
 
-#headerBottomContainer {
-  height: 100%;
-}
-
-.taskNavEntrySelected {
-  font-weight: var(--nys-font-weight-bold);
-  background-color: var(--nys-color-theme);
+.buttonContainer:has(label), .buttonContainer div:has(label) {
+  gap: var(--nys-space-300);
+  display: flex;
+  align-items: baseline;
+  margin-bottom: var(--nys-space-300);
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 table.resultsPaginationContent table.tableStyle td, table.resultsPaginationContent table.tableStyle th {
@@ -452,6 +1112,21 @@ td.formInput.textAlignRight {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+.homepageImage {
+  width: 579px !important;
+  border-color: #ededed !important;
+  border-width: 2px !important;
+  margin-bottom: 24px !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+#headerBottomContainer {
+  height: 100%;
 }
 
 div.fieldCell3Col input:focus, input.formInput:focus {
@@ -485,12 +1160,6 @@ p.imageText {
   left: 36px !important;
 }
 
-.block-form-type1, .block-form-type3 {
-  border: none;
-  border-radius: 0;
-  background-color: #ffffff;
-}
-
 .altColor {
   background-color: var(--nys-color-base-weak) !important;
 }
@@ -506,58 +1175,25 @@ table.resultsPaginationContent {
   background-color: #ffffff !important;
 }
 
-div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
-  display: none;
-}
-
 table.resultsPaginationContent table.tableStyle th {
   font-size: 16px !important;
   line-height: 1.25rem !important;
   padding-bottom: 6px !important;
   background-color: white !important;
+  padding: var(--nys-space-100) var(--nys-space-250);
+    width: -webkit-fill-available;
 }
+
+
 
 .resultsPaginationHeader h2 {
   color: var(--nys-color-text-reverse);
   padding: 8px 16px;
   background-color: var(--nys-color-theme);
+  margin: var(--nys-space-200);
 }
 
-#taskNavHeader {
-  height: 60px !important;
-}
-
-h2.expandableHeaderInheritProperties, th a.white, th {
-  font-size: 20px !important;
-  font-weight: 700 !important;
-  letter-spacing: .001rem !important;
-}
-
-div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
-  display: none;
-}
-
-#pageContentHomepage {
-  width: 100% !important;
-  overflow-x: visible !important;
-  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
-}
-
-.fieldCell3Col br {
-  display: none !important;
-}
-
-label.formLabel {
-  height: 24px !important;
-  display: block;
-  box-sizing: border-box !important;
-  margin-bottom: 8px !important;
-}
-
-.fieldCell3Col {
-  margin-bottom: 32px !important;
-}
-
+/* Component: general */
 .homepageCaseSearch label + br {
   display: none;
 }
@@ -571,14 +1207,45 @@ label.formLabel {
   margin-bottom: 16px;
 }
 
-#pageContentWrapperHomepage {
-  padding: 16px 10px;
-  margin-top: 0 !important;
-  margin-left: 0 !important;
+.block-form-type1 .rowField .cell span.formLabel {
+  display: flex !important;
+}
+
+tbody tr th {
+  font-size: var(--nys-font-size-lg) !important;
+  font-weight: var(--nys-font-weight-semibold) !important;
+}
+
+.block-title,.block-footer, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, table.tableStyle caption, tr.formLabel>th, th.formLabel, tr.formlabel>th, th.formlabel, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, .curvedHeaderTableData, .curvedLeftTopHeaderSearchResults, .curvedRightTopHeaderSearchResults, .headerStyleWithoutTH, .headerStyleWithPadding {
+  color: var(--nys-color-text-reverse) !important;
+  background-color: var(--nys-color-theme);
+}
+
+body, p, td, #logo, #pageContentHomepage, #pageContent, #mainNavigationContainer, h2.expandableHeaderInheritProperties, th a.white, th, .block-title, .block-footer {
+  color: var(--nys-color-text);
+  font-family: var(--nys-font-family-sans);
+}
+
+div#virtualBotContainer {
+  display: none !important;
+}
+
+.homepageTopRow {
+  width: 100% !important;
+}
+
+br {
+  display: none !important;
 }
 
 th:hover, th a:hover, .expandableHeaderSectionTag:hover, .expandableHeaderSectionTag a.white:hover {
   background-color: var(--nys-color-neutral-50) !important;
+}
+
+#pageContentWrapperHomepage {
+  padding: 16px 10px;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
 }
 
 #pageContentWrapperHomepage {
@@ -587,7 +1254,6 @@ th:hover, th a:hover, .expandableHeaderSectionTag:hover, .expandableHeaderSectio
   border-radius: 0 !important;
 }
 
-/* Notes: removing california specific text for ny */
 a[title="CalFresh"] h2.expandableHeaderInheritProperties {
   visibility: hidden;
 }
@@ -601,6 +1267,12 @@ th, .block-title, .block-footer {
   text-align: left;
   padding-left: 16px;
   vertical-align: middle;
+}
+
+#header {
+  height: 87px !important;
+  background: var(--nys-color-theme) !important;
+  padding-bottom: 0 !important;
 }
 
 p.imageText:before {
@@ -634,713 +1306,9 @@ span#logo {
   outline-width: var(--nys-border-width-sm);
 }
 
-.homepageCaseSearch a {
-  display: inline-block;
-  margin-left: 16px;
-}
-
-a {
-  color: var(--nys-color-link);
-}
-
-a:hover {
-  color: var(--nys-color-link-strongest);
-}
-
-.homepageTopRowHeader h2 {
-  color: var(--nys-color-text-reverse);
-  margin: 0;
-  padding: var(--nys-space-200) !important;
-  font-size: var(--nys-font-size-h4);
-  background: var(--nys-color-theme-mid);
-  font-weight: var(--nys-font-weight-light);
-  border-radius: 0;
-  letter-spacing: var(--nys-font-letterspacing-h2);
-}
-
-button.ui-datepicker-trigger img {
-  opacity: 0;
-}
-
-button.ui-datepicker-trigger:after {
-  top: -25px;
-  left: 6px;
-  width: var(--nys-size-300);
-  height: var(--nys-size-300);
-  content: "";
-  display: block;
-  position: relative;
-}
-
-button.ui-datepicker-trigger {
-  width: var(--nys-size-500);
-  border: none !important;
-  height: var(--nys-size-500);
-  margin: 0 0 0 var(--nys-space-100);
-  padding: 0 !important;
-  background-color: transparent !important;
-}
-
-button.ui-datepicker-trigger:hover {
-  background-color: var(--nys-color-base-weak) !important;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#taskNavContainer {
-  border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100);
-  margin-top: var(--nys-space-200);
-}
-
-.taskNavEntry:hover {
-  color: var(--nys-color-link) !important;
-  font-weight: 400 !important;
-  text-decoration: underline !important;
-}
-
-h2.expandableHeaderInheritProperties, th a.white, th {
-  font-size: var(--nys-font-size-ui-xl);
-  font-family: var(--nys-font-family-ui);
-  font-weight: var(--nys-font-weight-bold);
-  line-height: var(--nys-font-lineheight-ui-xl);
-  letter-spacing: var(--nys-font-letterspacing-ui-xl);
-}
-
-tbody tr th {
-  font-size: var(--nys-font-size-lg) !important;
-  font-weight: var(--nys-font-weight-semibold) !important;
-}
-
-.block-title,.block-footer, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, table.tableStyle caption, tr.formLabel>th, th.formLabel, tr.formlabel>th, th.formlabel, .roundedTableHeader th, .resultsHeader, .resultsSummaryHeader, .curvedHeaderTableData, .curvedLeftTopHeaderSearchResults, .curvedRightTopHeaderSearchResults, .headerStyleWithoutTH, .headerStyleWithPadding {
-  color: var(--nys-color-text-reverse) !important;
-  background-color: var(--nys-color-theme);
-}
-
-body, h1, h2, h3, h4, h5, h6, p, td, #logo, #pageContentHomepage, #pageContent, #mainNavigationContainer, h2.expandableHeaderInheritProperties, th a.white, th, .block-title, .block-footer {
-  color: var(--nys-color-text);
-  font-family: var(--nys-font-family-ui);
-}
-
-button.ui-datepicker-trigger:after {
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-}
-
-button.ui-datepicker-trigger:hover {
-  background-color: var(--nys-color-weak) !important;
-}
-
-/* Notes: hiding bot */
-div#virtualBotContainer {
-  display: none !important;
-}
-
-.homepageTopRow {
-  width: 100% !important;
-}
-
-br {
-  display: none !important;
-}
-
-#header {
-  height: 87px !important;
-  background: var(--nys-color-theme) !important;
-  padding-bottom: 0 !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.smallRowHeight span.formLabel {
-  font-size: var(--nys-font-size-h4);
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-label.formLabel {
-  font-weight: var(--nys-font-weight-semibold) !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.row:has(input.hasDatepicker) {
-  padding-top: var(--nys-space-50);
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-#pageContent form div.block-form-type1 .row div {
-  display: none;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-#pageContent form div.block-form-type1 .row {
-  gap: var(--nys-space-250);
-  height: auto;
-  margin: 0 var(--nys-space-2px) var(--nys-space-500);
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.fieldCell10Col {
-  width: min-content !important;
-  height: -webkit-fill-available;
-  display: flex;
-  padding-top: var(--nys-space-200);
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.fieldCell7Col label.formLabel {
-  grid-column: 1 / span 4 !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-input.hasDatepicker {
-  grid-column: 1 / span 3 !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-button.ui-datepicker-trigger {
-  grid-column: 4 !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.fieldCell7Col select {
-  grid-column: 1 / span 4 !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.smallButton {
-  display: block;
-  box-sizing: border-box !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-#pageContent form div.block-form-type1 .row div.fieldCell10Col:has(.smallButton) {
-  align-content: flex-end;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.smallRowHeight div {
-  display: none;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.smallRowHeight div.fieldCell7Col {
-  display: block;
-  margin-top: var(--nys-space-100);
-  margin-bottom: var(--nys-space-100);
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-.smallRowHeight {
-  height: auto;
-  margin: 0 var(--nys-space-2px);
-}
-
-.rowFields {
-  display: flex !important;
-  flex-direction: row;
-}
-
-form .block-form-type1 div.row .rowFields {
-  width: 100%;
-  display: flex !important;
-  flex-direction: row;
-}
-
-#pageContent form div.block-form-type1 .row div {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  flex-direction: row;
-}
-
-.buttonContainer .right * {
-  margin-bottom: 0px;
-}
-
-.buttonContainer .right:last-child {
-  gap: 16px;
-  border: 1px solid green;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  align-content: flex-end;
-  margin-bottom: 0 !important;
-  flex-direction: column;
-}
-
-.buttonContainer .right .smallButton {
-  width: 100% !important;
-}
-
-/* Notes: lots of styles to make certain search forms work better */
-#pageContent form div.block-form-type1 .row div.fieldCell7Col, #pageContent form div.block-form-type1 .row div.fieldCell10Col, .row .rowFields .fieldCell4Col {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  display: grid;
-  font-weight: var(--nys-font-weight-regular);
-  grid-row-gap: var(--nys-space-50);
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* Notes: cant figure why select boxes won't shrink */
-#pageContent form div.block-form-type1 .row div {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  flex-direction: row;
-}
-
-/* Notes: cant figure why select boxes won't shrink */
-#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
-  clear: both !important;
-  float: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  display: grid !important;
-  padding: 0 !important;
-  align-items: flex-start;
-  grid-row-gap: var(--nys-space-50);
-  justify-items: left;
-  grid-template-columns: 1fr;
-}
-
-/* Notes: cant figure why select boxes won't shrink */
-.row .rowFields div {
-  width: -webkit-fill-available;
-  height: -webkit-fill-available;
-  display: grid;
-  font-weight: var(--nys-font-weight-regular);
-  grid-row-gap: var(--nys-space-50);
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
-  color: var(--nys-color-text-reverse);
-  border-color: var(--nys-color-theme-strong);
-  background-color: var(--nys-color-theme-strong) !important;
-}
-
-/* Notes: cant figure why select boxes won't shrink */
-.row .rowFields * select * {
-  width: 50% !important;
-  grid-column: 1 / span 2 important;
-}
-
-.homepageImage {
-  width: 579px !important;
-  border-color: #ededed !important;
-  border-width: 2px !important;
-  margin-bottom: 24px !important;
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
-  border-bottom-left-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
-}
-
-#headerBottomContainer {
-  height: 100%;
-}
-
-#pageBodyColumn {
-  border-left: 1px solid black;
-  vertical-align: top;
-  background-color: var(--nys-color-surface);
-}
-
-#wrapperBody {
-  border: 0 !important;
-  background: var(--nys-color-surface) !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none !important;
-}
-
-th, th a, .expandableHeaderSectionTag, .expandableHeaderSectionTag a.white {
-  color: #1b1b1b !important;
-  border: 0 !important;
-  cursor: pointer;
-}
-
-th, .expandableHeaderSectionTag, th a {
-  background: var(--nys-color-neutral-50);
-}
-
-#taskNavigation a:focus>.taskNavEntry {
-  color: var(--nys-color-text) !important;
-  font-weight: var(--nys-font-weight-bold);
-  background-color: var(--nys-color-theme-mid) !important;
-}
-
-
-
-table.tableStyle, table.tableStyle.expandableSectionTable {
-  border-color: var(--nys-color-neutral-100);
-  border-width: var(--nys-border-width-sm);
-  border-radius: 0 !important;
-  margin-bottom: var(--nys-space-200);
-  background-color: var(--nys-color-surface);
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-}
-
-.buttonContainer > :last-child {
-  margin-top: var(--nys-space-50);
-}
-
-form.taskNavCaseSearchForm {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-form.taskNavCaseSearchForm label {
-  width: 100% !important;
-}
-
-#caseSummaryHover {
-  padding: 0;
-  border-radius: 4px !important;
-}
-
-#taskNavigation a:focus>.taskNavEntry span {
-  background-color: var(--nys-color-theme-mid) !important;
-}
-
-input#caseNumberTaskNav {
-  margin-right: var(--nys-space-150);
-}
-
-.buttonContainer {
-  gap: var(--nys-space-100);
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.buttonContainer:has(label), .buttonContainer div:has(label) {
-  gap: var(--nys-space-300);
-  display: flex;
-  align-items: baseline;
-  margin-bottom: var(--nys-space-300);
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-#taskNavCaseSearch {
-  font-size: var(--nys-font-size-sm);
-  padding-top: var(--nys-size-150);
-  padding-left: var(--nys-size-200);
-  border-bottom: 1px solid var(--nys-color-neutral-500);
-  padding-right: var(--nys-size-200);
-  padding-bottom: var(--nys-size-150);
-  background-color: unset;
-}
-
-#label_resultsPerPage {
-  font-size: var(--nys-font-size-h6);
-  font-weight: var(--nys-font-weight-semibold);
-  letter-spacing: var(--nys-font-letterspacing-h6);
-}
-
-td.curvedHeaderTableData,  td.curvedHeaderTableData h2 {
-  padding: var(--nys-space-150) var(--nys-space-200);
-  font-size: var(--nys-font-size-ui-md) !important;
-  font-weight: var(--nys-font-weight-bold) !important;
-  line-height: var(--nys-font-lineheight-ui-md);
-  border-radius: 0 !important;
-  background-color: var(--nys-color-surface) !important;
-}
-
 .navHeaderRow {
   margin: 0 !important;
   padding: 0 !important;
-}
-
-/* Notes: br was getting hidden */
-span.taskNavEntry br {
-  display: block !important;
-}
-
-#navCaseName, #navCaseNumber {
-  font-size: var(--nys-font-size-h5);
-}
-
-/* Notes: adjusting the forms made of tables so the labels are right */
-form table.tableStyle td:first-of-type a {
-  margin-left: var(--nys-space-150);
-}
-
-#caseSummaryHover div.navHoverRow div.navHoverLeftColumn, #caseSummaryHover div.navHoverRow div.navHoverRightColumn, #caseSummaryHover #navStatusContainer {
-  padding: 8px 16px !important;
-}
-
-/* Notes: adjusting the forms made of tables so the labels are right */
-form table.tableStyle td:has(#selectWorkerButton) {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-}
-
-#taskNavigation a:has(span.taskNavEntrySelected) span {
-  border-left: 6px solid var(--nys-color-theme-strong) !important;
-  padding-left: 10px !important;
-  background-color: var(--nys-color-theme-faint) !important;
-}
-
-span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
-  color: var(--nys-color-text) !important;
-  font-weight: var(--nys-font-weight-bold) !important;
-  text-decoration: none !important;
-}
-
-/* Notes: adjusting the forms made of tables so the labels are right */
-form table.tableStyle td {
-  padding: var(--nys-space-50) var(--nys-space-100);
-}
-
-/* Notes: forms when they are tables, mostly */
-#pageContent form div.block-form-type1 .row div {
-  flex-wrap: wrap;
-}
-
-/* Notes: forms when they are tables, mostly */
-form .block:has(fieldCell3Col) {
-  padding: 0;
-}
-
-/* Notes: forms when they are tables, mostly */
-form .row {
-  gap: var(--nys-space-200);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-/* Notes: forms when they are tables, mostly */
-form div.block.rowHeight {
-  display: flex;
-  align-items: flex-start;
-  padding-bottom: var(--nys-space-200);
-}
-
-/* Notes: forms when they are tables, mostly */
-label.formLabel {
-  width: 100% !important;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Notes: forms when they are tables, mostly */
-form select:not(#resultsPerPage), #pageContent form div.block-form-type1 .row div select {
-  width: fit-content !important;
-}
-
-/* Notes: forms when they are tables, mostly */
-#pageContent form div.block-form-type1 .row, #pageContent form div.block-form-type1 .block {
-  margin: 0 var(--nys-space-2px) var(--nys-space-200);
-}
-
-/* Notes: forms when they are tables, mostly */
-form div.block.rowHeight:has(.fieldCell3Col) {
-  gap: var(--nys-space-200);
-  flex-direction: row;
-  padding-bottom: 0;
-}
-
-/* Notes: forms when they are tables, mostly */
-form div.fieldCell3Col:has(button) input[type="text"] {
-  width: calc(100% - 50px) !important;
-  max-width: 100%;
-}
-
-/* Notes: forms when they are tables, mostly */
-.fieldCell3Col {
-  margin-bottom: var(--nys-space-200) !important;
-}
-
-/* Notes: forms when they are tables, mostly */
-form .block.smallRowHeight {
-  flex-direction: row;
-}
-
-/* Notes: adjusting the forms made of tables so the labels are right */
-form table.tableStyle td.formLabel {
-  margin-top: var(--nys-space-300);
-  vertical-align: bottom;
-}
-
-/* Notes: making the logo give the full name on homepage */
-div#wrapper:has(#wrapperContainer #wrapperBody #pageContentWrapperHomepage) #header #headerLogo span:after {
-  content: "NYS Integrated Eligibility System" !important;
-}
-
-/* Notes: removing california specific text for ny */
-a[title="CalWORKs"] h2.expandableHeaderInheritProperties {
-  visibility: hidden;
-}
-
-/* Notes: removing california specific text for ny */
-a[title="CalFresh"] h2.expandableHeaderInheritProperties:before {
-  content: "NYFresh";
-  visibility: visible !important;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#taskNavigation #taskNavContainer > div:has(a) > a span {
-  width: 100%;
-  height: 100%;
-  padding: var(--nys-space-150) var(--nys-space-200);
-  border-bottom: 1px solid var(--nys-color-neutral-100) !important;
-  overflow-wrap: anywhere;
-}
-
-.taskNavMenuHeader:hover {
-  color: var(--nys-color-text) !important;
-  cursor: pointer;
-  font-weight: var(--nys-font-weight-bold) !important;
-  text-decoration: none !important;
-}
-
-/* Notes: forms when they are tables, mostly */
-form .fieldCell3Col,
-form .block {
-  flex: 1 1 0;
-  display: flex;
-  min-width: 0;
-  margin-bottom: var(--nys-space-200);
-  flex-direction: column;
-}
-
-/* Notes: forms when they are tables, mostly */
-form select#state {
-  width: fit-content !important;
-}
-
-/* Notes: forms when they are tables, mostly */
-form label {
-  display: block;
-  text-align: left;
-  font-weight: var(--nys-font-weight-semibold);
-  white-space: normal;
-  margin-bottom: var(--nys-space-50);
-}
-
-/* Notes: forms when they are tables, mostly */
-form input[type="text"],
-form select:not(#resultsPerPage) {
-  height: var(--nys-space-500);
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-/* Notes: forms when they are tables, mostly */
-#pageContent form div.block-form-type1 .row {
-  display: grid;
-  justify-content: start;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* Notes: forms when they are tables, mostly */
-form .block {
-  max-width: 100%;
-  padding-left: 6px;
-  margin-bottom: var(--nys-space-500);
-}
-
-/* Notes: forms when they are tables, mostly */
-.rowHeight {
-  height: auto;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#taskNavigation #taskNavContainer div:has(a) {
-  background: none;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-.taskNavEntrySelected {
-  color: var(--nys-color-text);
-  background: var(--nys-color-theme-faint);
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#taskNavigation {
-  height: auto !important;
-  background: none;
-  min-height: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#pageBodyColumn {
-  border: none;
-  padding-left: 16px !important;
-}
-
-#headerContainer:has(#rightHeaderContainer #headerTopContainer #headerContext div.container) #leftHeaderContainer #headerLogo span:after {
-  content: "NYS IES" !important;
-}
-
-/* Notes: removing california specific text for ny */
-a[title="CalWORKs"] h2.expandableHeaderInheritProperties:before {
-  content: "NYWorks";
-  visibility: visible !important;
-}
-
-/* Notes: forms when they are tables, mostly */
-table.expandableSectionTable td {
-  max-width: 100%;
-}
-
-
-/* Notes: forms when they are tables, mostly */
-table.expandableSectionTable {
-  width: 100%;
-  max-width: 100%;
-}
-
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#taskNavigation #taskNavContainer > div:has(a) > a:last-child span {
-  border-bottom: none !important;
-}
-
-/* Notes: fixes for the sidebar to make it NYS-ish */
-.taskNavEntry {
-  border: none !important;
-  font-size: var(--nys-font-size-ui-md);
-  background: none;
-}
-
-#headerContext {
-  margin-left: 20px;
-}
-
-/* Notes: sidebar nav stuff */
-#taskNavigation a span {
-  color: var(--nys-color-ink);
-  display: block;
-  padding: var(--nys-space-150) var(--nys-space-200) !important;
-  font-size: var(--nys-font-size-ui-md);
-  line-height: var(--nys-font-lineheight-2xs);
-  border-bottom: solid var(--nys-border-width-sm) var(--nys-color-neutral-50) !important;
-  letter-spacing: var(--nys-font-letterspacing-ui-md);
-  text-decoration: none;
-  background-color: var(--nys-color-surface);
-}
-
-/* Notes: sidebar with accordions */
-.taskNavMenuHeader {
-  width: 100%;
-  height: 100%;
-  padding: var(--nys-space-150) var(--nys-space-200) var(--nys-space-150) var(--nys-space-50) !important;
-  border-top: 1px solid var(--nys-color-neutral-100) !important;
-  border-bottom: 1px solid var(--nys-color-neutral-100) !important;
-  overflow-wrap: anywhere;
-  background-color: var(--nys-color-neutral-10);
 }
 
 div.fieldCell3Col input:focus {
@@ -1363,27 +1331,13 @@ img.banner {
 /* Notes: fixes for the sidebar to make it NYS-ish */
 #taskNavHeader {
   background: none !important;
+  height: 60px !important;
 }
 
-li.navContainer>a.globalNavTab {
-  width: -webkit-fill-available !important;
-  height: 35px !important;
-  display: flex;
-  padding: 8px 8px 6px !important;
-  line-height: var(--nys-font-lineheight-2xs);
-  flex-direction: column-reverse;
-}
+
 
 .homepageCountySelector, .homepageCounty {
   display: none;
-}
-
-table.tableStyle td {
-  padding: 10px 20px;
-}
-
-p.imageText {
-  left: 36px !important;
 }
 
 #wrapperContainer {
@@ -1413,22 +1367,755 @@ div.homepageTopRowItem div {
   padding-right: 48px !important;
 }
 
-/* Component: label */
-/* Notes: lots of styles to make certain search forms work better */
-span.requiredIcon img {
+div.homepageTopRowItem div.homepageCountyCaseContainer div.homepageCountySelector {
+    width: 38%;
+    float: left;
+    display: none !important;
+}
+
+
+div.homepageRightItem * div#section1.expandableSectionDiv div.fieldCell.x220 {
   display: none;
 }
-/* Notes: huge form label fixes in progress */
-td:has(#label_caseName) > span.requiredIcon, .cell span.formLabel > span.requiredIcon {
+
+#pageContentHomepage {
+  width: 100% !important;
+  overflow-x: visible !important;
+  font-family: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+}
+
+.fieldCell3Col br {
   display: none !important;
 }
 
-/* Notes: huge form label fixes in progress */
+span.taskNavEntry br {
+  display: block !important;
+}
+
+.homepageCaseSearch a {
+  display: inline-block;
+  margin-left: 16px;
+}
+div.homepageTopRowItem div.homepageCountyCaseContainer div.homepageCaseSearch {
+    float: left;
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+
+a {
+  color: var(--nys-color-link);
+}
+
+a:hover {
+  color: var(--nys-color-link-strongest);
+}
+
+.homepageTopRowHeader h2 {
+  color: var(--nys-color-text);
+  margin: 0 0 var(--nys-space-50);
+  padding: var(--nys-space-2px) var(--nys-space-200) var(--nys-space-150) !important;
+  font-size: var(--nys-font-size-h4);
+  background: var(--nys-color-surface) !important;
+  border-radius: 0;
+  letter-spacing: var(--nys-font-letterspacing-h2);
+}
+
+
+h2.expandableHeaderInheritProperties, th a.white, th {
+  font-size: var(--nys-font-size-ui-xl);
+  font-family: var(--nys-font-family-ui);
+  font-weight: var(--nys-font-weight-bold);
+  line-height: var(--nys-font-lineheight-ui-xl);
+  letter-spacing: var(--nys-font-letterspacing-ui-xl);
+}
+
+h2.expandableHeaderInheritProperties {
+  margin: var(--nys-space-200) 0;
+}
+
+
+.fieldCell10Col {
+  width: min-content !important;
+  height: -webkit-fill-available;
+  display: flex;
+  padding-top: var(--nys-space-200);
+}
+
+.fieldCell7Col label.formLabel {
+  grid-column: 1 / span 4 !important;
+}
+
+input.hasDatepicker {
+  grid-column: 1 / span 3 !important;
+}
+
+.fieldCell7Col select {
+  grid-column: 1 / span 4 !important;
+}
+
+.smallButton {
+  display: block;
+  box-sizing: border-box !important;
+}
+
+#pageContent form div.block-form-type1 .row div.fieldCell10Col:has(.smallButton) {
+  align-content: flex-end;
+}
+
+.smallRowHeight div {
+  display: none;
+}
+
+.smallRowHeight div.fieldCell7Col {
+  display: block;
+  margin-top: var(--nys-space-100);
+  margin-bottom: var(--nys-space-100);
+}
+
+.smallRowHeight {
+  height: auto;
+  margin: 0 var(--nys-space-2px);
+}
+
+.rowFields {
+  display: flex !important;
+  flex-direction: row;
+}
+
+form .block-form-type1 div.row .rowFields {
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+}
+
+.buttonContainer .right * {
+  margin-bottom: 0px;
+}
+
+.buttonContainer .right .smallButton {
+  width: 100% !important;
+}
+
+#pageContent form div.block-form-type1 .row div.fieldCell7Col, #pageContent form div.block-form-type1 .row div.fieldCell10Col, .row .rowFields .fieldCell4Col {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: grid;
+  font-weight: var(--nys-font-weight-regular);
+  grid-row-gap: var(--nys-space-50);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#pageContent form div.block-form-type1 .row div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.row .rowFields div {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: grid;
+  font-weight: var(--nys-font-weight-regular);
+  grid-row-gap: var(--nys-space-50);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+a#CaseButton:hover, .smallButton:hover, .largeButton:hover {
+  color: var(--nys-color-text-reverse);
+  background-color: var(--nys-color-theme-strong) !important;
+}
+
+
+
+.row .rowFields * select * {
+  width: 50% !important;
+  grid-column: 1 / span 2 important;
+}
+
+#pageBodyColumn {
+  border-left: 1px solid black;
+  vertical-align: top;
+  background-color: var(--nys-color-surface);
+}
+
+#wrapperBody {
+  border: 0 !important;
+  background: var(--nys-color-surface) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none !important;
+}
+
+th, th a, .expandableHeaderSectionTag, .expandableHeaderSectionTag a.white {
+  color: var(--nys-color-neutral-900) !important;
+  border: 0 !important;
+  cursor: pointer;
+  height: -webkit-fill-available;
+  padding: 0 var(--nys-space-250) ;
+
+}
+
+th, .expandableHeaderSectionTag, th a {
+  background: var(--nys-color-neutral-50);
+}
+
+.expandableHeaderSectionTag {
+  border-radius: var(--nys-radius-md) !important;
+
+}
+
+#taskNavigation a:focus>.taskNavEntry {
+  color: var(--nys-color-link-strong) !important;
+  font-weight: var(--nys-font-weight-regular);
+  background-color: var(--nys-color-neutral-100) !important;
+}
+
+.buttonContainer:not(:has(a)) {
+    /* outline: 10px solid blue; */
+    height: 0 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  gap: var(--nys-space-100);
+}
+
+#label_resultsPerPage {
+font-weight: var(--nys-font-weight-semibold);
+    font-size: var(--nys-font-size-h6);
+    letter-spacing: var(--nys-font-letterspacing-h6);
+}
+
+.buttonContainer > :last-child { margin-top: var(--nys-space-50); }
+
+table.tableStyle  table  td { 
+width: auto;
+display: inline;
+} 
+
+table.tableStyle table td:has(>#label_case) {
+  display: inline-block;
+
+}
+
+table.tableStyle table td:has(>#label_case)  a#select {
+    margin-top: 8px;
+}
+
+
+td[colspan="3"] tr:has(td>.formLabel) td {
+  width: 25%;
+  display: inline;
+
+}
+
+table.tableStyle  table  td *:not:script {
+  display: flex;
+
+}
+
+form[name="SearchForm"] table table input {
+    /* outline: 5px solid green; */
+    margin-bottom: var(--nys-space-200) !important;
+}
+table.tableStyle td:has(table) {
+    padding: 0 0 0 6px !important;
+}
+table.tableStyle td:not(:has(table)).formLabel {
+    /* outline: 10px solid yellow; */
+    padding: 0 !important;
+}
+form[name="SearchForm"] table td:has(>.formLabel) {
+    /* outline: 16px solid rgba(0,0,255,0.2); */
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+form[name="SearchForm"] table td:has(a#Select) .formlabel {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+form[name="SearchForm"] table td:has(a#Select) input#case {
+    outline: none;
+}
+
+
+
+input[type="text"]:not(#caseNumberTaskNav) {
+  width: auto;
+  width: fit-content;
+}
+
+#navCaseName, #navCaseNumber {
+  font-size: var(--nys-font-size-h5);
+}
+
+input#caseNumber {
+    width: min-content !important;
+}
+
+input#caseNumberTaskNav {
+  margin-right: var(--nys-space-150);
+}
+
+form.taskNavCaseSearchForm {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+form.taskNavCaseSearchForm label {
+  width: 100% !important;
+}
+
+#caseSummaryHover {
+  padding: 0;
+  border-radius: 4px !important;
+}
+
+#taskNavigation a:focus>.taskNavEntry span {
+  background-color: var(--nys-color-theme-mid) !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer > div:has(a) > a span {
+  width: 100%;
+  height: 100%;
+  padding: var(--nys-space-150) var(--nys-space-200);
+  border-bottom: 1px solid var(--nys-color-neutral-100) !important;
+  overflow-wrap: anywhere;
+}
+
+.taskNavMenuHeader:hover {
+  color: var(--nys-color-text) !important;
+  cursor: pointer;
+  font-weight: var(--nys-font-weight-bold) !important;
+  text-decoration: none !important;
+}
+
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer div:has(a) {
+  background: none;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+.taskNavEntrySelected {
+  color: var(--nys-color-text);
+  background: var(--nys-color-theme-faint);
+  font-weight: var(--nys-font-weight-semibold);
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavContainer {
+  border: var(--nys-border-width-sm) solid var(--nys-color-neutral-100);
+  margin-top: var(--nys-space-200);
+}
+
+.taskNavEntry:hover {
+  color: var(--nys-color-link) !important;
+  font-weight: 400 !important;
+  text-decoration: underline !important;
+  background-color: var(--nys-color-surface) !important;
+}
+.taskNavEntrySelected:hover {
+  font-weight: var(--nys-font-weight-semibold) !important;
+}
+
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation #taskNavContainer > div:has(a) > a:last-child span {
+  border-bottom: none !important;
+}
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+.taskNavEntry {
+  border: none !important;
+  font-size: var(--nys-font-size-ui-md);
+  background: none;
+}
+
+#taskNavCaseSearch {
+  font-size: var(--nys-font-size-sm);
+  padding-top: var(--nys-size-150);
+  padding-left: var(--nys-size-200);
+  border-bottom: 1px solid var(--nys-color-neutral-500);
+  padding-right: var(--nys-size-200);
+  padding-bottom: var(--nys-size-150);
+  background-color: unset;
+}
+
+td.curvedHeaderTableData,  td.curvedHeaderTableData h2 {
+  padding: var(--nys-space-150) var(--nys-space-200);
+  font-size: var(--nys-font-size-ui-md) !important;
+  font-weight: var(--nys-font-weight-bold) !important;
+  line-height: var(--nys-font-lineheight-ui-md);
+  border-radius: 0 !important;
+  background-color: var(--nys-color-surface) !important;
+}
+
+form table.tableStyle td:first-of-type a {
+  margin-left: var(--nys-space-150);
+}
+
+#caseSummaryHover div.navHoverRow div.navHoverLeftColumn, #caseSummaryHover div.navHoverRow div.navHoverRightColumn, #caseSummaryHover #navStatusContainer {
+  padding: 8px 16px !important;
+}
+
+form table.tableStyle td:has(#selectWorkerButton) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#taskNavigation a:has(span.taskNavEntrySelected) span {
+  border-left: 6px solid var(--nys-color-theme-strong) !important;
+  padding-left: 10px !important;
+  background-color: var(--nys-color-theme-faint) !important;
+}
+
+span.taskNavEntrySelected:hover, span.taskNavMenuHeader:hover {
+  color: var(--nys-color-link-strong) !important;
+  font-weight: var(--nys-font-weight-semibold) !important;
+  text-decoration: underline !important;
+}
+
+table.tableStyle td {
+  padding: 0;
+}
+
+form table.tableStyle td {
+  padding: var(--nys-space-50) var(--nys-space-100);
+}
+
+form .block:has(fieldCell3Col) {
+  padding: 0;
+}
+
+form .row {
+  gap: var(--nys-space-200);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+form div.block.rowHeight {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 0 var(--nys-space-200) !important;
+  padding: 0 0 0 6px;
+}
+
+form div.block.rowHeight:has(>label) {
+  padding-left: 6px;
+}
+
+
+form select:not(#resultsPerPage), #pageContent form div.block-form-type1 .row div select {
+  width: fit-content !important;
+}
+
+#pageContent form div.block-form-type1 .row {
+  gap: var(--nys-space-250);
+  height: auto;
+  margin: 0 var(--nys-space-2px) var(--nys-space-500);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#pageContent form div.block-form-type1 .row, #pageContent form div.block-form-type1 .block {
+  margin: 0 0 var(--nys-space-100);
+}
+
+form div.block.rowHeight:has(.fieldCell3Col) {
+  gap: var(--nys-space-200);
+  flex-direction: row;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+form div.fieldCell3Col:has(button) input[type="text"] {
+  width: calc(100% - 50px) !important;
+  max-width: 100%;
+}
+
+.fieldCell3Col {
+  margin-bottom: var(--nys-space-100) !important;
+}
+
+form .block.smallRowHeight {
+  flex-direction: row;
+}
+
+a[title="CalFresh"] h2.expandableHeaderInheritProperties:before {
+  content: "NYFresh";
+  visibility: visible !important;
+}
+
+
+
+form .fieldCell3Col,
+form .block {
+  flex: 1 1 0;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  max-width: 100%;
+  padding-left: 6px;
+  margin-bottom: var(--nys-space-500);
+}
+
+form select#state {
+  width: fit-content !important;
+}
+
+form input[type="text"],
+form select:not(#resultsPerPage) {
+  height: var(--nys-space-500);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#pageContent form div.block-form-type1 .row {
+  display: grid;
+  justify-content: start;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.rowHeight {
+  height: auto;
+}
+
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#taskNavigation {
+  height: auto !important;
+  background: none;
+  min-height: 0 !important;
+  border-radius: 0 !important;
+}
+
+table.expandableSectionTable td {
+  max-width: 100%;
+  padding: 0  !important;
+
+}
+
+table.expandableSectionTable {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+#headerContext:has(div) {
+  margin-left: 20px;
+  border: 1px solid var(--nys-color-neutral-200);
+  padding: 2px 10px;
+  background-color: var(--nys-color-black-transparent-200);
+  box-shadow: 1.2px 1.2px 1.2px -0.2px rgba(1, 1, 1, .1);
+  box-sizing: border-box;
+  border-radius: var(--nys-radius-sm);
+}
+
+
+label#label_caseName {
+  width: max-content !important;
+}
+
+table, form {
+  border: none !important;
+}
+
+td.formInput {
+  border: none;
+}
+
+#taskNavigation a span {
+  color: var(--nys-color-ink);
+  display: block;
+  padding: var(--nys-space-150) var(--nys-space-200) !important;
+  font-size: var(--nys-font-size-ui-md);
+  line-height: var(--nys-font-lineheight-2xs);
+  border-bottom: solid var(--nys-border-width-sm) var(--nys-color-neutral-50) !important;
+  letter-spacing: var(--nys-font-letterspacing-ui-md);
+  text-decoration: none;
+  background-color: var(--nys-color-surface);
+}
+
+.taskNavMenuHeader {
+  width: 100%;
+  height: 100%;
+  padding: var(--nys-space-150) var(--nys-space-200) var(--nys-space-150) var(--nys-space-50) !important;
+  border-top: 1px solid var(--nys-color-neutral-100) !important;
+  border-bottom: 1px solid var(--nys-color-neutral-100) !important;
+  overflow-wrap: anywhere;
+  background-color: var(--nys-color-neutral-10);
+}
+
+.taskNavMenuHeader:hover {
+    font-weight: var(--nys-font-weight-bold) !important;
+    color: var(--nys-color-link-stronger) !important;
+    text-decoration: none !important;
+    background-color: var(--nys-color-neutral-50) !important;
+}
+
+form table.tableStyle td.formLabel {
+  height: max-content !important;
+  margin-top: var(--nys-space-300);
+  vertical-align: bottom;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  font-weight: var(--nys-font-weight-semibold);
+  white-space: normal;
+  margin-bottom: var(--nys-space-50);
+}
+
+td:has(#label_caseName), .rowField .cell > label {
+  width: fit-content !important;
+  height: fit-content !important;
+  display: flex;
+  flex-direction: column;
+}
+
+label#label_caseName:after {
+  left: var(--nys-space-50);
+  color: var(--nys-color-danger) !important;
+  content: "*";
+  display: inline;
+  position: relative;
+  visibility: visible !important;
+  vertical-align: top;
+}
+
+.smRowHgt {
+  height: fit-content;
+}
+
+th:empty {
+  display: none;
+}
+
+label.formLabel, div.group div.rowField div.cell, .formLabel {
+  width: 100% !important;
+  height: var(--nys-size-300) !important;
+  display: inline-block !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-weight: var(--nys-font-weight-semibold) !important;
+  margin-bottom: var(--nys-space-100) !important;
+}
+
+table tr > td:has(> #label_resultsPerPage) {
+  gap: var(--nys-space-300);
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
+  clear: both !important;
+  float: none !important;
+  width: max-content !important;
+  display: grid !important;
+  padding: 0 !important;
+  min-width: var(--nys-space-800);
+  align-items: center;
+  grid-row-gap: var(--nys-space-50);
+  justify-items: left;
+  grid-template-columns: 1fr;
+}
+
+td[colspan="3"] tr:has(td>.formLabel) {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Notes: fixes for the sidebar to make it NYS-ish */
+#pageBodyColumn {
+  border: none;
+  padding-left: var(--nys-space-400) !important;
+}
+
+table.tableStyle td:not(:has(table)) {
+  padding: var(--nys-space-100) var(--nys-space-250);
+}
+
+td:has(.formLabel) input[type="text"], .formLabel select:not(#resultsPerPage), td:has(.formLabel) select {
+  height: var(--nys-space-500);
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: var(--nys-space-100);
+}
+
+.fieldCell3Col.CountySelection {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+table.tableStyle, table.tableStyle.expandableSectionTable {
+  border-color: var(--nys-color-neutral-100);
+  border-width: var(--nys-border-width-sm);
+  border-radius: 0 !important;
+  margin-bottom: var(--nys-space-200);
+  background-color: var(--nys-color-surface);
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+/* Component: label */
+
+span.requiredIcon img, span.requiredIcon {
+  display: none !important;
+}
+
+span.requiredInst:after {
+  left: var(--nys-space-50);
+  color: var(--nys-color-danger) !important;
+  width: auto;
+  height: auto;
+  content: " (red asterisks)";
+  display: inline !important;
+  position: relative;
+  visibility: visible !important;
+}
+
+.fieldCell7Col:has(.requiredIcon) label:after {
+  left: 2px;
+  color: var(--nys-color-danger) !important;
+  width: min-content;
+  height: auto;
+  content: "*";
+  display: inline-flex;
+  position: relative;
+  visibility: visible !important;
+}
+
+span.requiredInst {
+  color: var(--nys-color-danger);
+  padding-left: var(--nys-space-100);
+}
+
 span.requiredInst:before {
   left: -4px !important;
 }
 
-/* Notes: huge form label fixes in progress */
 td:has(span.requiredIcon) > .formLabel:after, div.cell:has(> span.requiredIcon) .formLabel:after, span.formLabel:has(> span.requiredIcon):after , span.prelimQuest:has(> span.requiredIcon):after, span.requiredInst:before {
   left: var(--nys-space-50);
   color: var(--nys-color-danger) !important;
@@ -1439,23 +2126,8 @@ td:has(span.requiredIcon) > .formLabel:after, div.cell:has(> span.requiredIcon) 
   vertical-align: top;
 }
 
-
-/* Notes: lots of styles to make certain search forms work better */
-.fieldCell7Col:has(.requiredIcon) label:after {
-  left: 2px;
-  color: var(--nys-color-danger) !important;
-  width: min-content;
-  height: auto;
-  content: "*";
-  display: inline-flex;
-  outline: 3px solid pink !important;
-  position: relative;
-  visibility: visible !important;
-}
-
-span.requiredInst {
-  color: var(--nys-color-danger);
-  padding-left: var(--nys-space-100);
+td.formLabel:has(label) {
+  height: auto !important;
 }
 
 /* Component: radio */
@@ -1484,7 +2156,7 @@ input[type="radio"] {
 }
 
 /* Component: table */
-/* Notes: some tables are in forms like these */
+
 form table.tableStyle th, form table.tableStyle td.curvedHeaderTableData {
   padding: var(--nys-space-150) var(--nys-space-200);
   font-size: var(--nys-font-size-ui-md) !important;
@@ -1522,16 +2194,12 @@ form:not(:has(a)) table.tableStyle {
 }
 
 /* Component: text-input */
-label.formLabel {
-  display: inline-block !important;
-}
-
 select {
   display: block !important;
 }
 
 .row:has(input.hasDatepicker) {
-  padding-top: var(--nys-space-250);
+  padding-top: 0;
 }
 
 input[type="radio"]:hover, input[type="radio"]:hover * {
@@ -1540,30 +2208,35 @@ input[type="radio"]:hover, input[type="radio"]:hover * {
 
 [type="radio"]:not(:disabled):checked {
   background-color: var(--_nys-color-theme);
-  background-image: url(data:image/svg+xml;
-  utf8,<svg width="22"height="22"viewBox="0 0 22 22"fill="none"xmlns="http: //www.w3.org/2000/svg"><circle cx="11"cy="11"r="11"stroke="white"stroke-width="6"/></svg>);
+  background-image: url(data:image/svg+xml;utf8,<svg width="22"height="22"viewBox="0 0 22 22"fill="none"xmlns="http: //www.w3.org/2000/svg"><circle cx="11"cy="11"r="11"stroke="white"stroke-width="6"/></svg>);
 }
 
 .fieldCell3Col input[type="text"] {
   display: block;
 }
 
-/* Notes: forms when they are tables, mostly */
 button.ui-datepicker-trigger:after {
   width: var(--nys-size-300);
   height: var(--nys-size-300);
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjEgMjMuMzMiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIG1hc2s6IHVybCgjbWFzayk7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzFhMWExYTsKICAgICAgfQoKICAgICAgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZGFkOWQ5OwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPG1hc2sgaWQ9Im1hc2siIHg9Ii0zLjUiIHk9Ii0yLjMzIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8ZyBpZD0ibWFzazBfNDY1N181ODY5IiBkYXRhLW5hbWU9Im1hc2swIDQ2NTcgNTg2OSI+CiAgICAgICAgPHJlY3QgY2xhc3M9ImNscy0zIiB4PSItMy41IiB5PSItMi4zMyIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4Ii8+CiAgICAgIDwvZz4KICAgIDwvbWFzaz4KICA8L2RlZnM+CiAgPGcgY2xhc3M9ImNscy0xIj4KICAgIDxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTIuMzMsMjMuMzNjLS42NCwwLTEuMTktLjIzLTEuNjUtLjY5LS40Ni0uNDYtLjY5LTEuMDEtLjY5LTEuNjVWNC42N2MwLS42NC4yMy0xLjE5LjY5LTEuNjUuNDYtLjQ2LDEuMDEtLjY5LDEuNjUtLjY5aDEuMTd2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDkuMzN2LTEuMTdjMC0uMzMuMTEtLjYxLjM0LS44My4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3YxLjE3aDEuMTdjLjY0LDAsMS4xOS4yMywxLjY1LjY5LjQ2LjQ2LjY5LDEuMDEuNjksMS42NXYxNi4zM2MwLC42NC0uMjMsMS4xOS0uNjksMS42NS0uNDYuNDYtMS4wMS42OS0xLjY1LjY5SDIuMzNaTTIuMzMsMjFoMTYuMzN2LTExLjY3SDIuMzN2MTEuNjdaTTIuMzMsN2gxNi4zM3YtMi4zM0gyLjMzdjIuMzNaTTEwLjUsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNNS44MywxNGMtLjMzLDAtLjYxLS4xMS0uODMtLjM0cy0uMzQtLjUtLjM0LS44My4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTRjLS4zMywwLS42MS0uMTEtLjgzLS4zNHMtLjM0LS41LS4zNC0uODMuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODMtLjUuMzQtLjgzLjM0Wk0xMC41LDE4LjY3Yy0uMzMsMC0uNjEtLjExLS44My0uMzQtLjIyLS4yMi0uMzQtLjUtLjM0LS44M3MuMTEtLjYxLjM0LS44M2MuMjItLjIyLjUtLjM0LjgzLS4zNHMuNjEuMTEuODMuMzRjLjIyLjIyLjM0LjUuMzQuODNzLS4xMS42MS0uMzQuODNjLS4yMi4yMi0uNS4zNC0uODMuMzRaTTUuODMsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFpNMTUuMTcsMTguNjdjLS4zMywwLS42MS0uMTEtLjgzLS4zNC0uMjItLjIyLS4zNC0uNS0uMzQtLjgzcy4xMS0uNjEuMzQtLjgzYy4yMi0uMjIuNS0uMzQuODMtLjM0cy42MS4xMS44My4zNGMuMjIuMjIuMzQuNS4zNC44M3MtLjExLjYxLS4zNC44M2MtLjIyLjIyLS41LjM0LS44My4zNFoiLz4KICA8L2c+Cjwvc3ZnPg==) !important;
 }
 
-/* Notes: forms when they are tables, mostly */
+button.ui-datepicker-trigger:after {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  top: -25px;
+  left: 6px;
+  width: var(--nys-size-300);
+  height: var(--nys-size-300);
+  content: "";
+  display: block;
+  position: relative;
+}
+
 form .ui-datepicker-trigger {
   align-self: flex-start;
 }
 
-/* Notes: border-radius: var(--nys-radius-md);
-outline-color: transparent;
-outline-style: solid;
-outline-width: var(--nys-border-width-sm); */
 div.fieldCell3Col input, input[type="text" i], select, .formInput {
   color: var(--nys-color-text);
   height: var(--nys-space-500);
@@ -1583,7 +2256,67 @@ div.fieldCell3Col input, input[type="text" i], select, .formInput {
   letter-spacing: var(--nys-font-letterspacing-body-md);
 }
 
+button.ui-datepicker-trigger img {
+  opacity: 0;
+}
+
+button.ui-datepicker-trigger {
+  grid-column: 4 !important;
+}
+
+button.ui-datepicker-trigger {
+  width: var(--nys-size-500);
+  border: none !important;
+  height: var(--nys-size-500);
+  margin: 0 0 0 var(--nys-space-100);
+  padding: 0 !important;
+  vertical-align: middle !important;
+  background-color: transparent !important;
+}
+
+table[width="50%"]:has(#label_calheersSearchCriteriaParam) {
+  width: fit-content !important;
+}
+
 /* Component: view_only */
+
+#headerEnvironment span {
+  display: none;
+}
+
+/* Notes: adding logo to homepage with data-uri */
+
+#headerLogo {
+  display: flex;
+}
+
+#headerLogo::before {
+  top: 10px;
+  left: 3px;
+  width: 90px;
+  height: 65px;
+  content: "";
+  display: inline;
+  position: relative;
+  background-size: 88px;
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#headerEnvironment::after {
+  top: -14px;
+  left: 57px;
+  color: var(--nys-color-text-reverse);
+  width: 400px;
+  height: 45px;
+  content: "Albany SBX";
+  display: inline;
+  position: relative;
+  font-size: var(--nys-font-size-md);
+  font-family: var(--nys-font-family-agency);
+}
+
 img.banner:after {
   top: 0;
   left: 0;
@@ -1599,42 +2332,9 @@ img.banner:after {
   display: none !important;
 }
 
-/* Notes: hiding san bernadino */
-#headerEnvironment span {
-  display: none;
-}
-
-/* Notes: adding logo to homepage with data-uri */
-#headerLogo::before {
-  top: 4px;
-  left: 117px;
-  width: 90px;
-  height: 65px;
-  content: "";
-  display: inline;
-  position: absolute;
-  background-size: 88px;
-  background-image: url(data:image/png;base64,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);
-  background-repeat: no-repeat;
-  background-position: left;
-}
-
-#headerEnvironment::after {
-  top: -15px;
-  left: 62px;
-  color: var(--nys-color-text-reverse);
-  width: 400px;
-  height: 45px;
-  content: "Albany SBX";
-  display: inline;
-  position: relative;
-  font-size: var(--nys-font-size-md);
-  font-family: var(--nys-font-family-agency);
-}
-
-#wrapper, #headerContainer {
+/* #wrapper, #headerContainer {
   margin-left: 70px !important;
-}
+} */
 
 #logo:after {
   top: -8px;
@@ -1648,51 +2348,364 @@ img.banner:after {
   font-size: var(--nys-font-size-2xl);
   text-align: left;
   border-left: 1.5px solid #ebebeb;
-  font-family: var(--nys-font-family-agency);
+  font-family: var(--nys-font-family-sans);
   font-weight: 600;
   line-height: 25.5px;
   text-shadow: 0 0 0 rgba(0,0,0,0) !important;
   padding-left: 9px;
 }
 
-table tr > td:has(> #label_resultsPerPage) {
-  gap: var(--nys-space-300);
-  display: flex;
-  align-items: baseline;
-  flex-direction: row;
-  justify-content: flex-end;
+div#wrapper:has(#wrapperContainer #wrapperBody #pageContentWrapperHomepage) #header #headerLogo span:after, #headerContainer:has(#rightHeaderContainer #headerTopContainer #headerContext div.container) #leftHeaderContainer #headerLogo span:after, #headerContainer:has(#rightHeaderContainer #headerTopContainer #headerContext div.container) #leftHeaderContainer #headerLogo span:after {
+  content: "NYS IES" !important;
+  top: -15px;
+  left: 11px;
+  color: var(--nys-color-ink-reverse);
+  float: left;
+  width: 400px !important;
+  height: 55px;
+  position: relative;
+  font-size: var(--nys-font-size-2xl);
+  text-align: left;
+  border-left: 1.5px solid #ebebeb;
+  font-family: var(--nys-font-family-sans);
+  font-weight: 600;
+  line-height: 25.5px;
+  text-shadow: 0 0 0 rgba(0,0,0,0) !important;
+  padding-left: 9px;
 }
 
-.block-form-type1 .rowField .cell span.formLabel {
-  display: flex !important;
+
+#headerContext>div>div:first-child {
+    font-weight: var(--nys-font-weight-semibold);
+    padding: 0;
+    width: var(--nys-size-1200);
+    margin-right: var(--nys-space-100);
 }
 
-/* Notes: cant figure why select boxes won't shrink */
-#pageContent form div.block-form-type1 .row div div, #pageContent form div.block-form-type1 .row div select {
-  clear: both !important;
-  float: none !important;
-  width: max-content !important;
-  display: grid !important;
+#headerContext>div {
+    line-height: var(--nys-font-lineheight-ui-xs);
+    font-size: var(--nys-font-size-ui-sm);
+    letter-spacing: var(--nys-font-letterspacing-ui-sm);
+}
+
+
+
+table.tableStyle.expandableSectionTable:not(:has(thead)) > tbody > tr:not(:first-of-type) > td, table.tableStyle.expandableSectionTable > tbody td:has(.expandableSectionDiv) {
+  padding: var(--nys-space-200) var(--nys-space-250) !important;
+}
+
+table.tableStyle.expandableSectionTable:not(:has(thead)) > tbody > tr:not(:first-of-type) > td:has(.x247), table.tableStyle.expandableSectionTable > tbody:has(.expandableSectionDiv[style*="none"]) tr:not(:first-of-type) > td {
   padding: 0 !important;
-  min-width: var(--nys-space-800);
-  align-items: center;
-  grid-row-gap: var(--nys-space-50);
-  justify-items: left;
-  grid-template-columns: 1fr;
 }
 
-/* Notes: fixes for the sidebar to make it NYS-ish */
-#pageBodyColumn {
-  border: none;
-  padding-left: var(--nys-space-400) !important;
+table.tableStyle.expandableSectionTable:not(:has(thead)) > tbody > tr:not(:first-of-type) > td .x247 {
+  padding: var(--nys-space-200) var(--nys-space-250) !important;
+  width: 100%;
+
+}
+ 
+/**
+ * Wali - Chevron Fix
+ */
+
+td.expandableHeaderSectionTag a.white > img.expandableSectionImg {
+ opacity: 0 !important;
+ width: 0 !important;
+ height: 0 !important;
+ margin: 0 !important;
+ padding: 0 !important;
 }
 
-.fieldCell3Col.CountySelection {
-  display: flex;
-  padding: 0;
+.expandableSectionTable:not(:has(thead)) td.expandableHeaderSectionTag > a.white {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: var(--nys-space-100) !important;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+table.tableStyle.expandableSectionTable > thead th:last-of-type a.white[onClick] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: var(--nys-space-100) !important;
+  width: 100%;
+  flex-direction: row-reverse;
   justify-content: space-between;
+  height: 60px;
+  padding: 0;
 }
-.fieldCell3Col a.smallButton {
-  margin-bottom: var(--nys-space-200);
+
+
+td.expandableHeaderSectionTag > a.white::before, table.tableStyle.expandableSectionTable > thead th:last-of-type a.white[onClick]:before {
+ content: "" !important;
+ width: var(--nys-icon-size-3xl) !important;
+ height: var(--nys-icon-size-3xl) !important;
+ background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M12.0001%2014.725L19.3501%207.375C19.6001%207.125%2019.8918%207.00417%2020.2251%207.0125C20.5584%207.02083%2020.8501%207.15%2021.1001%207.4C21.3501%207.65%2021.4751%207.94167%2021.4751%208.275C21.4751%208.60833%2021.3501%208.9%2021.1001%209.15L13.4251%2016.85C13.2251%2017.05%2013.0001%2017.2%2012.7501%2017.3C12.5001%2017.4%2012.2501%2017.45%2012.0001%2017.45C11.7501%2017.45%2011.5001%2017.4%2011.2501%2017.3C11.0001%2017.2%2010.7751%2017.05%2010.5751%2016.85L2.87511%209.15C2.62511%208.9%202.50428%208.60417%202.51261%208.2625C2.52094%207.92083%202.65011%207.625%202.90011%207.375C3.15011%207.125%203.44178%207%203.77511%207C4.10844%207%204.40011%207.125%204.65011%207.375L12.0001%2014.725Z%22%20fill%3D%22%23000000%22/%3E%3C/svg%3E") !important;
+ background-repeat: no-repeat !important;
+ background-position: center !important;
+ background-size: contain !important;
+ transform-origin: 50% 50% !important;
+ transform: rotate(180deg) !important;
+ transition: .3s all cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+td.expandableHeaderSectionTag > a.white:has(> img.expandableSectionImg[src*="icon_arrowWhiteClosed"])::before {
+ transform: rotate(0deg) !important;
+}
+
+td.expandableHeaderSectionTag > a.white:has(> img.expandableSectionImg[src*="icon_arrowWhiteOpen"])::before {
+ transform: rotate(180deg) !important;
+}
+
+
+table.tableStyle.expandableSectionTable:has(tbody[style*="table-row-group"]) > thead th:last-of-type a.white:has("onClick"):before  {
+ transform: rotate(0deg) !important;
+}
+
+table.tableStyle.expandableSectionTable:has(tbody[style*="none"]) > thead th:last-of-type a.white:before {
+    transform: rotate(0deg) !important;
+}
+
+
+/**
+*  Modal Styling
+*/
+
+div#modalWindow {
+    border-radius: var(--nys-radius-lg);
+    margin: var(--nys-space-250);
+    padding: var(--nys-space-300) var(--nys-space-300) var(--nys-space-300);
+    border: var(--nys-border-width-sm) solid var(--nys-color-neutral-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--nys-space-200);
+    /* outline: 5px solid blue; */
+    width: 480px !important;
+    min-width: 320px;
+    height: max-content !important;
+    overflow: hidden;
+}
+div#modalWindow div#unsavedAlertMessage, div#modalWindow  div#timeOutMessage {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    /* outline: 3px solid orange; */
+    position: relative !important;
+    top: 0 !important;
+}
+div#modalWindow div#unsavedAlertMessage div:has(a), div#modalWindow div#timeOutMessage div:has(a)  {
+    /* outline: 5px solid; */
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    gap: 20px;
+    margin-top: 16px;
+}
+div#modalWindow div#unsavedAlertMessage div:has(a) a.smallButton[onclick] {
+    /* outline: 10px solid green; */
+    background-color: white !important;
+    color: var(--nys-color-link) !important;
+    text-decoration: underline;
+    border: none;
+}
+
+div#modalWindow div#unsavedAlertMessage:before {
+    content: "Warning";
+    display: flex;
+    top: -7px;
+    position: relative;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    /* outline: 2px solid pink; */
+    align-items: center;
+}
+
+div#modalWindow div#windowTimer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: var(--nys-font-family-ui);
+    font-size: 36pt;
+    font-weight: bold;
+    min-height: 70px;
+    margin-top: 16px;
+    color: var(--nys-color-danger-strong);
+}
+
+
+/* -=[ DEBUGGING ]=- */
+
+/* checking for forms with various sizes */
+
+/* input[type="text"][size="11"] { border: 5px dashed rgba(0,250,0,.6) !important; width: 100px !important; } */
+/* input[type="text"][size="15"] { border: 5px dashed rgba(250,100,100,.6) !important;  width: 100px !important;} */
+/* input[type="text"][size="10"] { border: 5px dashed rgba(0,250,250,.6) !important; width: 100px !important; } */
+/* input[type="text"][size="13"] { border: 5px dashed rgba(250,0,250,.6) !important;  width: 100px !important;} */
+
+/* identifying sub tables */
+
+/* table.tableStyle  table  td {  */
+  /* outline: 10px solid rgba(255,0,255,.3);   */
+  /* background-color: rgba(100,100,100,.1);  */
+/* } */
+
+/* .formLabel { */
+  /* outline: 5px solid rgba(0,109,255,0.4) !important; */
+/* } */
+
+/* select:not(#resultsPerPage) {  */
+  /* outline: 5px solid rgba(255,0,0,.4) !important; */
+/* } */
+
+/* .tableStyle > tbody > tr > td { outline: 10px solid rgba(0,0,255,.3);  background-color: rgba(100,100,100,.1); } */
+
+/* .tableStyle td[colspan=3] { outline: 10px solid rgba(0,255,0,.3) !important; } */
+
+
+
+
+
+tr.topAlign, tr.topAlign > td > table[width] > tbody tr:not(:first-of-type) {
+    display: table-row;
+    /* width: -webkit-fill-available; */
+    /* grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr; */
+    /* display: grid; */
+    /* outline: 5px solid rgba(255,0,0,0.2); */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+}
+
+tr.topAlign th, tr.topAlign td:not(:has(table)) {
+    width: 151px;
+    display: inline-table;
+    /* align-items: flex-end; */
+    /* outline: 2px solid rgba(0,255,0,0.5); */
+    /* display: grid !important; */
+    /* grid-template-columns: 0fr 1fr 1fr 1fr 1fr 1fr; */
+    overflow-wrap: anywhere;
+    /* display: flex !important; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* text-align: center; */
+    left: 10px;
+    position: relative;
+    vertical-align: middle;
+    height: 40px !important;
+    display: inline-block;
+    white-space: nowrap;
+    border-right: 1px solid var(--nys-color-neutral-200);
+}
+
+tr.topAlign > td > table {
+    table-layout: fixed !important;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr.topAlign > td > table[width] > tbody tr.topAlign th {
+    /* padding: 12px !important; */
+    /* background-color: pink; */
+    /* text-align: center; */
+}
+
+th.noWrap {}
+
+tr.topAlign > td > table[width] > tbody tr.topAlign {
+    background-color: var(--nys-color-neutral-50);
+    width: -webkit-fill-available;
+    /* padding-left: 10px; */
+    font-weight: 600 !important;
+}
+
+tr.topAlign table td:has(table) {
+    padding: 0 !important;
+}
+
+table.tableStyle.borderCollapse > tbody tr.topAlign td:has(>table) {
+    /* outline: 5px solid cyan; */
+    padding: 0 !important;
+}
+
+tr.topAlign > td > table > tbody:has(>tr.topAlign) tr:not(.topAlign):nth-child(odd) {
+    background-color: var(--nys-color-neutral-10);
+}
+
+tr.topAlign > td > table > tbody:has(>tr.topAlign) tr {
+    height: 40px;
+}
+
+table.tableStyle > tbody tr:not(.topAlign):first-of-type th:first-child {
+    padding-left: 30px;
+    height: 46px;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+tr.topAlign > td > table[width] > tbody tr.topAlign td:nth-child(6) {}
+
+tr.topAlign td:not(:has(table)):nth-of-type(6) {
+    /* outline: 2px solid yellow; */
+    border-right: 0;
+}
+
+table.tableStyle {
+    table-layout: fixed;
+    display: inline-table;
+}
+
+td[colspan] > table[width].tableStyle > tbody tr:has(td) {
+    outline: 10px solid grey;
+}
+
+form td table.tableStyle:first-of-type tr {
+    /* display: grid !important; */
+    grid-template-columns: 1fr 1fr 1fr !important;
+    /* width: 33% !important; */
+}
+
+tr:has(>td.formLabel), tr:has(>td.noWrap) {/* outline: 3px solid green; */
+  /* display: grid; */
+  width: 100%;
+  width: 927px;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* height: 40px; */
+  align-content: center;}
+
+div#pageContent table:nth-of-type(2) tbody > tr > td[colspan="2"] > table[width] > tbody {
+}
+
+div#pageContent > div table:first-of-type form {
+    outline: 2px solid rgba(0,0,255,0.3);
+}
+
+tr:has(>td.formLabel) td, tr:has(>td.noWrap) td {
+    height: 40px;
+    /* align-content: baseline; */
+    padding: 0 16px !important;
+}
+
+table.resultsPaginationContent table.tableStyle tbody tr.topAlign {
+    /* outline: 10px solid pink; */
+    table-layout: fixed;
+    /* width: -webkit-fill-available; */
+    display: table-row;
+    white-space: nowrap;
+}
+
+table.resultsPaginationContent table.tableStyle tbody tr.topAlign th {
+    left: 0 !important;
+}
+
+table.resultsPaginationContent table.tableStyle {
+    margin-bottom: 0 !important;
+}
+table.resultsPaginationContent table.tableStyle td:last-of-type, table.resultsPaginationContent table.tableStyle th:last-of-type {
+    border-right: none !important;
 }
 
