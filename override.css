@@ -1479,6 +1479,7 @@ input.hasDatepicker {
 }
 
 .rowFields {
+  height: auto;
   display: flex !important;
   flex-direction: row;
 }
