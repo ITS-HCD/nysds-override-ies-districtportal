@@ -2660,7 +2660,7 @@ table.tableStyle {
 }
 
 td[colspan] > table[width].tableStyle > tbody tr:has(td) {
-    outline: 10px solid grey;
+    /* outline: 10px solid grey; */
 }
 
 form td table.tableStyle:first-of-type tr {
@@ -2681,7 +2681,7 @@ div#pageContent table:nth-of-type(2) tbody > tr > td[colspan="2"] > table[width]
 }
 
 div#pageContent > div table:first-of-type form {
-    outline: 2px solid rgba(0,0,255,0.3);
+    /* outline: 2px solid rgba(0,0,255,0.3); */
 }
 
 tr:has(>td.formLabel) td, tr:has(>td.noWrap) td {
