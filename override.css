@@ -2648,8 +2648,8 @@ tr.topAlign > td > table > tbody:has(>tr.topAlign) tr {
 table.tableStyle > tbody tr:not(.topAlign):first-of-type th:first-child {
     padding-left: 30px;
     height: 46px;
-    font-size: 24px !important;
-    font-weight: 700 !important;
+    /* font-size: 24px !important;
+    font-weight: 700 !important; */
 }
 
 tr.topAlign > td > table[width] > tbody tr.topAlign td:nth-child(6) {}
@@ -2666,6 +2666,10 @@ table.tableStyle {
 
 td[colspan] > table[width].tableStyle > tbody tr:has(td) {
     /* outline: 10px solid grey; */
+        display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end;
 }
 
 form td table.tableStyle:first-of-type tr {
@@ -2712,5 +2716,33 @@ table.resultsPaginationContent table.tableStyle {
 }
 table.resultsPaginationContent table.tableStyle td:last-of-type, table.resultsPaginationContent table.tableStyle th:last-of-type {
     border-right: none !important;
+}
+
+td:has(>#label_displayDate) {
+    display: inline-grid;
+    flex-direction: column;
+}
+td:has(>#label_displayDate) {
+}
+td[colspan] > table[width].tableStyle > tbody tr:has(>td) td:nth-of-type(2) {
+    /* outline: 5px solid blue; */
+    height: 96px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: flex-end;
+}
+
+table.roundedResultsTable td.formlabel {
+    width: 50%;
+}
+
+table.roundedResultsTable {}
+
+table.roundedResultsTable > tbody > tr:has(td) {
+    display: flex;
+}
+
+td.textAlignRight {
+    justify-content: revert-layer;
 }
 
