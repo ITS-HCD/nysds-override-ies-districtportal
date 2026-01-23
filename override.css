@@ -2058,7 +2058,7 @@ table.tableStyle td:not(:has(table)) {
 }
 
 td:has(.formLabel) input[type="text"], .formLabel select:not(#resultsPerPage), td:has(.formLabel) select {
-  display: block;
+  display: inline-block;
   height: var(--nys-space-500);
   max-width: 100%;
   box-sizing: border-box;
