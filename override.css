@@ -1602,12 +1602,10 @@ font-weight: var(--nys-font-weight-semibold);
 
 table.tableStyle  table  td { 
 width: auto;
-display: inline;
 } 
 
 table.tableStyle table td:has(>#label_case) {
   display: inline-block;
-
 }
 
 table.tableStyle table td:has(>#label_case)  a#select {
@@ -1618,7 +1616,6 @@ table.tableStyle table td:has(>#label_case)  a#select {
 td[colspan="3"] tr:has(td>.formLabel) td {
   width: 25%;
   display: inline;
-
 }
 
 table.tableStyle  table  td *:not:script {
