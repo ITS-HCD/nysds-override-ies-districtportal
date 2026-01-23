@@ -2770,3 +2770,11 @@ td.textAlignRight {
 .buttonContainerTop.left > * {
   display: inline-block !important;
 }
+
+#section1 table.borderCollapse th,
+#section1 table.borderCollapse td {
+ vertical-align: top !important;
+ padding: 10px 16px !important;
+ line-height: 1.25 !important;
+ text-align: left !important;
+}
