@@ -2058,6 +2058,7 @@ table.tableStyle td:not(:has(table)) {
 }
 
 td:has(.formLabel) input[type="text"], .formLabel select:not(#resultsPerPage), td:has(.formLabel) select {
+  display: block;
   height: var(--nys-space-500);
   max-width: 100%;
   box-sizing: border-box;
@@ -2087,7 +2088,6 @@ span.requiredIcon img, span.requiredIcon {
 }
 
 span.requiredInst:after {
-  left: var(--nys-space-50);
   color: var(--nys-color-danger) !important;
   width: auto;
   height: auto;
@@ -2098,7 +2098,6 @@ span.requiredInst:after {
 }
 
 .fieldCell7Col:has(.requiredIcon) label:after {
-  left: 2px;
   color: var(--nys-color-danger) !important;
   width: min-content;
   height: auto;
@@ -2118,13 +2117,15 @@ span.requiredInst:before {
 }
 
 td:has(span.requiredIcon) > .formLabel:after, div.cell:has(> span.requiredIcon) .formLabel:after, span.formLabel:has(> span.requiredIcon):after , span.prelimQuest:has(> span.requiredIcon):after, span.requiredInst:before {
-  left: var(--nys-space-50);
+  padding-left: var(--nys-space-50);
   color: var(--nys-color-danger) !important;
   content: "*";
   display: inline;
   position: relative;
   visibility: visible !important;
   vertical-align: top;
+  font-size: 200%;
+  font-weight: var(--nys-font-weight-black);
 }
 
 td.formLabel:has(label) {
@@ -2742,3 +2743,8 @@ td.textAlignRight {
     justify-content: revert-layer;
 }
 
+.medRowHgt,
+.smRowHgt,
+.prelimRowHgt {
+    height: auto !important;
+}
