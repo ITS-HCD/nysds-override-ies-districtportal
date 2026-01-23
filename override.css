@@ -1986,8 +1986,8 @@ form label {
 }
 
 td:has(#label_caseName), .rowField .cell > label {
-  width: fit-content !important;
-  height: fit-content !important;
+  /* width: fit-content !important;
+  height: fit-content !important; */
   display: flex;
   flex-direction: column;
 }
@@ -2012,7 +2012,7 @@ th:empty {
 
 label.formLabel, div.group div.rowField div.cell, .formLabel {
   width: 100% !important;
-  height: var(--nys-size-300) !important;
+  /* height: var(--nys-size-300) !important; */ /* Don't enforce height, causes truncation */
   display: inline-block !important;
   max-width: 100%;
   box-sizing: border-box;
