@@ -512,29 +512,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
-  font-size: var(--nys-font-size-h1); 
+  font-size: var(--nys-font-size-3xl); 
   line-height: var(--nys-font-lineheight-h1); 
   letter-spacing: var(--nys-font-letterspacing-negative-300, -.02rem);
   margin: var(--nys-space-600) 0 var(--nys-space-250);
 }
 
 h2 { 
-  font-size: var(--nys-font-size-h2); 
+  font-size: var(--nys-font-size-2xl); 
   line-height: var(--nys-font-lineheight-h2); 
   letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
   margin: var(--nys-space-500) 0 var(--nys-space-200);
 }
 
 h3 { 
-  font-size: var(--nys-font-size-h3); 
+  font-size: var(--nys-font-size-xl); 
   line-height: var(--nys-font-lineheight-h3); 
   letter-spacing: var(--nys-font-letterspacing-negative-200, -.01rem);
   margin: var(--nys-space-400) 0 var(--nys-space-150);
 }
 
-h4 { font-size: var(--nys-font-size-h4); line-height: var(--nys-font-lineheight-h4); margin: var(--nys-space-300) 0 var(--nys-space-100); }
-h5 { font-size: var(--nys-font-size-h5); line-height: var(--nys-font-lineheight-h5); margin: var(--nys-space-250) 0 var(--nys-space-100); }
-h6 { font-size: var(--nys-font-size-h6); line-height: var(--nys-font-lineheight-h6); margin: var(--nys-space-200) 0 var(--nys-space-100); }
+h4 { font-size: var(--nys-font-size-lg); line-height: var(--nys-font-lineheight-lg); margin: var(--nys-space-300) 0 var(--nys-space-100); }
+h5 { font-size: var(--nys-font-size-md); line-height: var(--nys-font-lineheight-md); margin: var(--nys-space-250) 0 var(--nys-space-100); }
+h6 { font-size: var(--nys-font-size-md); line-height: var(--nys-font-lineheight-md); margin: var(--nys-space-200) 0 var(--nys-space-100); }
 
 /* Spacing Helpers */
 p, ul, ol, dl, blockquote { margin-bottom: var(--nys-space-150); }
@@ -1181,16 +1181,15 @@ table.resultsPaginationContent table.tableStyle th {
   padding-bottom: 6px !important;
   background-color: white !important;
   padding: var(--nys-space-100) var(--nys-space-250);
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 
 
-
 .resultsPaginationHeader h2 {
+  font-size: var(--nys-font-size-2xl);
   color: var(--nys-color-text-reverse);
-  padding: 8px 16px;
   background-color: var(--nys-color-theme);
-  margin: var(--nys-space-200);
+  margin: var(--nys-space-50) var(--nys-space-250);
 }
 
 /* Component: general */
