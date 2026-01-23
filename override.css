@@ -2756,3 +2756,17 @@ td.textAlignRight {
 .xlRowHgtAppReg {
     height: auto !important;
 }
+
+/* Root Question List */
+
+#rooQuestionsTable {
+  table-layout: auto !important;
+}
+.alternateQuestion img,
+.requireQuestion img {
+  filter: saturate(50%) hue-rotate(180deg);
+}
+
+.buttonContainerTop.left > * {
+  display: inline-block !important;
+}
