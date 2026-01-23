@@ -2759,7 +2759,7 @@ td.textAlignRight {
 
 /* Root Question List */
 
-#rooQuestionsTable {
+#rootQuestionsTable {
   table-layout: auto !important;
 }
 .alternateQuestion img,
