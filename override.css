@@ -1140,6 +1140,10 @@ table.resultsPaginationContent table.tableStyle tr.sortableTableRow td {
   background-color: var(--nys-color-base-weak) !important;
 }
 
+table.resultsPaginationContent table.tableStyle tr.sortableTableRow td a {
+  filter: saturate(50%) hue-rotate(180deg);
+}
+
 table.resultsPaginationContent br {
   display: none;
 }
