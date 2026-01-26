@@ -1597,7 +1597,6 @@ th, .expandableHeaderSectionTag, th a {
 }
 
 .buttonContainer:not(:has(a)) {
-    /* outline: 10px solid blue; */
     height: 0 !important;
     margin: 0;
     padding: 0;
@@ -1605,16 +1604,16 @@ th, .expandableHeaderSectionTag, th a {
 
 .buttonContainer {
   display: flex;
-  flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
   gap: var(--nys-space-100);
 }
 
 #label_resultsPerPage {
-font-weight: var(--nys-font-weight-semibold);
-    font-size: var(--nys-font-size-h6);
-    letter-spacing: var(--nys-font-letterspacing-h6);
+  font-weight: var(--nys-font-weight-semibold);
+  font-size: var(--nys-font-size-h6);
+  letter-spacing: var(--nys-font-letterspacing-h6);
 }
 
 .buttonContainer > :last-child { margin-top: var(--nys-space-50); }
