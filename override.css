@@ -2835,3 +2835,70 @@ th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] {
  display: flex !important;
 
 }
+
+
+
+/* Program Selection Table Overrides */
+
+table.tableStyle:has(input[name="mainBox"]) {
+  display: table !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  table-layout: auto !important;
+}
+
+table.tableStyle:has(input[name="mainBox"]) tbody {
+  display: table-row-group !important;
+}
+
+table.tableStyle:has(input[name="mainBox"]) tr {
+  display: table-row !important;
+}
+
+table.tableStyle:has(input[name="mainBox"]) th,
+table.tableStyle:has(input[name="mainBox"]) td {
+  display: table-cell !important;
+  border: 1px solid var(--nys-color-neutral-300) !important;
+  padding: 8px !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
+
+table.tableStyle:has(input[name="mainBox"]) th.formLabel,
+table.tableStyle:has(input[name="mainBox"]) td.formLabel {
+  width: 1% !important;
+  white-space: nowrap !important;
+  padding-right: 4px !important;
+}
+
+
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CW"]),
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CF"]),
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_MC"]),
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CH"]),
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_HE"]) {
+  font-size: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* CalWORKs -> PA */
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CW"])::after {
+  content: "PA";
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+}
+
+/* CalFresh -> SNAP */
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CF"])::after {
+  content: "SNAP";
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+}
+
+
+/* _CH -> Medicaid */
+table.tableStyle:has(input[name="mainBox"]) td:has(input[name*="reportingTypeCode"][name*="_CH"])::after {
+  content: "Medicaid";
+  font-size: 1rem !important;
+  vertical-align: middle !important;
+}
