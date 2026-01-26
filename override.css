@@ -1080,8 +1080,14 @@ th[colspan] .divHomeScheduleLabel {
   border-radius: var(--nys-radius-xl);
   justify-content: center;
   box-shadow: none !important;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none !important;
+  font-size: var(--nys-font-size-md);
+}
+
+.smallButton {
+  font-size: var(--nys-font-size-sm);
+  height: var(--nys-size-500);
+  padding: var(--nys-space-2px) var(--nys-space-150) !important;
+  height: 100% !important
 }
 
 .fieldCell3Col a.smallButton {
@@ -1194,6 +1200,15 @@ table.resultsPaginationContent table.tableStyle th {
   color: var(--nys-color-text-reverse);
   background-color: var(--nys-color-theme);
   margin: var(--nys-space-50) var(--nys-space-250);
+}
+
+/* Table Style Overrides */
+
+/* -- Income List */
+
+form[name="IncomeList"] .tableStyle th:nth-child(2),
+form[name="IncomeList"] .tableStyle td:nth-child(2) {
+  display: none !important;
 }
 
 /* Component: general */
