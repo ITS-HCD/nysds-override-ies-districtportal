@@ -2967,3 +2967,38 @@ form[name="EdbcList"] .block-form-type2 {
  overflow: hidden !important;
  text-overflow: ellipsis !important;
 }
+
+
+
+/* Kevin page 6 household status list */
+
+tr[scope] td:first-of-type {
+    display: none;
+}
+table.resultsPaginationContent table.tableStyle th:has(br) br {
+    display: block !important;
+}
+table.resultsPaginationContent form[name="HouseholdStatusList"] table td.formLabel:nth-of-type(3):before {
+    content: "";
+    width: auto;
+    height: auto;
+    display: -webkit-inline-box;
+    position: relative;
+}
+
+form[name="HouseholdStatusList"] td[width="40%"] { display: none; }
+
+form[name="HouseholdStatusList"] table:first-of-type > tbody > tr:has(>td[width]) { display: grid; }
+
+form[name="HouseholdStatusList"] .buttonContainer:not(:has(a)) {  height: auto !important; }
+
+form[name="HouseholdStatusList"] tr.sortableTableRow td:nth-of-type(3) { display: none; }
+
+form[name="HouseholdStatusList"] tr.sortableTableRow td {  background: none !important;  }
+
+form[name="HouseholdStatusList"] table[width]:first-of-type td.textAlignRight {
+    display: grid;
+    align-content: end;
+    padding-bottom: 16px !important;
+    height: auto !important;
+}
