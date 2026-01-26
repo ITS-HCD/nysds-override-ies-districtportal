@@ -2855,8 +2855,8 @@ th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] {
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse {
  width: 100% !important;
  max-width: 100% !important;
- display: table !important;            
- table-layout: fixed !important;     
+ display: table !important;
+ table-layout: fixed !important;
  border-collapse: collapse !important;
  border-spacing: 0 !important;
 }
@@ -2884,27 +2884,27 @@ th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] {
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(1),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(2),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(2) {
- width: 10% !important; 
+ width: 10% !important;
 }
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(4),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(4) {
- width: 14% !important; 
+ width: 14% !important;
 }
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(5),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(5) {
- width: 10% !important; 
+ width: 10% !important;
 }
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(6),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(6) {
- width: 14% !important; 
+ width: 14% !important;
 }
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(7),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(7) {
- width: 10% !important; 
+ width: 10% !important;
 }
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(8),
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(8) {
- width: 10% !important; 
+ width: 10% !important;
 }
 
 #pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(9),
@@ -2924,7 +2924,7 @@ form[name="EdbcList"] .block-form-type2 .row > .right {
 form[name="EdbcList"] .block-form-type2 .fieldCell {
  display: flex !important;
  flex-direction: column !important;
- padding-right: 0 !important; 
+ padding-right: 0 !important;
  flex: 0 0 auto !important;
 }
 
@@ -2934,6 +2934,6 @@ form[name="EdbcList"] .block-form-type2 .left {
 }
 
 form[name="EdbcList"] .block-form-type2 {
- overflow: auto !important; 
+ overflow: auto !important;
  padding-bottom: var(--nys-space-200, 16px) !important;
 }
