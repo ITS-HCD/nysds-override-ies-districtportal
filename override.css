@@ -2937,3 +2937,33 @@ form[name="EdbcList"] .block-form-type2 {
  overflow: auto !important;
  padding-bottom: var(--nys-space-200, 16px) !important;
 }
+
+#pageContent .block-form-edbc table.tableStyle.noBorder {
+ width: 100% !important;
+ table-layout: fixed !important; 
+}
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > th:first-child,
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > td:first-child {
+ width: 45% !important;
+}
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > th:last-child,
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > td:last-child {
+ width: 13.75% !important;      
+ text-align: right !important;  
+ overflow: hidden !important;  
+}
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > td:last-child table {
+ width: 100% !important;
+ table-layout: fixed !important;
+}
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > td:last-child table td:first-child {
+ width: 1.5em !important;
+ white-space: nowrap !important;
+}
+#pageContent .block-form-edbc table.tableStyle.noBorder > tbody > tr > td:last-child table td:last-child {
+ width: auto !important;      
+ text-align: right !important;
+ white-space: nowrap !important;
+ overflow: hidden !important;
+ text-overflow: ellipsis !important;
+}
