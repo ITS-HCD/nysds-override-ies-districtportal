@@ -2778,3 +2778,60 @@ td.textAlignRight {
  line-height: 1.25 !important;
  text-align: left !important;
 }
+
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle th[aria-hidden="true"] {
+ display: table-cell !important; 
+ width: 40px !important;          
+ padding: 0 !important;
+}
+#pageContent form[name="individualDemographicsList"] table.tableStyle tr > td:first-child {
+ width: 40px !important;       
+ padding: 0 !important;
+}
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle
+th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] a.plainHeaderFormLabelForeground {
+ display: inline-block !important;
+ white-space: nowrap !important;
+}
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle td.textAlignRight {
+ white-space: nowrap !important;
+ text-align: right !important;
+ width: 1% !important;
+}
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle {
+ width: 100% !important;
+ max-width: 100% !important;
+ box-sizing: border-box !important;
+ table-layout: auto !important;         
+ display: table !important;              
+}
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle th,
+#pageContent form[name="individualDemographicsList"] table.tableStyle td {
+ text-align: left !important;
+ vertical-align: middle !important;
+}
+
+#pageContent form[name="individualDemographicsList"] table.tableStyle
+th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] {
+ text-align: left !important;
+ padding-left: 0 !important;         
+}
+
+#label_complete{
+  display: contents;
+}
+
+#pageContent > div.skipLinkTarget > form > div.buttonContainer{
+  display: block;
+}
+
+
+#pageContent > div.skipLinkTarget > form > table:nth-child(9) > tbody > tr:nth-child(2) > td.textAlignRight {
+ display: flex !important;
+
+}
