@@ -1956,6 +1956,7 @@ td.formInput {
   letter-spacing: var(--nys-font-letterspacing-ui-md);
   text-decoration: none;
   background-color: var(--nys-color-surface);
+  width: auto;
 }
 
 .taskNavMenuHeader {
