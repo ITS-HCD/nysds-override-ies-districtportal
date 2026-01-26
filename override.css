@@ -2835,3 +2835,90 @@ th.plainHeaderFormLabelInheritBackgroundDisplay[scope="row"] {
  display: flex !important;
 
 }
+
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse {
+ width: 100% !important;
+ max-width: 100% !important;
+ display: table !important;            
+ table-layout: fixed !important;     
+ border-collapse: collapse !important;
+ border-spacing: 0 !important;
+}
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse br {
+ display: block !important;
+}
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th,
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td {
+ white-space: nowrap !important;
+ overflow: hidden !important;
+ text-overflow: ellipsis !important;
+ vertical-align: middle !important;
+}
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(3),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(3) {
+ width: 16px !important;
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+}
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(1),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(1),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(2),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(2) {
+ width: 10% !important; 
+}
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(4),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(4) {
+ width: 14% !important; 
+}
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(5),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(5) {
+ width: 10% !important; 
+}
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(6),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(6) {
+ width: 14% !important; 
+}
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(7),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(7) {
+ width: 10% !important; 
+}
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(8),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(8) {
+ width: 10% !important; 
+}
+
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse th:nth-child(9),
+#pageContent .block-form-type2 table.resultsPaginationContent table.tableStyle.borderCollapse td:nth-child(9) {
+ width: auto !important;
+}
+
+form[name="EdbcList"] .block-form-type2 .row,
+form[name="EdbcList"] .block-form-type2 .row > .right {
+ display: flex !important;
+ flex-wrap: nowrap !important;
+ align-items: flex-end !important;
+ gap: var(--nys-space-200, 16px) !important;
+ width: 100% !important;
+}
+
+form[name="EdbcList"] .block-form-type2 .fieldCell {
+ display: flex !important;
+ flex-direction: column !important;
+ padding-right: 0 !important; 
+ flex: 0 0 auto !important;
+}
+
+form[name="EdbcList"] .block-form-type2 .left {
+ margin-left: auto !important;
+ flex: 0 0 auto !important;
+}
+
+form[name="EdbcList"] .block-form-type2 {
+ overflow: auto !important; 
+ padding-bottom: var(--nys-space-200, 16px) !important;
+}
